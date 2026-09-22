@@ -1,0 +1,153 @@
+[worldserver]
+
+########################################
+# mod-botlore configuration
+#
+# Lore-flavoured chatter for playerbots. The lines themselves live in the world
+# database table `bot_lore_text` (seeded by sql/07_bot_lore_text.sql), keyed by
+# trigger with optional zone, area, creature, race, class, faction and level
+# filters, so a line can be written for one place and will only be heard there.
+#
+#   UPDATE bot_lore_text SET Text = 'Something else.' WHERE Id = 12;
+#   INSERT INTO bot_lore_text (`Trigger`, ZoneId, Text) VALUES ('zone_enter', 1537, 'Ironforge stands.');
+#   .botlore reload
+#
+# ".botlore list [trigger]" prints what is loaded and ".botlore test <bot>
+# [trigger]" makes a named bot speak, which is the quickest way to check a new
+# line without waiting for the trigger to happen.
+#
+# Placeholders: %zone %area %target %quest %item %level %name
+#
+# Bots only ever speak when a real player is within earshot, so distant bots
+# cost nothing and the world does not chatter to itself.
+########################################
+#
+#    BotLore.Enable
+#        Description: Enable lore chatter.
+#        Default:     1 - (Enabled)
+#                     0 - (Disabled)
+
+BotLore.Enable = 1
+
+#
+#    BotLore.Chance
+#        Description: Percent chance that a bot speaks when one of its triggers
+#                     fires and everything else allows it. Keep it low. The
+#                     corpus is large enough that variety comes from the number
+#                     of bots and the length of a session, not from any one bot
+#                     talking often - a bot that speaks rarely reads as a
+#                     person, and one that speaks often reads as a chat log.
+#        Range:       0-100
+#        Default:     12
+
+BotLore.Chance = 12
+
+#
+#    BotLore.CooldownSeconds
+#        Description: Minimum gap between two lines from the same bot, across
+#                     all triggers. This is the main anti-spam dial, and it is
+#                     a hard cap: a bot's rate is
+#                     min(1 per cooldown, trigger rate x BotLore.Chance).
+#                     At 1200 a bot in earshot speaks at most three times an
+#                     hour, so a handful of nearby bots comes out at a line
+#                     every few minutes.
+#        Default:     1200
+
+BotLore.CooldownSeconds = 1200
+
+#
+#    BotLore.RangeYards
+#        Description: A bot only speaks if a real (non-bot) player is within
+#                     this many yards. 40 matches the game's own say range, so
+#                     lines are only produced by bots you could actually hear.
+#        Default:     40
+
+BotLore.RangeYards = 40
+
+#
+#    BotLore.IdleSeconds
+#        Description: How often the idle trigger can fire per bot, in seconds.
+#                     Only used when BotLore.Trigger.Idle is on.
+#        Default:     900
+
+BotLore.IdleSeconds = 900
+
+#
+#    BotLore.LoginGraceSeconds
+#        Description: Stay silent for this long after logging in. Entering the
+#                     world counts as a zone change, so without a grace period
+#                     a restart would have every bot greeting its own login.
+#                     The first cooldown is also randomised across the
+#                     population so 500 of them do not expire together.
+#        Default:     60
+
+BotLore.LoginGraceSeconds = 60
+
+#
+#    BotLore.AvoidRepeats
+#        Description: Never pick the line a bot said last time, as long as
+#                     another line matches.
+#        Default:     1 - (Enabled)
+
+BotLore.AvoidRepeats = 1
+
+#
+#    BotLore.Chance.KillBoss / .LevelUp / .Death
+#        Description: Per-trigger chance overrides in percent; -1 uses
+#                     BotLore.Chance. Killing a boss is worth remarking on
+#                     nearly every time, walking into a zone is not.
+#        Default:     75 / 60 / -1
+
+BotLore.Chance.KillBoss = 50
+BotLore.Chance.LevelUp = 35
+BotLore.Chance.Death = -1
+
+#
+#    BotLore.Trigger.*
+#        Description: Which events can produce a line.
+#                     Kill fires on every ordinary creature death and
+#                     CombatStart on every pull, so both are off by default -
+#                     KillBoss covers elites, rares and world bosses. Idle is
+#                     off because ambient chatter with no cause reads as spam
+#                     more easily than a line about something that happened.
+#        Default:     as below
+
+BotLore.Trigger.ZoneEnter = 1
+BotLore.Trigger.QuestAccept = 1
+BotLore.Trigger.QuestComplete = 1
+BotLore.Trigger.KillBoss = 1
+BotLore.Trigger.Kill = 0
+BotLore.Trigger.Death = 1
+BotLore.Trigger.LevelUp = 1
+BotLore.Trigger.LootRare = 1
+BotLore.Trigger.CombatStart = 0
+BotLore.Trigger.Idle = 0
+
+#
+#    BotLore.SpecificityWeight
+#        Description: How strongly a more specific line is favoured over a more
+#                     general one.
+#
+#                     Specificity used to be a hard filter - the most specific
+#                     matching lines were kept and the rest discarded - which
+#                     made the pool in any one situation tiny. Standing in
+#                     Duskwood, the handful of Duskwood lines were the only
+#                     candidates and several hundred archetype and generic lines
+#                     could never be heard at all, so a player who stayed in one
+#                     zone heard the same few lines repeatedly.
+#
+#                     It is now a multiplier on the line's weight:
+#                         effective = Weight * (1 + Specificity * this)
+#                     Specificity scores 3 for a quest or item, 2 for an area or
+#                     creature, 1 each for zone, class and archetype. So at 6 a
+#                     quest-specific line is about 19 times as likely as a
+#                     generic one, but the whole matching corpus stays in the
+#                     draw - which is what stops a long session repeating.
+#
+#                     0 ignores specificity entirely and draws flat from
+#                     everything that matches. Large values approach the old
+#                     hard-filter behaviour.
+#        Default:     6
+#
+
+BotLore.SpecificityWeight = 6

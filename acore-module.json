@@ -1,0 +1,5 @@
+{
+    "name": "mod-botlore",
+    "description": "Lore-flavoured chatter for playerbots, driven by a world database table",
+    "version": "1.0.0"
+}
