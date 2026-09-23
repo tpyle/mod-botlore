@@ -26,6 +26,7 @@
  * single branch, because the real-player set is empty.
  */
 
+#include "BotLoreSelection.h"
 #include "Chat.h"
 #include "Config.h"
 #include "Creature.h"
@@ -153,58 +154,15 @@ namespace
         return allowed[hash % allowed.size()];
     }
 
-    struct LoreLine
+    // The filter columns are BotLoreSelection::Filter, inherited so the
+    // loader can keep assigning them by name; the rest is what the module
+    // needs to say the line.
+    struct LoreLine : public BotLoreSelection::Filter
     {
         uint32      id = 0;
-        uint32      zoneId = 0;
-        uint32      areaId = 0;
-        uint32      creatureEntry = 0;
-        uint32      raceMask = 0;
-        uint32      classMask = 0;
-        uint32      personalityMask = 0;
-        uint32      questId = 0;
-        uint32      itemId = 0;
-        int32       itemClass = -1;
-        int32       itemSubClass = -1;
-        int8        gender = -1;
-        uint32      specMask = 0;
-        int8        teamId = -1;
-        uint8       minLevel = 0;
-        uint8       maxLevel = 0;
         uint8       channel = CHANNEL_SAY;
         uint8       weight = 1;
         std::string text;
-
-        // How specific this line is. A line written for one zone, or for one
-        // creature, beats a generic one so hand-written Duskwood lines
-        // actually turn up in Duskwood.
-        uint32 Specificity() const
-        {
-            uint32 score = 0;
-            if (zoneId)
-                score += 1;
-            if (areaId)
-                score += 2;
-            if (creatureEntry)
-                score += 2;
-            if (questId)
-                score += 3;
-            if (itemId)
-                score += 3;
-            if (itemSubClass >= 0)
-                score += 2;
-            else if (itemClass >= 0)
-                score += 1;
-            if (gender >= 0)
-                score += 1;
-            if (specMask)
-                score += 1;
-            if (classMask)
-                score += 1;
-            if (personalityMask)
-                score += 1;
-            return score;
-        }
     };
 
     // trigger -> lines
@@ -410,53 +368,37 @@ namespace
         return false;
     }
 
-    bool MatchesFilters(LoreLine const& line, Player* bot, LoreContext const& context)
+    // The bot's own attributes, as numbers the selection rules understand.
+    BotLoreSelection::Speaker SpeakerFor(Player* bot)
     {
-        if (line.zoneId && line.zoneId != context.zoneId)
-            return false;
-        if (line.areaId && line.areaId != context.areaId)
-            return false;
-        if (line.creatureEntry && line.creatureEntry != context.creatureEntry)
-            return false;
-        if (line.raceMask && !(line.raceMask & bot->getRaceMask()))
-            return false;
-        if (line.classMask && !(line.classMask & bot->getClassMask()))
-            return false;
-        if (line.personalityMask && !(line.personalityMask & context.personality))
-            return false;
-        if (line.questId && line.questId != context.questId)
-            return false;
-        if (line.itemId && line.itemId != context.itemId)
-            return false;
-        if (line.itemClass >= 0 && line.itemClass != context.itemClass)
-            return false;
-        if (line.itemSubClass >= 0 && line.itemSubClass != context.itemSubClass)
-            return false;
-        if (line.gender >= 0 && line.gender != int8(bot->getGender()))
-            return false;
-        // Talent tree with the most points spent, as a bit. The core's
+        BotLoreSelection::Speaker who;
+        who.raceMask  = bot->getRaceMask();
+        who.classMask = bot->getClassMask();
+        who.gender    = int8(bot->getGender());
+        who.teamId    = int8(bot->GetTeamId());
+        who.level     = bot->GetLevel();
+
         // GetMostPointsTalentTree weighs three counters and returns the index
-        // of the largest, so with nothing spent it returns 0 rather than
-        // "no spec" - every fresh character would read as Arms, Holy, Beast
-        // Mastery and so on. An empty talent map is the honest test, and it
-        // keeps spec lines silent until the bot has actually chosen.
-        if (line.specMask)
-        {
-            if (bot->GetTalentMap().empty())
-                return false;
+        // of the largest, so with nothing spent it returns 0 rather than "no
+        // spec". An empty talent map is the honest test.
+        who.specTree  = bot->GetTalentMap().empty() ? -1 : int32(bot->GetMostPointsTalentTree());
 
-            uint8 const tree = bot->GetMostPointsTalentTree();
-            if (tree > 2 || !(line.specMask & (1u << tree)))
-                return false;
-        }
-        if (line.teamId >= 0 && line.teamId != int8(bot->GetTeamId()))
-            return false;
-        if (line.minLevel && bot->GetLevel() < line.minLevel)
-            return false;
-        if (line.maxLevel && bot->GetLevel() > line.maxLevel)
-            return false;
+        return who;
+    }
 
-        return true;
+    BotLoreSelection::Context SelectionContext(LoreContext const& context)
+    {
+        BotLoreSelection::Context ctx;
+        ctx.zoneId        = context.zoneId;
+        ctx.areaId        = context.areaId;
+        ctx.creatureEntry = context.creatureEntry;
+        ctx.questId       = context.questId;
+        ctx.itemId        = context.itemId;
+        ctx.personality   = context.personality;
+        ctx.itemClass     = context.itemClass;
+        ctx.itemSubClass  = context.itemSubClass;
+
+        return ctx;
     }
 
     LoreLine const* PickLine(std::string const& trigger, Player* bot, LoreContext const& context, uint32 avoidId)
@@ -476,16 +418,19 @@ namespace
         // one item still overwhelmingly wins, but the whole matching corpus
         // stays in the draw, which is what keeps a long session from
         // repeating.
+        BotLoreSelection::Speaker const who = SpeakerFor(bot);
+        BotLoreSelection::Context const ctx = SelectionContext(context);
+
         std::vector<LoreLine const*> candidates;
         std::vector<uint32> weights;
 
         for (LoreLine const& line : itr->second)
         {
-            if (!MatchesFilters(line, bot, context))
+            if (!BotLoreSelection::Matches(line, who, ctx))
                 continue;
 
             candidates.push_back(&line);
-            weights.push_back(uint32(line.weight) * (1 + line.Specificity() * cfg.SpecificityWeight));
+            weights.push_back(BotLoreSelection::WeightOf(line.weight, line, cfg.SpecificityWeight));
         }
 
         if (candidates.empty())
@@ -511,47 +456,37 @@ namespace
         if (!total)
             return candidates.front();
 
-        uint32 roll = urand(0, total - 1);
-        for (std::size_t i = 0; i < candidates.size(); ++i)
-        {
-            if (roll < weights[i])
-                return candidates[i];
-
-            roll -= weights[i];
-        }
-
-        return candidates.back();
+        return candidates[BotLoreSelection::PickIndex(weights, urand(0, total - 1))];
     }
 
     std::string Substitute(std::string text, Player* bot, LoreContext const& context)
     {
-        auto replace = [&text](std::string const& token, std::string const& value)
-        {
-            for (std::size_t at = text.find(token); at != std::string::npos; at = text.find(token, at))
-                text.replace(at, token.size(), value);
+        std::vector<std::pair<std::string, std::string>> replacements = {
+            { "%zone",    AreaName(context.zoneId) },
+            { "%area",    AreaName(context.areaId ? context.areaId : context.zoneId) },
+            { "%target",  context.target },
+            { "%killer",  context.target },   // friendlier name for death lines
+            { "%quest",   context.quest },
+            { "%item",    context.item },
+            { "%level",   std::to_string(bot->GetLevel()) },
+            { "%name",    bot->GetName() },
+            { "%faction", bot->GetTeamId() == TEAM_ALLIANCE ? "Alliance" : "Horde" },
         };
 
-        replace("%zone", AreaName(context.zoneId));
-        replace("%area", AreaName(context.areaId ? context.areaId : context.zoneId));
-        replace("%target", context.target);
-        replace("%killer", context.target);   // friendlier name for death lines
-        replace("%quest", context.quest);
-        replace("%item", context.item);
-        replace("%level", std::to_string(bot->GetLevel()));
-        replace("%name", bot->GetName());
-        replace("%faction", bot->GetTeamId() == TEAM_ALLIANCE ? "Alliance" : "Horde");
-
+        // The DBC lookups are only worth doing if the token is there at all.
         if (text.find("%class") != std::string::npos)
             if (ChrClassesEntry const* entry = sChrClassesStore.LookupEntry(bot->getClass()))
-                replace("%class", entry->name[sWorld->GetDefaultDbcLocale()] ? entry->name[sWorld->GetDefaultDbcLocale()]
-                                                                            : entry->name[LOCALE_enUS]);
+                replacements.emplace_back("%class", entry->name[sWorld->GetDefaultDbcLocale()]
+                                                        ? entry->name[sWorld->GetDefaultDbcLocale()]
+                                                        : entry->name[LOCALE_enUS]);
 
         if (text.find("%race") != std::string::npos)
             if (ChrRacesEntry const* entry = sChrRacesStore.LookupEntry(bot->getRace(true)))
-                replace("%race", entry->name[sWorld->GetDefaultDbcLocale()] ? entry->name[sWorld->GetDefaultDbcLocale()]
-                                                                           : entry->name[LOCALE_enUS]);
+                replacements.emplace_back("%race", entry->name[sWorld->GetDefaultDbcLocale()]
+                                                       ? entry->name[sWorld->GetDefaultDbcLocale()]
+                                                       : entry->name[LOCALE_enUS]);
 
-        return text;
+        return BotLoreSelection::Substitute(std::move(text), replacements);
     }
 
     void Emit(Player* bot, LoreLine const& line, std::string const& text)
