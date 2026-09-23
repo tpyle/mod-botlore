@@ -49,3 +49,8 @@ The `bot_lore_text` table and its content (see the server project's
 `sql/` directory). The table is loaded in `OnStartup`, not
 `OnAfterConfigLoad`, because the DBC and object stores do not exist yet at
 config-load time and every row would be discarded.
+
+## Licence
+
+GNU Affero General Public License v3.0, the licence AzerothCore and its
+modules use. See [LICENSE](LICENSE).
