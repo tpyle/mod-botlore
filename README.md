@@ -10,6 +10,31 @@ fire. This module fills the gap - bots comment on what they are doing and
 where they are, in `/say`, `/emote`, party and guild, from an SQL-editable
 line table that can be reloaded in game.
 
+## Bundled SQL
+
+The table and its content both ship with the module. `data/sql/db-world/base/botlore_lore_text.sql`
+creates the table and fills it with 11,868 lines across the ten triggers, and
+the core's database updater applies it at startup for every enabled module:
+`UpdateFetcher::ReceiveIncludedDirectories` walks
+`modules/<name>/data/sql/db-world`, and a `MODULE` file whose hash has changed
+is re-applied, so regenerating the corpus and restarting is enough to publish
+it. Nothing has to be applied by hand.
+
+That file is generated. The corpus itself lives in Python, under `tools/`,
+because it is prose and has to stay readable and editable:
+
+    tools/gen_bot_lore.py          the hand-placed lines: this zone, that
+                                   quest, that boss, and the header and schema
+                                   of the SQL file
+    tools/gen_bot_lore_combos.py   fragments along the axes the module filters
+                                   on - class, archetype, race, gender, spec,
+                                   item category - multiplied out, which is
+                                   where the volume comes from
+
+Run `python3 tools/gen_bot_lore.py` to rewrite the SQL file; it drives the
+combos half itself and prints the per-trigger counts. To publish without a
+restart, apply the regenerated file by hand and run `.botlore reload`.
+
 ## The table
 
 `bot_lore_text` in the world database: a trigger name, the line, and filter
@@ -45,8 +70,8 @@ and per-trigger switches (`.Trigger.*`). Read in `OnAfterConfigLoad`, so
 
 ## Requirements
 
-The `bot_lore_text` table and its content (see the server project's
-`sql/` directory). The table is loaded in `OnStartup`, not
+Nothing external: the table and its content are bundled, as above. The table
+is loaded in `OnStartup`, not
 `OnAfterConfigLoad`, because the DBC and object stores do not exist yet at
 config-load time and every row would be discarded.
 
