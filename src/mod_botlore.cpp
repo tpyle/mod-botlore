@@ -628,7 +628,13 @@ namespace
         if (!forced && data->graceUntil > now)
             return Refusal::InGrace;
 
-        if (data->nextLine > now)
+        // Forced calls are ".botlore test", a GM-only diagnostic meant to be run
+        // repeatedly. The cooldown exists to keep 500 bots from filling local
+        // chat, which a console command does not do, and honouring it here made
+        // the command nearly unusable: at the configured twenty minutes almost
+        // every bot answered "still on cooldown" and verifying a filter meant
+        // hunting for one that had not spoken yet.
+        if (!forced && data->nextLine > now)
             return Refusal::OnCooldown;
 
         if (!forced && urand(0, 99) >= ChanceFor(trigger))
@@ -641,7 +647,12 @@ namespace
         std::string const text = Substitute(line->text, bot, context);
         Emit(bot, *line, text);
 
-        data->nextLine = now + cfg.CooldownSeconds;
+        // A test must not mute the bot in the world for the next twenty minutes,
+        // so it deliberately leaves the cooldown alone. lastLineId is still
+        // recorded, which is what makes repeated tests draw different lines.
+        if (!forced)
+            data->nextLine = now + cfg.CooldownSeconds;
+
         data->lastLineId = line->id;
 
         if (spoken)
