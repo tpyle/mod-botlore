@@ -1,0 +1,64 @@
+@ trigger=idle archetype=devout
+My bandages want rolling again. I did them damp and now they dry crooked.
+I said the evening words twice last night because I lost count the first time.
+A woman in Goldshire taught me to set a bone, and I still hear her counting under my breath.
+I keep a candle stub I have never lit, for the night when I need one and there is nothing.
+Cold hands make poor mending, so I sit on them a while before anyone needs me.
+I have not eaten since morning, and I would sooner stay hungry than break off halfway through.
+
+@ trigger=idle archetype=grim
+Water is low. It will be lower tomorrow, and I have walked drier stretches than this.
+I have counted the ways out of %area twice. Both are bad.
+Someone will go down at the next stop. Better it is me watching the road than one of them.
+My boots have another month in them if it stays dry, and it will not stay dry.
+I stopped learning names for a while. It made the burying quicker, and I was wrong to.
+Sharpen, eat, sleep, move. Nothing in %zone has yet given me cause to add a fifth thing.
+
+@ trigger=idle archetype=scholar
+The lichen here grows only on the north faces, so the wind has not shifted in a very long while.
+I have three pages of notes on %zone and two of them contradict the third.
+Someone told me dwarven mortar sets harder under water, and I have been meaning to test that for a year.
+My ink froze once in the highlands and thawed out purple. I still cannot say why.
+I am fairly certain I miscounted the arches back there, and it is going to bother me.
+The word for a valley shaped like this is older than the kingdom that named it, or so my tutor insisted.
+I have carried a cracked lens for two years now, in case I meet a lensgrinder in a generous mood.
+
+@ trigger=idle archetype=boastful
+There is a song about me in at least one tavern, and I paid for none of it.
+I practise the difficult flourish when nobody is looking, so that it lands when they are.
+Ask me later about the bridge. It is a long story and it wants a crowd.
+This cloak was a gift, and the giver wept when she handed it over, and I do not blame her.
+I held a door six breaths against something enormous, and my shoulder still brings it up.
+Nobody here has asked me yet what I did at %area. I am a patient man.
+
+@ trigger=idle archetype=wry
+I was promised adventure. Thus far I have been promised a great deal.
+My left boot has a hole in it precisely where the weather is.
+I have walked through %zone four times now and it has yet to improve.
+Every map I own agrees this road is the shorter one. Every map I own is a liar.
+I am saving my strength for something, and I expect I will know it when it hits me.
+Someone asked whether I was the cheerful one. I let them go on guessing.
+
+@ trigger=idle archetype=haunted
+I still set out two cups some mornings, then sit and look at the second one.
+It smelled like this the week before. Wet stone and smoke.
+I do not sing the middle verse. I never learned the rest of it properly in any case.
+There was a coat I should have taken with me. I think about the coat more than I should.
+Someone used to walk on my left. I keep leaving the space.
+I am not tired. I simply do not care for the hour before dark.
+The letter is still folded in my pack, and I have read the first line perhaps a hundred times.
+
+@ trigger=idle archetype=savage
+My knuckles ache before a storm and before a good fight, and both are welcome.
+I ate standing up. Sitting down makes me slow, and slow makes me foul company.
+I have given my axe no name. It has not earned one lately.
+A stretch this quiet makes my teeth itch.
+The last one who ran, I let run. He had thrown his weapon down and I am no butcher.
+I want something with weight to it. Small things break wrong and spoil the swing.
+
+@ trigger=idle archetype=sinister
+I have learned which of us sleeps lightest. It is worth the knowing.
+I do not sharpen where others can watch. Let them wonder what I am carrying.
+A man in the south owes me a small debt, and I have let it grow for three years.
+Patience costs me nothing, and I am told I have a great deal of it in reserve.
+I count the doors first, then I count who is standing nearest to them.

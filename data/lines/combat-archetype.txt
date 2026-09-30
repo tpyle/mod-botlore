@@ -1,0 +1,120 @@
+# Archetype combat lines, moved here out of the AUTHORED table in
+# tools/gen_bot_lore.py so they sit with the rest of the prose and can be
+# gated the same way.
+#
+# Each archetype has two sections. The first works against anything. The second
+# is gated on rank=normal because the line only makes sense against a small
+# animal - %target substitutes the real creature name, and a line like "%target
+# appears to have strong opinions about me" turns into unintentional comedy the
+# moment it fires on a named rare.
+
+@ trigger=combat_start archetype=devout
+Hold still, %target. I will make this clean.
+I take no joy in this, only the duty of it.
+%target, I have no quarrel with you, but you have left me none either.
+Light forgive me the small cruelties.
+Better my hand than a slower one.
+Mercy first. If not mercy, then speed.
+Stand aside, %target, and live out your season.
+I will not let %target suffer longer than it must.
+Nothing dies uncounted. Not even this.
+My hands are for the wounded, but they will answer for this too.
+
+@ trigger=combat_start archetype=grim
+No sense putting it off.
+I have never once walked away clean. Start swinging.
+%target wants a fight. Everything out here does, eventually.
+Something in the way, and me still walking. This is how it goes.
+I do not expect to enjoy this.
+%target. You will not be the last one today.
+Nothing dies quietly. Get on with it.
+Draw your steel. The odds do not improve with waiting.
+
+@ trigger=combat_start archetype=grim rank=normal
+%target. Small thing. They all add up the same way.
+
+@ trigger=combat_start archetype=scholar
+I have notes on %target. None of them cover this part.
+Wait. I want to see how it moves before I stop it moving.
+A pity. Live specimens teach so much more than dead ones.
+Observe the posture. That is a threat display, and it is fully committed to it.
+%target, and it has already decided. Very well.
+I had three questions. I will settle for one answer.
+Every creature defends itself. I keep hoping one will explain why.
+This is the part of the work I like least.
+Let the record show that %target began it.
+
+@ trigger=combat_start archetype=scholar rank=normal
+I will try to remember which end the teeth are on.
+
+@ trigger=combat_start archetype=boastful
+Watch closely. This will be over quickly and I want it remembered correctly.
+%target has chosen to become part of my story. A small part.
+Stand back and let me work. I am at my best with an audience.
+I have fought worse before breakfast, and I will fight better after.
+%target picked a fight with the wrong sort of person. An excellent sort, but the wrong one.
+
+@ trigger=combat_start archetype=boastful rank=normal
+I will keep this brief. Nobody wants a long verse about %target.
+Not every legend is built on giants. Some of it is built on days like this.
+%target, you will not be the hardest thing I face today, but you may be the loudest.
+One moment. I have something small to handle in front of witnesses.
+There is no glory in this one, but there will be style. Watch for the style.
+
+@ trigger=combat_start archetype=wry
+Of course it wants a fight. Everything in this land wants a fight.
+I had plans for this afternoon. They were modest, but I had them.
+Do you know, I was very nearly sitting down.
+Nothing has ever simply walked past me. Not once.
+I would run, but then I would be tired and still fighting.
+
+@ trigger=combat_start archetype=wry rank=normal
+Well. This is beneath both of us.
+Come along then, %target. Let us get this over with.
+%target, you have chosen the least interesting way to spend a morning.
+Very well. Teeth it is.
+%target appears to have strong opinions about me.
+
+@ trigger=combat_start archetype=haunted
+I will not turn away this time.
+Another one. They blur together after a while.
+Someone used to stand at my shoulder for this.
+I remember the sound of this. I always remember the sound.
+Quickly, then. I do not like drawing these things out.
+
+@ trigger=combat_start archetype=haunted rank=normal
+%target is nothing. I have seen worse things walk upright.
+
+@ trigger=combat_start archetype=haunted group=with_player
+Keep your eyes open. I was not, once.
+Stay close to me. I have lost people who wandered off.
+Do not let it get behind you. That is how it happens.
+Watch my left. I am slow on my left now.
+
+@ trigger=combat_start archetype=savage
+Good. My hands were getting cold.
+Stand still, %target. It goes easier.
+Something to kill. That is enough for me.
+You came at me. I respect that much.
+%target started this. I only finish it.
+Then we find out which of us is hungrier.
+Hold your ground and I will make it quick.
+Do not run, %target. I would rather earn this.
+
+@ trigger=combat_start archetype=savage rank=normal
+Small teeth. Still teeth.
+I was made for worse than you.
+
+@ trigger=combat_start archetype=sinister
+Nothing personal. You are simply in the ledger now.
+I would offer terms, but you have nothing worth bargaining with.
+Hold still and this costs you very little.
+You chose this the moment you decided to look at me.
+Struggle if it comforts you. It changes only the duration.
+I take what I need from whatever happens to be standing there.
+%target has something I want. It does not know that yet.
+I have done this for less reason than you have given me.
+Come closer. My patience has been generous enough today.
+
+@ trigger=combat_start archetype=sinister rank=normal
+%target. Small. That makes this quick, not merciful.

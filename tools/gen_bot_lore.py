@@ -1221,7 +1221,11 @@ for _p, _texts in LEVEL_EXTRA.items():
     many("level_up", _texts, personality=_p, comment=f"level {PERSONALITY_NAMES[_p]}")
 
 # =============================================================================
-# Authored archetype lines for the three short triggers.
+# Authored archetype lines for death and level_up.
+#
+# The combat_start half of this table moved to data/lines/combat-archetype.txt,
+# because a good many of those lines only work against a small animal and the
+# rank gate that fixes them is expressible in a line file, not here.
 #
 # combat_start, death and level_up used to get most of their volume from the
 # combinatorial layer, which joined an object or situation fragment to an
@@ -1238,18 +1242,6 @@ for _p, _texts in LEVEL_EXTRA.items():
 
 AUTHORED = {
     DEVOUT: {
-        "combat_start": [
-            "Hold still, %target. I will make this clean.",
-            "I take no joy in this, only the duty of it.",
-            "%target, I have no quarrel with you, but you have left me none either.",
-            "Light forgive me the small cruelties.",
-            "Better my hand than a slower one.",
-            "Mercy first. If not mercy, then speed.",
-            "Stand aside, %target, and live out your season.",
-            "I will not let %target suffer longer than it must.",
-            "Nothing dies uncounted. Not even this.",
-            "My hands are for the wounded, but they will answer for this too.",
-        ],
         "death": [
             "Do not carry me far. Lay me where the Light can find me.",
             "Tend the others first. I have had my share of care.",
@@ -1270,18 +1262,6 @@ AUTHORED = {
         ],
     },
     GRIM: {
-        "combat_start": [
-            "Something has to die here. Fair chance it is me.",
-            "%target. Small thing. They all add up the same way.",
-            "No sense putting it off.",
-            "I have never once walked away clean. Start swinging.",
-            "%target wants a fight. Everything out here does, eventually.",
-            "Something in the way, and me still walking. This is how it goes.",
-            "I do not expect to enjoy this.",
-            "%target. You will not be the last one today.",
-            "Nothing dies quietly. Get on with it.",
-            "Draw your steel. The odds do not improve with waiting.",
-        ],
         "death": [
             "There. Done, and no surprises in it.",
             "%target. Of all the things that could have had me.",
@@ -1302,18 +1282,6 @@ AUTHORED = {
         ],
     },
     SCHOLAR: {
-        "combat_start": [
-            "I have notes on %target. None of them cover this part.",
-            "Wait. I want to see how it moves before I stop it moving.",
-            "A pity. Live specimens teach so much more than dead ones.",
-            "Observe the posture. That is a threat display, and it is fully committed to it.",
-            "%target, and it has already decided. Very well.",
-            "I had three questions. I will settle for one answer.",
-            "Every creature defends itself. I keep hoping one will explain why.",
-            "I will try to remember which end the teeth are on.",
-            "This is the part of the work I like least.",
-            "Let the record show that %target began it.",
-        ],
         "death": [
             "Ah. So that is what that feels like.",
             "%target. Write the name down correctly, whoever is listening.",
@@ -1334,18 +1302,6 @@ AUTHORED = {
         ],
     },
     BOASTFUL: {
-        "combat_start": [
-            "Watch closely. This will be over quickly and I want it remembered correctly.",
-            "%target has chosen to become part of my story. A small part.",
-            "I will keep this brief. Nobody wants a long verse about %target.",
-            "Not every legend is built on giants. Some of it is built on days like this.",
-            "Stand back and let me work. I am at my best with an audience.",
-            "%target, you will not be the hardest thing I face today, but you may be the loudest.",
-            "One moment. I have something small to handle in front of witnesses.",
-            "I have fought worse before breakfast, and I will fight better after.",
-            "There is no glory in this one, but there will be style. Watch for the style.",
-            "%target picked a fight with the wrong sort of person. An excellent sort, but the wrong one.",
-        ],
         "death": [
             "Tell them I was magnificent. Tell them nothing else.",
             "%target. Of all the endings I rehearsed, never this one.",
@@ -1366,18 +1322,6 @@ AUTHORED = {
         ],
     },
     WRY: {
-        "combat_start": [
-            "Well. This is beneath both of us.",
-            "Come along then, %target. Let us get this over with.",
-            "Of course it wants a fight. Everything in this land wants a fight.",
-            "I had plans for this afternoon. They were modest, but I had them.",
-            "%target, you have chosen the least interesting way to spend a morning.",
-            "Do you know, I was very nearly sitting down.",
-            "Nothing has ever simply walked past me. Not once.",
-            "Very well. Teeth it is.",
-            "%target appears to have strong opinions about me.",
-            "I would run, but then I would be tired and still fighting.",
-        ],
         "death": [
             "Well. That was not the plan, but it was certainly a plan.",
             "%target. Truly. Of all the things.",
@@ -1398,17 +1342,8 @@ AUTHORED = {
         ],
     },
     HAUNTED: {
-        "combat_start": [
-            "I will not turn away this time.",
-            "Another one. They blur together after a while.",
-            "%target is nothing. I have seen worse things walk upright.",
-            "Someone used to stand at my shoulder for this.",
-            "I remember the sound of this. I always remember the sound.",
-            "Quickly, then. I do not like drawing these things out.",
-        ],
         "death": [
             "I am sorry. I could not do it a second time.",
-            "Do not tell them how small the thing was that took me.",
             "I am coming. You waited long enough.",
             "It is quiet. I had forgotten quiet.",
             "Go on without me. I know how that is done.",
@@ -1426,18 +1361,6 @@ AUTHORED = {
         ],
     },
     SAVAGE: {
-        "combat_start": [
-            "Good. My hands were getting cold.",
-            "Stand still, %target. It goes easier.",
-            "Something to kill. That is enough for me.",
-            "You came at me. I respect that much.",
-            "Small teeth. Still teeth.",
-            "%target started this. I only finish it.",
-            "Then we find out which of us is hungrier.",
-            "I was made for worse than you.",
-            "Hold your ground and I will make it quick.",
-            "Do not run, %target. I would rather earn this.",
-        ],
         "death": [
             "Ha. You had it in you after all.",
             "Not clean, but mine.",
@@ -1458,18 +1381,6 @@ AUTHORED = {
         ],
     },
     SINISTER: {
-        "combat_start": [
-            "Nothing personal. You are simply in the ledger now.",
-            "I would offer terms, but you have nothing worth bargaining with.",
-            "%target. Small. That makes this quick, not merciful.",
-            "Hold still and this costs you very little.",
-            "You chose this the moment you decided to look at me.",
-            "Struggle if it comforts you. It changes only the duration.",
-            "I take what I need from whatever happens to be standing there.",
-            "%target has something I want. It does not know that yet.",
-            "I have done this for less reason than you have given me.",
-            "Come closer. My patience has been generous enough today.",
-        ],
         "death": [
             "A poor return on everything I put in.",
             "I knew the price. I had hoped to pay it much later.",
@@ -2193,6 +2104,25 @@ _GROUP_BY_NAME = {
 }
 _GENDER_BY_NAME = {"male": 0, "female": 1}
 
+# ItemTemplate::Class, and the subclasses from ItemTemplate.h. Named rather
+# than numbered in the line files, because "weapon=two_hand_axe" is legible in
+# a diff and "iclass=2 isub=1" is not.
+_ITEM_CLASS_WEAPON, _ITEM_CLASS_ARMOR = 2, 4
+
+_WEAPON_BY_NAME = {
+    "one_hand_axe": 0, "two_hand_axe": 1, "bow": 2, "gun": 3,
+    "one_hand_mace": 4, "two_hand_mace": 5, "polearm": 6,
+    "one_hand_sword": 7, "two_hand_sword": 8, "staff": 10, "fist": 13,
+    "dagger": 15, "thrown": 16, "crossbow": 18, "wand": 19,
+}
+
+# ITEM_SUBCLASS_ARMOR_MISC is 0 and covers rings, necklaces and trinkets,
+# which the filters cannot tell apart - only InventoryType distinguishes them
+# and the corpus does not read it. Lines using it stay vague about the form.
+_ARMOUR_BY_NAME = {
+    "trinket": 0, "cloth": 1, "leather": 2, "mail": 3, "plate": 4, "shield": 6,
+}
+
 _TRIGGERS = {
     "zone_enter", "quest_accept", "quest_complete", "kill", "kill_boss",
     "death", "level_up", "loot_rare", "combat_start", "idle",
@@ -2242,6 +2172,12 @@ def _filters_from_header(header, where):
             kw["group"] = _GROUP_BY_NAME[value] if value in _GROUP_BY_NAME else _fail(where, key, value)
         elif key == "gender":
             kw["gender"] = _GENDER_BY_NAME[value] if value in _GENDER_BY_NAME else _fail(where, key, value)
+        elif key == "weapon":
+            kw["iclass"] = _ITEM_CLASS_WEAPON
+            kw["isub"] = _WEAPON_BY_NAME[value] if value in _WEAPON_BY_NAME else _fail(where, key, value)
+        elif key == "armour":
+            kw["iclass"] = _ITEM_CLASS_ARMOR
+            kw["isub"] = _ARMOUR_BY_NAME[value] if value in _ARMOUR_BY_NAME else _fail(where, key, value)
         elif key == "zone":
             assert value.isdigit(), f"{where}: zone must be a number, got {value!r}"
             kw["zone"] = int(value)

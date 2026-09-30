@@ -1,10 +1,8 @@
 @ trigger=combat_start class=hunter archetype=savage
 My hound has the scent and I have the shot. Nothing about this ends well for %target.
-Small game still bleeds, and my beast is hungry.
 Go, take its legs. I will finish whatever limps.
 
 @ trigger=combat_start class=hunter archetype=wry
-Another mangy thing that thought the treeline was empty.
 I have arrows I have been meaning to waste, and %target has volunteered.
 
 @ trigger=combat_start class=hunter archetype=scholar
@@ -14,14 +12,12 @@ Watch how %target favours the left foreleg. That is where the arrow goes.
 @ trigger=combat_start class=rogue archetype=sinister
 It has not looked behind itself once, and that is a habit I intend to punish.
 Stay just as you are, %target. I am nearly at your back.
-No noise for this one. There is no need to make a night of something so small.
 
 @ trigger=combat_start class=rogue archetype=wry
 It never occurs to any of them that the shadow is already occupied.
 I would let %target pass, but it is standing on the only way through.
 
 @ trigger=combat_start class=rogue archetype=grim
-Small, stupid, and in the road. I will keep it brief.
 It dies here because it stood here. There is no more reason than that.
 
 @ trigger=combat_start class=druid archetype=devout
@@ -119,3 +115,18 @@ It is finished and the grove can breathe. I would still rather have mended than 
 
 @ trigger=kill_boss class=druid archetype=wry
 Ancient, terrible, and undone by a bear with a grudge.
+
+# Lifted out of the sections above: these assume a small animal, so they are
+# gated on rank=normal and will not fire on anything notable.
+
+@ trigger=combat_start class=hunter archetype=savage rank=normal
+Small game still bleeds, and my beast is hungry.
+
+@ trigger=combat_start class=hunter archetype=wry rank=normal
+Another mangy thing that thought the treeline was empty.
+
+@ trigger=combat_start class=rogue archetype=sinister rank=normal
+No noise for this one. There is no need to make a night of something so small.
+
+@ trigger=combat_start class=rogue archetype=grim rank=normal
+Small, stupid, and in the road. I will keep it brief.

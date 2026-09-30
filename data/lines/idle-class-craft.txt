@@ -1,0 +1,121 @@
+@ trigger=idle class=warrior
+I tape my hands before the ache starts, not after.
+Every blade in my kit has a weight, and I know each one by the wrist.
+
+@ trigger=idle class=warrior archetype=boastful
+Watch the footwork while it is free, since you will want to copy it later.
+
+@ trigger=idle class=warrior archetype=grim
+I sharpen in the quiet because the quiet never lasts.
+
+@ trigger=idle class=warrior archetype=wry
+Half of soldiering is standing about, and I have grown very good at it.
+
+@ trigger=idle class=paladin
+I keep the vigil until someone relieves me, and no one has yet.
+The buckles get oiled whether anyone inspects them or not.
+
+@ trigger=idle class=paladin archetype=devout
+I ask myself why I struck, and I do not always like the answer.
+
+@ trigger=idle class=paladin archetype=grim
+I polish the plate knowing whose blood will dull it again.
+
+@ trigger=idle class=paladin archetype=scholar
+Ceremony is only memory with its boots on, so I rehearse it slowly.
+
+@ trigger=idle class=hunter
+She has a burr behind the ear, and she will not complain of it herself.
+Fourteen good feathers today, and crooked fletching is a wasted shaft.
+The wind in %zone turns near dusk, so I would rather move before then.
+
+@ trigger=idle class=hunter archetype=wry
+My hound eats better than I do, and she is aware of it.
+
+@ trigger=idle class=hunter archetype=scholar
+Tracks tell time, and these have gone soft at the edges since morning.
+
+@ trigger=idle class=rogue
+Three ways out of this place, and two of them are windows.
+I pick at this lock for the practice, not for whatever is in the box.
+
+@ trigger=idle class=rogue archetype=sinister
+I count who is armed before I count who is friendly.
+
+@ trigger=idle class=rogue archetype=wry
+Nobody ever notices the one counting the doors, which is rather the point.
+
+@ trigger=idle class=rogue archetype=haunted
+I still sit facing the entrance, and I had a good reason once.
+
+@ trigger=idle class=priest
+The scar on his shoulder is pulling again, so I will see to it before we move.
+I pray quietly, since it is not a performance for anyone standing here.
+I keep a list of who is hurting and how, and I go down it often.
+
+@ trigger=idle class=priest archetype=devout
+My knees know this stone better than my hands know my own work.
+
+@ trigger=idle class=priest archetype=haunted
+I say the names of the ones I could not mend, so that someone says them.
+
+@ trigger=idle class=death_knight
+The wind here is bitter, and I notice it the way I notice a colour.
+I have not slept in a long while, and I have stopped waiting to.
+
+@ trigger=idle class=death_knight archetype=grim
+Food has no taste now, which is one fewer thing to want.
+
+@ trigger=idle class=death_knight archetype=haunted
+I remember being hungry. I do not remember minding that it ended.
+
+@ trigger=idle class=death_knight archetype=sinister
+My hands do not shake in the cold, and that has proven useful.
+
+@ trigger=idle class=shaman
+The air is talking to itself about rain, and it will get its way.
+The stones under %area are slow to answer, so I wait and ask again.
+Something is shifting far below us, deep and unhurried.
+
+@ trigger=idle class=shaman archetype=wry
+The wind has strong opinions and no manners, and I listen regardless.
+
+@ trigger=idle class=shaman archetype=devout
+I thank the fire for the warmth before I bank it down for the night.
+
+@ trigger=idle class=mage
+I turn the problem over again, because there is a seam in it somewhere.
+Water, out of habit, though I am not especially thirsty.
+
+@ trigger=idle class=mage archetype=scholar
+The proportion is off by a hair, and a hair is precisely what ruins it.
+
+@ trigger=idle class=mage archetype=wry
+I have conjured more bread than I could ever eat, purely from habit.
+
+@ trigger=idle class=mage archetype=boastful
+A flame no bigger than a thumbnail, held perfectly steady. Any fool can make a big one.
+
+@ trigger=idle class=warlock
+Something at the edge of my attention is waiting, and I let it wait.
+I do not look directly at what stands behind my thoughts.
+
+@ trigger=idle class=warlock archetype=sinister
+It is patient because I taught it patience, and I keep the lesson fresh.
+
+@ trigger=idle class=warlock archetype=grim
+There is always a weight leaning on the door of my mind.
+
+@ trigger=idle class=warlock archetype=wry
+My shadow is a little crowded, and I have made peace with the arrangement.
+
+@ trigger=idle class=druid
+The season has turned, and I felt it in my teeth before I saw the leaves.
+My hand went to claw without being asked, as it tends to do.
+I can sit here long enough that the birds forget I am not a tree.
+
+@ trigger=idle class=druid archetype=savage
+The fur comes up along my spine, and I do not send it back down.
+
+@ trigger=idle class=druid archetype=wry
+I half changed shape while thinking, which is undignified at my age.

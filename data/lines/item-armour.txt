@@ -1,0 +1,121 @@
+@ trigger=loot_rare armour=cloth
+The weave in %item is finer than anything the looms of Stormwind turn out.
+The embroidery runs on the inside too, where nobody was ever meant to see it.
+Someone dyed this in small batches and matched every one of them. I can find no seam in the colour.
+
+@ trigger=loot_rare armour=cloth archetype=scholar
+%item holds its dye without a single pale patch. That is patient work.
+
+@ trigger=loot_rare armour=cloth archetype=devout
+Embroidery like this was stitched as a prayer, not as decoration.
+
+@ trigger=loot_rare armour=cloth archetype=haunted
+Cloth keeps a scent longer than it keeps a shape. This one smells of a house I no longer visit.
+
+@ trigger=loot_rare armour=cloth archetype=boastful
+Let them look. Cloth this fine speaks for a man before he does.
+
+@ trigger=loot_rare armour=cloth class=mage
+Threadwork this careful holds a spell the way a good jar holds water.
+
+@ trigger=loot_rare armour=leather
+Boiled, oiled, and stitched twice over. Whoever made %item expected to see it come back.
+Still smells of the tanning oil. Nobody has worn this hard yet.
+The hide was cut all from one beast, so it will wear evenly and not gape at the seams.
+
+@ trigger=loot_rare armour=leather archetype=scholar
+The stitching doubles back at every point that takes a strain. A patient hand cut the hide in %item.
+
+@ trigger=loot_rare armour=leather archetype=savage
+Good hide, and it still carries the smell of the beast. I like knowing what I am wearing.
+
+@ trigger=loot_rare armour=leather archetype=grim
+Leather fails once and it fails quietly. I will be going over these seams every night.
+
+@ trigger=loot_rare armour=leather archetype=haunted
+I knew a man who stitched hide like this. His work has outlasted him by years.
+
+@ trigger=loot_rare armour=leather class=rogue
+%item does not creak at all when I move. That is worth more to me than the hide is.
+
+@ trigger=loot_rare armour=mail
+Thousands of rings, and every one of them riveted shut. Somebody's whole winter went into %item.
+It whispers when I turn. Mail never lets a man be quiet.
+Rings set this close turn a point aside instead of catching it. That is the cleverer defence.
+Held up to the light, not one gap shows through the weave.
+
+@ trigger=loot_rare armour=mail archetype=scholar
+Riveted, not merely butted closed. That doubles the labour and doubles what it will stop.
+
+@ trigger=loot_rare armour=mail archetype=boastful
+Hear that? %item rings like coin, and I intend to be heard coming.
+
+@ trigger=loot_rare armour=mail archetype=grim
+Mail sings on the way to a fight and rattles on the way back. I would sooner it stayed silent.
+
+@ trigger=loot_rare armour=mail archetype=wry
+I am told every ring in %item was closed by hand. I have decided to believe it.
+
+@ trigger=loot_rare armour=shield
+Something already broke itself against %item. The dent in it is the proof.
+The straps are worn through on the inside. Someone held this for a long while.
+Oak beneath the iron, banded crossways so no blow can split the grain.
+
+@ trigger=loot_rare armour=shield archetype=grim
+There is a gouge in this deep as my thumb. Whoever held it last did not walk away carrying it.
+
+@ trigger=loot_rare armour=shield archetype=devout
+This board has stood between somebody and the end of them. I will keep it standing.
+
+@ trigger=loot_rare armour=shield archetype=boastful
+Look at the scoring across the face of it. Every mark is a story I mean to improve upon.
+
+@ trigger=loot_rare armour=shield archetype=wry
+%item has stopped something larger than me at least once. I find that encouraging.
+
+@ trigger=loot_rare armour=shield class=paladin
+A shield is a promise made to the man standing beside you. I will carry %item as one.
+
+@ trigger=loot_rare armour=plate
+%item came off an armourer's anvil, not out of a barrel. You can feel that in the weight of it.
+This was fitted to a body, not hammered flat and hoped over.
+
+@ trigger=loot_rare armour=plate archetype=wry
+I can barely lift %item, which suggests it is very good at its work.
+
+@ trigger=loot_rare armour=plate archetype=scholar
+The buckles sit inside the plate so nothing can catch on them. Whoever fitted this thought it through.
+
+@ trigger=loot_rare armour=plate archetype=grim
+Plate keeps a man alive right up until the day he falls into deep water.
+
+@ trigger=loot_rare armour=plate archetype=devout
+Weight like this teaches humility before it teaches anything else.
+
+@ trigger=loot_rare armour=plate archetype=sinister
+Heavy, and fitted to a larger man than me. A pity. It would have suited my purposes.
+
+@ trigger=loot_rare armour=plate class=priest
+I could not wear this if I trained for a year, so someone in this company will be glad of it.
+
+@ trigger=loot_rare armour=trinket
+Small, old, and warm to the touch. %item has not told me why yet.
+The clasp has been mended twice. Whoever owned %item did not want to part with it.
+There is writing on the inside of this, too small to read without better light.
+It is worn smooth on one side only, as though a thumb passed over it for years.
+This is older than the barrow I took it out of, and it is keeping that to itself.
+
+@ trigger=loot_rare armour=trinket archetype=scholar
+The marks around the edge are older than the setting. Someone made this out of something else.
+
+@ trigger=loot_rare armour=trinket archetype=haunted
+I have seen this pattern before, on a hand I will not see again.
+
+@ trigger=loot_rare armour=trinket archetype=sinister
+It is small enough that nobody else need ever know I am carrying it.
+
+@ trigger=loot_rare armour=trinket archetype=grim
+Little things like this come off the dead far more often than they come out of a shop.
+
+@ trigger=loot_rare armour=trinket archetype=boastful
+A small thing, and I will still see that it gets noticed.

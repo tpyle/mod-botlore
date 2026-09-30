@@ -47,10 +47,8 @@ Alone, I do not have to soften anything.
 Leave me some of %target, at least.
 
 @ trigger=combat_start group=grouped archetype=wry
-We outnumber %target badly. It hardly seems fair on the poor thing.
 
 @ trigger=combat_start group=grouped archetype=grim
-Small fight. We will still do it properly.
 
 @ trigger=combat_start group=grouped archetype=boastful
 I fight better with company about. %target will come to regret that.
@@ -92,7 +90,6 @@ I have stories for this stretch of road, if the silence keeps up.
 Stay behind me and I will keep you whole.
 
 @ trigger=combat_start group=with_player archetype=grim
-Small thing. Keep your guard up regardless.
 
 @ trigger=combat_start group=with_player archetype=savage
 Mine first. Take whatever slips past me.
@@ -147,3 +144,15 @@ Say the word and I will move. Until then I am watching the treeline.
 
 @ trigger=idle group=with_player archetype=devout
 If you are hurt, say so now rather than later.
+
+# Lifted out of the sections above: these assume a small animal, so they are
+# gated on rank=normal and will not fire on anything notable.
+
+@ trigger=combat_start group=grouped archetype=wry rank=normal
+We outnumber %target badly. It hardly seems fair on the poor thing.
+
+@ trigger=combat_start group=grouped archetype=grim rank=normal
+Small fight. We will still do it properly.
+
+@ trigger=combat_start group=with_player archetype=grim rank=normal
+Small thing. Keep your guard up regardless.

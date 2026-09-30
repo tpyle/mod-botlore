@@ -1,0 +1,143 @@
+@ trigger=zone_enter zone=1519
+The gates are taller than the ones that fell here, and I think that is the whole point.
+Stone bridges, white towers, banners on every wall - this city wants you to know it was rebuilt properly.
+
+@ trigger=zone_enter zone=1519 race=human
+I was born to a city of stone and banners, and I still look up at the towers every time.
+
+@ trigger=zone_enter zone=1519 race=tauren
+I have to duck under every doorway in Stormwind, and every human in the street pretends not to stare.
+
+@ trigger=zone_enter zone=1537
+One great hot room carved out under a mountain, and the forge at its heart never cools.
+The air tastes of coal and ale before I am three steps past the gate.
+
+@ trigger=zone_enter zone=1537 race=dwarf
+Down the ramp into the warm dark, and every hammer fall sounds like home.
+
+@ trigger=zone_enter zone=1537 archetype=boastful
+Let the elves keep their trees; I will take a mountain with a forge in the middle of it.
+
+@ trigger=zone_enter zone=1657
+The whole city has gone quiet at once, and I cannot tell whether that is peace or warning.
+
+@ trigger=zone_enter zone=1657 race=dwarf
+Too many trees, too little noise, and nowhere in Darnassus to set my boots that does not creak.
+
+@ trigger=zone_enter zone=1657 race=nightelf
+I know these paths by the smell of the moss, and they have not changed in my lifetime.
+
+@ trigger=zone_enter zone=3557
+Crystal corridors still bent where the landing bent them, and people have hung their washing in the cracks.
+
+@ trigger=zone_enter zone=3557 race=draenei
+We call it a city, but the walls remember being a ship, and so do I.
+
+@ trigger=zone_enter zone=1637
+Timber, iron, and a guard at the gate who has already decided how long he will tolerate me.
+Every wall in this place is spiked, and none of it is decoration.
+
+@ trigger=zone_enter zone=1637 race=orc
+Drums in the Valley of Strength, and nobody here wastes breath on greetings.
+
+@ trigger=zone_enter zone=1638
+The lift sways the whole way up, and then there is nothing between me and the wind.
+
+@ trigger=zone_enter zone=1638 race=tauren
+Up here the drums carry on the wind, and the plains lie open all the way to the horizon.
+
+@ trigger=zone_enter zone=1638 archetype=devout
+The wind on this mesa is the breath of the Earth Mother, and I came a long way to stand in it.
+
+@ trigger=zone_enter zone=1497
+Down the lift into the sewers, where the water runs black and nobody minds the smell.
+
+@ trigger=zone_enter zone=1497 race=undead
+Ruined Lordaeron overhead, our own halls beneath it, and I prefer the halls.
+
+@ trigger=zone_enter zone=3487
+Red stone, gold leaf, and half the windows dark behind all of it.
+
+@ trigger=zone_enter zone=3487 race=bloodelf
+Home, and every empty balcony in it reminds me how few of us came back.
+
+@ trigger=zone_enter zone=3703
+Terraces full of people who lost a world, all of them talking at once in a dozen tongues.
+Nobody draws steel in Shattrath, and everybody notices who keeps a hand near it.
+
+@ trigger=zone_enter zone=4395
+A whole city floating over the ice, and the mages here would rather I touched nothing at all.
+Purple spires, snow in the streets, and half the population watching me from a window.
+
+@ trigger=zone_enter zone=4395 archetype=scholar
+There is more written knowledge on this one street than in most kingdoms, and I mean to read what they allow me.
+
+@ trigger=idle zone=1519
+The traders in %area shout over one another until dusk, and not one of them lowers a price.
+Two guards in shining mail have walked past me three times now in %area.
+
+@ trigger=idle zone=1519 archetype=wry
+Stormwind keeps a canal for its waste and a cathedral for its conscience, and both run busy.
+
+@ trigger=idle zone=1537
+I have stood in %area long enough that my collar is damp clean through.
+Someone by the forge is recruiting for an expedition into Blackrock, and finding no takers.
+
+@ trigger=idle zone=1537 race=gnome
+Everything in %area is built for shoulders wider than mine, and the dwarves think that is very funny.
+
+@ trigger=idle zone=1657
+I have heard nothing in %area but water and leaves for an hour, and it is beginning to unsettle me.
+
+@ trigger=idle zone=1657 race=nightelf
+The sentinels pass me in %area without a word, because no word is needed.
+
+@ trigger=idle zone=3557
+The crystal hums under my boots here, and nobody can tell me whether that is the repairs or the rot.
+
+@ trigger=idle zone=3557 race=draenei
+A child in %area asked me what the sky over Argus looked like, and I had no honest answer for her.
+
+@ trigger=idle zone=1637
+Three fights broke out in %area while I stood here, and the guards let two of them finish.
+
+@ trigger=idle zone=1637 race=orc
+The smoke off the forges in %area gets into your throat, and you learn to be glad of it.
+
+@ trigger=idle zone=1637 archetype=grim
+This city was raised in a hurry by people with nowhere else to go, and it shows in every beam.
+
+@ trigger=idle zone=1638
+The rope bridges between the rises creak in the wind, and I have stopped looking down.
+
+@ trigger=idle zone=1638 race=tauren
+Totems rattle above %area, and the smell of hide and smoke is the smell of my childhood.
+
+@ trigger=idle zone=1497
+Green light, dripping stone, and a throne room at the bottom of a sewer.
+
+@ trigger=idle zone=1497 race=undead
+The apothecaries in %area work with the doors open, and I have long stopped asking what is in the vats.
+
+@ trigger=idle zone=1497 archetype=haunted
+I keep to the outer ring, because the dead city above us still has my own street in it.
+
+@ trigger=idle zone=3487
+The gilding on these spires is flawless, and behind it every room is shuttered.
+
+@ trigger=idle zone=3487 race=bloodelf
+I could walk the length of %area at midday and pass a dozen of my own people, no more.
+
+@ trigger=idle zone=3703
+A woman is begging in %area in Draenei, and a Scryer recruiter is shouting over her in Common.
+There are orcs and humans drinking on the same terrace here, and not one of them remarks on it.
+
+@ trigger=idle zone=3703 archetype=devout
+The Light is spoken of plainly in %area, by people who have no world left to go home to.
+
+@ trigger=idle zone=4395
+A mage in %area shifted my pack three feet with a glance rather than ask me to move it.
+I looked over the edge of %area and watched Northrend crawl past underneath.
+
+@ trigger=idle zone=4395 archetype=scholar
+The spellbooks here are kept behind glass, and the glass is watched more closely than the door.

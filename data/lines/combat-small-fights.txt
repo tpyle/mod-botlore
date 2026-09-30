@@ -1,0 +1,85 @@
+# Written for the common case: the enemy is a Mangy Wolf, not a champion.
+# Every section is gated on rank=normal, because %target substitutes the real
+# creature name and understatement aimed at a named rare reads as farce -
+# "Something Wicked appears to have strong opinions about me" was the line that
+# proved it. Notable creatures have their own lines in creature-rank.txt.
+
+@ trigger=combat_start rank=normal archetype=devout
+Light guide my hand, and make this quick.
+I would rather have mended something today than ended it.
+Come on then, %target. I will not make a long thing of it.
+Hold still, %target. Nothing here needs to suffer longer than it must.
+%target does not know any better. That does not change what I have to do.
+
+@ trigger=combat_start rank=normal archetype=grim
+It was always going to come to this. Stand still, %target.
+Fine. One more.
+I expected worse on this road. That is no comfort, only a fact.
+Nothing on this road leaves you be. Nothing ever has.
+%target picked the wrong day, same as the rest.
+
+@ trigger=combat_start rank=normal archetype=scholar
+Interesting. %target commits fully and plans nothing.
+%target opens the same way as the last one. They must learn it somewhere.
+I would rather have measured you, %target, but you have made that difficult.
+Note the front paws. That is where it starts, every time.
+It charges before it looks, and I have notes on that.
+
+@ trigger=combat_start rank=normal archetype=boastful
+Watch closely. %target will not last long enough for a second look.
+%target, you have chosen a very famous person to bite.
+They will not sing about %target. I will do it well anyway.
+Another for the tally, and the tally is getting long.
+
+@ trigger=combat_start rank=normal archetype=wry
+Tenth one this morning. I have stopped naming them.
+I was almost sitting down.
+Of course. Of course it was going to be %target.
+I had one job left today and now I have two.
+%target has enormous confidence for something that size.
+And here I thought the walk was going well.
+
+@ trigger=combat_start rank=normal archetype=haunted
+Quick, then. I have had enough of slow things.
+I do not want this, and I am doing it anyway.
+%target will be gone in a moment and I will still be here.
+I have stood over smaller things than this and felt worse.
+Come on. The day has already taken more than this.
+
+@ trigger=combat_start rank=normal archetype=savage
+Good. I was getting stiff.
+Come at me properly, %target. Give me something to remember.
+Small, quick, still a fight. Come here, %target.
+I hear you, and I am already moving.
+Teeth out, then. Mine are better.
+
+@ trigger=combat_start rank=normal archetype=sinister
+You may keep coming. It changes nothing.
+I will give you one chance to run, %target. I do not expect you to take it.
+Quietly now, %target. There is no need for a scene.
+How brave, %target. How brief.
+Stay close if you like. Closer is worse for you.
+
+@ trigger=combat_start rank=normal race=tauren
+I am sorry, %target. You will not be wasted.
+I take no joy in this. Come here and be done.
+
+@ trigger=combat_start rank=normal race=troll
+Dis one been askin for it all mornin.
+%target want a fight, %target get one. No hard feelin.
+
+@ trigger=combat_start rank=normal race=undead
+I have been dead longer than %target has been alive. This will be tedious.
+Another thing that wants me down. It is all so repetitive.
+
+@ trigger=combat_start rank=normal race=nightelf
+I have watched this wood far longer than you, %target. Do not make me tend it with a blade.
+
+@ trigger=combat_start rank=normal race=draenei
+I did not come this far to fight animals, and yet here we are.
+
+@ trigger=combat_start rank=normal race=orc
+%target is small. It is still a foe, and I will meet it as one.
+
+@ trigger=combat_start rank=normal race=dwarf
+Aye, I have time for this. Not much, mind.

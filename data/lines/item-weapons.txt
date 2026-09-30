@@ -1,0 +1,149 @@
+@ trigger=loot_rare weapon=one_hand_axe archetype=scholar
+A smith who grinds the bevel this thin means it to bite bone, not wood.
+
+@ trigger=loot_rare weapon=one_hand_axe archetype=savage
+One hand for the axe and one hand still free. That is how I like a fight.
+
+@ trigger=loot_rare weapon=one_hand_axe
+%item hangs true off the wrist, heavy at the head and quick on the return.
+
+@ trigger=loot_rare weapon=two_hand_axe archetype=boastful
+Let them watch me shoulder %item down the road and draw their own conclusions.
+
+@ trigger=loot_rare weapon=two_hand_axe archetype=grim
+Two hands on the haft leaves nothing over to block with. I have seen how that ends.
+
+@ trigger=loot_rare weapon=two_hand_axe archetype=savage
+All the weight out at the head and all of it going one direction. Good.
+
+@ trigger=loot_rare weapon=two_hand_axe
+I could not swing %item twice, but I know men who would swing it all day.
+
+@ trigger=loot_rare weapon=bow
+%item is strung dry and true, and the limbs come back without a shudder.
+
+@ trigger=loot_rare weapon=bow archetype=scholar
+Horn, sinew and yew laid up in layers, and every layer doing its own work.
+
+@ trigger=loot_rare weapon=bow class=hunter
+I will cut arrows to this draw tonight and know %item by morning.
+
+@ trigger=loot_rare weapon=gun archetype=wry
+Dwarven work, so it will fire, and it will tell the whole valley that it did.
+
+@ trigger=loot_rare weapon=gun archetype=boastful
+Every head on the road turns when %item speaks, and then they look for me.
+
+@ trigger=loot_rare weapon=gun archetype=scholar
+Goblin barrel, dwarven lock. Someone was in a hurry and got lucky.
+
+@ trigger=loot_rare weapon=gun archetype=grim
+A bow gives you a second shot. This gives you a loud one.
+
+@ trigger=loot_rare weapon=one_hand_mace archetype=devout
+%item keeps no edge and no grudge, only weight and a steady arm behind it.
+
+@ trigger=loot_rare weapon=one_hand_mace
+Flanged head, short haft, made for fighting men who trusted their plate.
+
+@ trigger=loot_rare weapon=one_hand_mace class=paladin
+I have carried a mace since I took my vows, and %item would carry the rest of them.
+
+@ trigger=loot_rare weapon=two_hand_mace archetype=grim
+Nothing this heavy was ever made for a fair fight.
+
+@ trigger=loot_rare weapon=two_hand_mace archetype=savage
+%item does not cut, it simply decides where a man's helmet is going.
+
+@ trigger=loot_rare weapon=two_hand_mace
+Head like an anvil and a haft long enough for both fists, so armour means less today.
+
+@ trigger=loot_rare weapon=polearm archetype=scholar
+%item was made for a line of men, not one. Alone it is only a long spade.
+
+@ trigger=loot_rare weapon=polearm
+Reach comes first, and the one with reach decides when the fight begins.
+
+@ trigger=loot_rare weapon=polearm archetype=boastful
+Give me twenty men holding the like of %item and I will hold a bridge worth singing about.
+
+@ trigger=loot_rare weapon=one_hand_sword
+Balanced a thumb above the guard, so %item turns on the wrist and not the shoulder.
+
+@ trigger=loot_rare weapon=one_hand_sword archetype=devout
+One hand on the sword leaves the other for a shield, or for lifting someone off the ground.
+
+@ trigger=loot_rare weapon=one_hand_sword archetype=wry
+Straight, sharp and unremarkable, and it will outlast most of the men who say so.
+
+@ trigger=loot_rare weapon=two_hand_sword archetype=boastful
+I want %item across my back where the whole common room can see it.
+
+@ trigger=loot_rare weapon=two_hand_sword archetype=haunted
+Someone carried this before me and did not keep it. I try not to wonder how far he got.
+
+@ trigger=loot_rare weapon=two_hand_sword
+Long in the blade and long in the grip, so %item wants open ground to do its work.
+
+@ trigger=loot_rare weapon=two_hand_sword archetype=savage
+Half the reach is in my arms and the rest is in the steel, and I mean to use all of it.
+
+@ trigger=loot_rare weapon=staff archetype=scholar
+This wood was not so much carved as persuaded, and the grain still runs unbroken end to end.
+
+@ trigger=loot_rare weapon=staff
+%item is a walking stick to anyone who cannot feel what is wound through it.
+
+@ trigger=loot_rare weapon=staff archetype=devout class=priest
+I will lean on %item along the road and raise it when the road turns unkind.
+
+@ trigger=loot_rare weapon=fist
+%item straps to the knuckle and adds nothing to my reach, only to the argument.
+
+@ trigger=loot_rare weapon=fist archetype=savage
+Claws for my hands. Nothing I do from here on is unarmed.
+
+@ trigger=loot_rare weapon=fist archetype=wry
+A weapon I cannot drop, since I would have to unbuckle it first.
+
+@ trigger=loot_rare weapon=dagger archetype=sinister
+%item does not need to be swung. It only needs to be somewhere unexpected.
+
+@ trigger=loot_rare weapon=dagger
+Thin, stiff and ground to a needle, so it was made to find the gaps in mail.
+
+@ trigger=loot_rare weapon=dagger class=rogue
+A blade like %item disappears into a sleeve, and so does the hand holding it.
+
+@ trigger=loot_rare weapon=dagger archetype=scholar
+The maker put his stamp under the grip, where no honest customer would think to look.
+
+@ trigger=loot_rare weapon=thrown
+Weighted at the point, so %item turns once in the air and lands the way I want it.
+
+@ trigger=loot_rare weapon=thrown archetype=savage
+I can throw these all the way in and still have a knife for whoever reaches me.
+
+@ trigger=loot_rare weapon=thrown archetype=wry
+A weapon I have to walk over and pick up again. Still quieter than shouting for help.
+
+@ trigger=loot_rare weapon=thrown archetype=sinister
+Three of these leave my hand before the first one is missed.
+
+@ trigger=loot_rare weapon=crossbow archetype=scholar
+Steel prod, a windlass, and a stock cut to sit against the cheek. It asks patience, not strength.
+
+@ trigger=loot_rare weapon=crossbow
+%item will hold its shot loaded all night, which is more than my arms would do for a bow.
+
+@ trigger=loot_rare weapon=crossbow archetype=grim
+Point it, wait, and it does not care how tired I am. That is the whole virtue of the thing.
+
+@ trigger=loot_rare weapon=wand
+%item is a channel and nothing more, but a narrow channel makes a fast current.
+
+@ trigger=loot_rare weapon=wand archetype=scholar
+Birch rod, silver band, a stone set at the tip, and every part chosen for what it will not resist.
+
+@ trigger=loot_rare weapon=wand class=mage
+I could burn through a door with %item and never lift my arm above my belt.

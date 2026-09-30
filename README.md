@@ -24,8 +24,8 @@ That file is generated. The corpus itself is kept in two shapes:
 
     data/lines/*.txt               most of it - plain text, a header naming the
                                    filters and the lines under it inheriting
-                                   them. Ten files, 500 lines, one per slice of
-                                   the filter space
+                                   them. Twenty files, 1,083 lines, each a slice
+                                   of the filter space
     tools/gen_bot_lore.py          the lines that need code beside them: a loop,
                                    or a table of creature and quest ids. Also
                                    the loader for data/lines and the schema
@@ -43,6 +43,14 @@ silently reading as "any":
     @ trigger=combat_start rank=elite archetype=savage
     Big one. Finally something that will not fall over when I look at it.
     %target has real weight to it. Good. I want to feel the swing land.
+
+`rank=normal` is the workhorse of that vocabulary. Most combat lines are written
+for the common case, where the enemy is a small animal, and `%target`
+substitutes the real creature name - so understatement aimed at a named rare
+reads as farce. Those lines are gated on `rank=normal` and cannot fire on
+anything notable. Item kinds are named rather than numbered for the same reason
+of legibility: `weapon=two_hand_axe` and `armour=trinket` rather than
+`iclass=2 isub=1`.
 
 Run `python3 tools/gen_bot_lore.py` to rewrite the SQL file; it loads
 `data/lines` itself and prints the per-trigger counts. To publish without a

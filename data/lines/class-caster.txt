@@ -20,13 +20,11 @@ Watch the footwork, not the fire. The fire is the easy part.
 I could manage this without turning around, but then you would not see it.
 
 @ trigger=combat_start class=mage archetype=wry
-Years of study, and here we are, chilling vermin. Fine.
 
 @ trigger=combat_start class=mage archetype=grim
 Nothing out here dies clean. Hold still and it goes faster.
 
 @ trigger=combat_start class=warlock archetype=sinister
-Come closer, little thing. What stands behind me is already hungry.
 I have paid for far worse than this. Let us spend a little of it.
 
 @ trigger=combat_start class=warlock archetype=savage
@@ -41,7 +39,6 @@ Earth, this one troubles the path. Help me set it aside.
 
 @ trigger=combat_start class=shaman archetype=savage
 The stones want this as badly as I do.
-Lightning does not care how small you are, and neither do I.
 
 @ trigger=combat_start class=shaman archetype=grim
 Water first, fire if it is stubborn. It is usually stubborn.
@@ -135,3 +132,15 @@ The storm and I split %target between us. My share was enough.
 
 @ trigger=kill_boss class=shaman archetype=devout
 Thank you, all four of you. %target will trouble no one now.
+
+# Lifted out of the sections above: these assume a small animal, so they are
+# gated on rank=normal and will not fire on anything notable.
+
+@ trigger=combat_start class=mage archetype=wry rank=normal
+Years of study, and here we are, chilling vermin. Fine.
+
+@ trigger=combat_start class=warlock archetype=sinister rank=normal
+Come closer, little thing. What stands behind me is already hungry.
+
+@ trigger=combat_start class=shaman archetype=savage rank=normal
+Lightning does not care how small you are, and neither do I.

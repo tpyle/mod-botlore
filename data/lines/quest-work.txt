@@ -1,0 +1,113 @@
+@ trigger=quest_accept class=rogue
+Half now, half when it is done. That is how I work.
+You are paying me to care about this, and for that price I will.
+
+@ trigger=quest_accept class=paladin
+You asked, and asking is enough. I will see it done.
+I would rather be asked than commanded. Consider me asked.
+
+@ trigger=quest_accept class=hunter
+Far from any road, then. Those are the only errands worth taking.
+Point me at the wilderness and I will not need the directions twice.
+
+@ trigger=quest_accept class=warlock
+You have told me what you need, so now I know something about you. I accept.
+I will do this, and you will owe me. That is the better half of the bargain.
+
+@ trigger=quest_accept class=priest
+You trusted me with this before you knew my name. I will not waste that.
+%quest is a heavy thing to hand a stranger. I will carry it gently.
+
+@ trigger=quest_accept class=death_knight
+I have done worse for worse reasons. This one at least has a reason.
+
+@ trigger=quest_accept class=warrior
+You need not dress it up for me. Tell me who to stand in front of.
+
+@ trigger=quest_accept class=mage
+%quest is beneath my study, but the walk will give me time to think.
+
+@ trigger=quest_accept archetype=devout
+Small work done faithfully is still faith. I will begin.
+
+@ trigger=quest_accept archetype=grim
+%quest will go badly and I will still be the one who finishes it.
+I expect nothing good at the end of this, and I am going anyway.
+
+@ trigger=quest_accept archetype=scholar
+I want the details twice, and then I want them written down.
+%quest - yes, I have read of this, and I would like to see it for myself.
+
+@ trigger=quest_accept archetype=boastful
+Tell the others I took this on without flinching, because I did.
+You came to me, which means you asked everyone else first.
+
+@ trigger=quest_accept archetype=wry
+You had me at the part where I do all of it alone.
+I am told nobody else was available for %quest. I am always what nobody else was.
+
+@ trigger=quest_accept archetype=haunted
+I take the errands that keep me walking. Give me this one.
+
+@ trigger=quest_accept archetype=savage
+If there is something at the end of it that fights back, I am already agreed.
+
+@ trigger=quest_accept archetype=sinister
+I accept, and I will remember that you were the one who asked.
+
+@ trigger=quest_complete class=rogue
+Done. Now the other half of the payment.
+You will want to know how I managed it. You will not want to know how.
+
+@ trigger=quest_complete class=paladin
+%quest is finished, and it changed less than I hoped it would.
+I need no thanks for it, only the next thing that needs doing.
+
+@ trigger=quest_complete class=hunter
+Long road out, longer road back, and here I am.
+%quest is settled. Nobody out there will ever know a soul came through for it.
+
+@ trigger=quest_complete class=priest
+You trusted me and I did not break it. That is all I wanted from this.
+It is done, and I am sorry it took what it took.
+
+@ trigger=quest_complete class=warlock
+Your errand is finished, and what I learned doing it stays with me.
+Consider %quest complete, and consider the ledger between us open.
+
+@ trigger=quest_complete class=death_knight
+Finished. It did not feel like anything, which is how I know it was work.
+
+@ trigger=quest_complete class=warrior
+It is over. Not cleanly, but over.
+
+@ trigger=quest_complete class=druid
+%quest is done, and the land has already forgotten I was there.
+
+@ trigger=quest_complete archetype=devout
+It is finished, and I took no more than I had to along the way.
+
+@ trigger=quest_complete archetype=grim
+Finished, and nothing is better for it. I did not promise better.
+%quest is done. Something else will need doing before nightfall.
+
+@ trigger=quest_complete archetype=scholar
+%quest is complete, and I have notes, should anyone ever want them.
+It is done, though I found the middle of it stranger than the end.
+
+@ trigger=quest_complete archetype=boastful
+%quest, finished, and I would gladly do it again with an audience.
+You are welcome. Say it louder than that.
+
+@ trigger=quest_complete archetype=wry
+Done. I will wait here while you find the right words.
+Finished, and somebody has written it in a ledger, which is my reward.
+
+@ trigger=quest_complete archetype=haunted
+It is done. I had hoped it would take longer.
+
+@ trigger=quest_complete archetype=savage
+Finished, and I am not yet finished.
+
+@ trigger=quest_complete archetype=sinister
+%quest is complete, exactly as I intended, which is not exactly as you asked.

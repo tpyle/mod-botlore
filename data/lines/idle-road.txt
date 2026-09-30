@@ -1,0 +1,66 @@
+@ trigger=idle
+My boots have worn through three soles this season, and the cobbler always says the same thing.
+Rain coming. I can feel it in the knee I broke years back.
+I have not slept under a roof in nine nights.
+This road was mended once, and whoever did it should be ashamed.
+Cold porridge in the morning, cold porridge at night. One day I will eat something warm.
+The light is going. Time to find high ground and dry wood.
+My pack horse threw a shoe two days out and has been sulking ever since.
+Every river crossing in %zone is a ford in summer and a drowning in spring.
+I am waiting. It is most of what this work is.
+Listen to that. %zone never goes quiet, it only changes what it is saying.
+Wet wood, wet boots, wet bread. At least it is consistent.
+There is a blister on my heel the size of a copper coin.
+Dawn is the only honest hour. Everything after it is negotiation.
+Half a loaf, a strip of salt meat, and whatever %area sees fit to offer me.
+I would trade my second-best blade for one night on a real mattress.
+The horse eats better than I do and knows it.
+Four hours until dark. That is enough road left to be worth walking.
+I have stopped counting the days. The weeks I still count.
+Someone has been sleeping in this camp ring. The ashes are barely cold.
+Good road while it lasts. Nothing in %zone stays mended long.
+My cloak has not been dry since the last time I saw a proper town.
+Water in the skin, salt in the bag, flint in the pouch. %zone does not provide the rest.
+I sharpen in the evening. It gives the hands something to do while the light dies.
+The roads through %area were better kept when there was coin for keeping them.
+Whistle once for the horse, twice for trouble. Tonight I would rather whistle once.
+The stars came out early. That means a cold night and a clear morning.
+Somewhere ahead there is a bridge or there is not, and I will find out at the water.
+I packed for six days and %area has kept me eleven.
+Firewood first, food second, sleep last. That is the order, and I never get all three.
+Long walk into %zone, and the map made it look so short.
+There is frost on the grass and my breath is showing.
+I have walked this stretch of %zone enough times to know where the mud waits.
+Caravans used to come through %area weekly. Now it is monthly, if the guards can be found.
+
+@ trigger=idle archetype=wry
+The road is long, the rations are short, and I have made peace with the arithmetic.
+I asked a farmer how far it was. He said not far. Farmers measure distance in hope.
+My boots are in better repair than my spirits, and my boots are ruined.
+
+@ trigger=idle archetype=grim
+Every mile of open road in %zone is a mile someone can see you coming.
+Sleep light out here. The ones who slept deep are under the cairns.
+
+@ trigger=idle archetype=devout
+I wash my hands before I eat, even out here. The small rites hold the rest together.
+The Light does not complain of cold rations, so neither will I.
+
+@ trigger=idle archetype=scholar
+I mark the miles each evening. Bad roads in %area should be written down for the next traveller.
+The milestones here are older than the road. Someone paved over an earlier way.
+
+@ trigger=idle archetype=boastful
+I have walked farther in worse weather than most men have walked at all.
+Blisters are for those who walk slowly. I have not slowed since I set out.
+
+@ trigger=idle archetype=haunted
+I sleep better on the road than under a roof. Roofs remind me of a house I do not go back to.
+
+@ trigger=idle archetype=savage
+The walking is the worst of it. Give me something to fight and I will forget my feet.
+I would carry twice this pack for half the waiting.
+
+@ trigger=idle archetype=sinister
+I choose my camps where the road can be watched and the fire cannot.
+Who passes, at what hour, carrying what. The road pays out to anyone who keeps accounts.

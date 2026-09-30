@@ -1,0 +1,152 @@
+@ trigger=zone_enter zone=10 archetype=grim
+The sun does not rise over Darkshire. Keep to the road and keep a lantern lit.
+
+@ trigger=zone_enter zone=10 archetype=haunted
+Raven Hill holds more graves than Darkshire holds living. I stopped counting both.
+
+@ trigger=zone_enter zone=10
+Something is howling past the treeline, and it is too heavy to be a wolf.
+
+@ trigger=idle zone=10 archetype=haunted
+I have walked %area by day and by night, and there is no difference here.
+
+@ trigger=zone_enter zone=40 race=human
+My people worked fields like these before the Defias came. Sentinel Hill holds what is left.
+
+@ trigger=zone_enter zone=40
+Every farmhouse in Westfall stands empty, and every scarecrow watches the road.
+
+@ trigger=idle zone=40 archetype=wry
+%area used to grow grain. Now it grows bandits.
+
+@ trigger=zone_enter zone=38 race=dwarf
+The Stonewrought Dam still holds and so does Thelsamar. Good stone and good ale both.
+
+@ trigger=zone_enter zone=38
+The loch drowned this valley and the dwarves made a lake of it. A fair trade.
+
+@ trigger=idle zone=38 archetype=scholar
+The dig at %area turns up tools older than any record kept in Ironforge.
+
+@ trigger=zone_enter zone=11
+Mud to the knee and murlocs in every reed bed. Watch the shallows.
+
+@ trigger=idle zone=11 archetype=grim
+The Alliance cut a road through %area once. The swamp has taken most of it back.
+
+@ trigger=zone_enter zone=45
+Stromgarde is broken walls and squatters now, and every side still wants these hills.
+
+@ trigger=zone_enter zone=3
+Nothing grows in the Badlands but stone and dragonkin. Mind the ridgelines.
+
+@ trigger=idle zone=3 archetype=scholar
+The excavation at %area cuts straight down through stone laid before the Sundering.
+
+@ trigger=zone_enter zone=8
+Drowned ruins to the horizon, and the Dark Portal burning away at the southern edge.
+
+@ trigger=idle zone=8 archetype=haunted
+The water at %area covers a temple, and I would rather not know who prayed in it.
+
+@ trigger=zone_enter zone=41
+No birds, no game, no people. Only Karazhan watching the pass.
+
+@ trigger=zone_enter zone=41 archetype=sinister
+Someone in that tower still keeps the lamps burning. I would very much like to meet them.
+
+@ trigger=zone_enter zone=47
+High forest and Vilebranch drums. Aerie Peak is the only roof worth trusting here.
+
+@ trigger=idle zone=47 archetype=savage
+The drums at %area have not stopped since dawn. Good. They will be easy to find.
+
+@ trigger=zone_enter zone=36
+The lords of Alterac left nothing but cellars, and ogres have moved into them.
+
+@ trigger=zone_enter zone=51
+Slag and cinder for miles, all of it torn up by Dark Iron hands.
+
+@ trigger=idle zone=51 archetype=grim
+The smoke over %area never clears. Blackrock keeps the furnaces fed.
+
+@ trigger=zone_enter zone=46
+Blackrock Mountain smokes over everything here, and the ground burns through boot leather.
+
+@ trigger=zone_enter zone=4
+This whole waste is one wound, and the Dark Portal is where it was cut.
+
+@ trigger=zone_enter zone=4 archetype=devout
+The Light did not make this land. Nethergarde watches the Portal so the ruin spreads no further.
+
+@ trigger=zone_enter zone=33
+Stranglethorn eats the careless. Tigers in the brush, trolls in the ruins.
+
+@ trigger=zone_enter zone=33 race=human
+Booty Bay is the only civil word in this jungle, and it is a goblin one.
+
+@ trigger=idle zone=33 archetype=boastful
+There is a tiger in %area with my name on its hide. It simply does not know yet.
+
+@ trigger=zone_enter zone=15
+Theramore stands alone in this marsh, and the marsh is patient.
+
+@ trigger=idle zone=15 archetype=wry
+%area offers mud, dragonkin and crocolisks. Charming country.
+
+@ trigger=zone_enter zone=357
+Old forest, and gorillas thick in it. Feathermoon keeps a light burning off the coast.
+
+@ trigger=zone_enter zone=400
+Mesas like teeth and not a drop of water in the basin. The racing goblins seem content.
+
+@ trigger=idle zone=400 archetype=wry
+%area is dry as old bone, and somebody chose to build a racetrack in it.
+
+@ trigger=zone_enter zone=405
+Dead ground, dead trees, and centaur riding over both.
+
+@ trigger=zone_enter zone=406
+Every stand of timber here is coming down, and the mountain itself is still in dispute.
+
+@ trigger=zone_enter zone=148 race=nightelf
+Auberdine holds, but this coast is all wreckage and the sea keeps bringing more.
+
+@ trigger=idle zone=148 archetype=haunted
+The ruins at %area were standing when I was young. So was a great deal else.
+
+@ trigger=zone_enter zone=361 race=nightelf
+The taint runs through every root in Felwood. We failed this forest.
+
+@ trigger=zone_enter zone=361
+Green rot on the bark and green fire in the beasts. Breathe shallow here.
+
+@ trigger=zone_enter zone=493 archetype=devout
+No blade is drawn in Moonglade. Mine stays sheathed and my voice stays low.
+
+@ trigger=zone_enter zone=490
+The crater floor shakes when the big ones walk, and there is crystal underfoot everywhere.
+
+@ trigger=idle zone=490 archetype=scholar
+The crystals at %area hum when I bring them close together, and I mean to learn why.
+
+@ trigger=zone_enter zone=440
+Open desert all the way to Gadgetzan, and sand enough to swallow a caravan whole.
+
+@ trigger=idle zone=440 archetype=scholar
+The sands near %area run wrong, and bronze dragons guard the place where time frays.
+
+@ trigger=zone_enter zone=618
+Winterspring keeps its quiet, and I will not be the one to break it.
+
+@ trigger=idle zone=618 archetype=wry
+%area is cold enough to crack teeth, and I have not seen another soul all day.
+
+@ trigger=zone_enter zone=16
+Broken elven halls along the whole of this coast, and satyr squatting in every one.
+
+@ trigger=zone_enter zone=1377
+Sand, insects, and the sense of something enormous buried beneath both.
+
+@ trigger=zone_enter zone=1377 archetype=grim
+The hives beyond the wall are digging upward. Whatever they serve is not finished.

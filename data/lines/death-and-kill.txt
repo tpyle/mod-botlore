@@ -1,0 +1,92 @@
+@ trigger=death archetype=devout
+The Light does not need me to be brave about this, only willing.
+Tell them I kept the watch until the watch was taken from me.
+I go where I was always going, only a little earlier than planned.
+Hold the prayer, I will find my own way to the end of it.
+
+@ trigger=death archetype=grim
+I said it would be something small, and here we are.
+A %target, then, and it was never going to be a song.
+Do not carry me anywhere warm, I would only complain.
+This is the ending I packed for.
+
+@ trigger=death archetype=scholar
+Note the wound, it went in under the ribs and I did not expect that.
+So that is what it feels like, and now I cannot write it down.
+I still do not know how the %target got behind me.
+I had three more questions and no time left for any of them.
+
+@ trigger=death archetype=boastful
+Do not let them say it was one %target, say it was a hundred.
+This is not how the story goes, someone rewrite the ending.
+I refuse to be remembered for this particular afternoon.
+
+@ trigger=death archetype=wry
+Well, that is embarrassing for both of us.
+Brought down by a %target, after all that training.
+I would give a speech, but I have gone off the idea.
+
+@ trigger=death archetype=haunted
+I am sorry, I meant to finish it before this happened.
+Tell her I did not forget, if you can find anyone who knows her name.
+I always thought I would recognise this moment, and I do not.
+
+@ trigger=death archetype=savage
+Get off me, I am not done - no, apparently I am.
+Bite back, that is all I ever asked of anything.
+Take the head off that %target for me, it is only fair.
+
+@ trigger=death archetype=sinister
+How careless of me to be interrupted.
+I had plans well past this, and I resent the edit.
+Remember the %target's face, I would like that settled later.
+
+@ trigger=death race=tauren
+The Earth Mother is calling and I am only late in answering.
+
+@ trigger=death race=undead
+I have done this before, and it was worse the first time.
+
+@ trigger=death race=troll
+Death an me be old acquaintances, mon, I be back soon enough.
+
+@ trigger=kill archetype=wry
+That settles that.
+Still ahead, barely.
+Well, it started it.
+
+@ trigger=kill archetype=grim
+There will be another.
+Down, and I am still tired.
+Nothing gained but the quiet.
+
+@ trigger=kill archetype=savage
+Next.
+Barely worth the swing.
+Meat for the crows.
+
+@ trigger=kill archetype=scholar
+Four, if I am counting right.
+It favoured the left side.
+
+@ trigger=kill archetype=devout
+Rest, whatever you were.
+Light keep it, I suppose.
+
+@ trigger=kill archetype=boastful
+Hardly my best work.
+No one saw that, of course.
+
+@ trigger=kill archetype=haunted
+That one felt like nothing.
+Another face I will not keep.
+
+@ trigger=kill archetype=sinister
+Tidy.
+The %target is accounted for.
+One less %target in the ledger.
+
+# Gated on rank=normal: it names the killer as small, which is true of almost
+# every death but wrong the one time a world boss does it.
+@ trigger=death archetype=haunted rank=normal
+Do not tell them how small the thing was that took me.
