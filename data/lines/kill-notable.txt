@@ -1,0 +1,113 @@
+@ trigger=kill_boss archetype=devout
+It is down. I would rather have mended it than broken it, but the road only had the one turn.
+%target is still. I ask nothing for myself, only that the next one comes easier.
+Let me stand a moment with %target before I go on.
+
+@ trigger=kill_boss archetype=devout rank=rare_elite
+Something that old should have had a gentler end. I will say the words over it anyway.
+
+@ trigger=kill_boss archetype=grim
+%target is dead. Something worse is always further in.
+I expected to lose. Pleasant to be wrong, briefly.
+%target bled the way anything else does. That never stops surprising me.
+
+@ trigger=kill_boss archetype=grim rank=elite
+Big and mean and now quiet. That is the best anyone gets.
+
+@ trigger=kill_boss archetype=scholar
+Hold still, %target, I want a proper look at those teeth now that you cannot use them.
+The scarring on %target is older than the wounds I gave it. Something else fought this thing first.
+Fascinating. It is markedly smaller dead than it appeared alive.
+
+@ trigger=kill_boss archetype=scholar rank=rare
+Seldom seen, and now thoroughly seen. I will write the markings down before they fade.
+
+@ trigger=kill_boss archetype=boastful
+Did anyone see the size of %target? I would hate to describe this later and be doubted.
+%target fell to me. Remember the name attached to the deed.
+
+@ trigger=kill_boss archetype=boastful rank=world_boss
+A mountain with a temper, and I brought it down to my height. Let the ballads catch up.
+
+@ trigger=kill_boss archetype=boastful rank=elite
+They said nothing that scarred goes down easy. They were half right - it went down.
+
+@ trigger=kill_boss archetype=wry
+%target turned out to be quite killable. Quite slowly, but quite killable.
+Well. That was more of %target than I strictly needed to see.
+I have a new scar and a story of moderate quality. Fair trade.
+
+@ trigger=kill_boss archetype=wry rank=world_boss
+Enormous. Enormously dead. I suppose that is the whole of it.
+
+@ trigger=kill_boss archetype=haunted
+%target is down and I feel exactly the same. I keep expecting that to change.
+Quiet again. I have never liked what the quiet leaves me thinking about.
+I did not enjoy that. I did it well, which is a different matter.
+
+@ trigger=kill_boss archetype=haunted rank=rare_elite
+Old things dying does not settle anything. I learned that a long way from here.
+
+@ trigger=kill_boss archetype=savage
+%target fought properly. I will take no pleasure in an easy one after this.
+My arms are dead weight and my blood is singing. I want another before it cools.
+
+@ trigger=kill_boss archetype=savage rank=elite
+That one earned its teeth. I will not take trophies off something that fought so well.
+
+@ trigger=kill_boss archetype=sinister
+%target is dead and nobody is coming to ask why. I checked that first.
+It guarded this spot for a reason. I will know the reason before I leave.
+
+@ trigger=kill_boss archetype=sinister rank=rare
+An unusual creature. Unusual things have unusual uses, and I mean to find this one's.
+
+@ trigger=kill_boss class=warrior
+%target is down, and the notches in my blade tell it better than I can.
+
+@ trigger=kill_boss class=warrior rank=world_boss
+I put my shoulder against something the size of a hill and the hill moved. I will sit down now.
+
+@ trigger=kill_boss class=paladin
+It is finished. I hold no grudge against %target now and I held none during.
+Light keep it, whatever it was. A thing that strong was made for something.
+
+@ trigger=kill_boss class=hunter
+%target was the finest thing I have tracked in a season. I will not forget the trail.
+
+@ trigger=kill_boss class=hunter rank=rare
+Tracks like those are seldom crossed. I followed them a long way to end them.
+
+@ trigger=kill_boss class=rogue
+%target never saw where the last one came in. That is the whole of the craft.
+Dead and still warm. Let me see what it was minding, before anything else comes looking.
+
+@ trigger=kill_boss class=priest
+%target is at rest, and I mean that plainly. Not everything I meet gets that.
+I mended myself three times in there. I would rather have spent it on something living.
+
+@ trigger=kill_boss class=death_knight
+I have been on the other side of that stillness, %target. It is not as bad as the dying.
+
+@ trigger=kill_boss class=death_knight rank=elite
+Old and strong and now cold. I know that progression intimately.
+
+@ trigger=kill_boss class=shaman
+The ground sits easier now that %target has stopped walking on it.
+The spirits crowded close at the end. They wanted to watch this one go.
+
+@ trigger=kill_boss class=mage
+%target burned a long while before it agreed to stop. I would like to know why.
+
+@ trigger=kill_boss class=mage rank=rare_elite
+Seldom seen, and I have questions the body cannot answer. Irritating.
+
+@ trigger=kill_boss class=warlock
+%target had a great deal of life in it. Had.
+
+@ trigger=kill_boss class=warlock rank=elite
+Strong things make strong endings. I felt every bit of it leave.
+
+@ trigger=kill_boss class=druid
+%target was old. Older than the grove I trained in, and I ended it in an afternoon.
+Something will feed on this by morning. That is the only comfort I can offer it.

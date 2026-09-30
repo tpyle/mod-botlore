@@ -1,0 +1,65 @@
+@ trigger=level_up archetype=devout
+My hands are steadier than they were. I will not ask why, only what it is for.
+This strength is lent, not owned, and the ledger comes due somewhere.
+Something in me sits straighter under the weight. Good. There is more weight coming.
+I did not earn this. I only kept showing up where I was told to stand.
+The prayer is the same as yesterday. It is my voice that carries further.
+Held in trust, and trust is a thing you can be found unworthy of.
+
+@ trigger=level_up archetype=grim
+Harder to kill than last week. Still killable.
+The armour sits right now. That only means it took this long to break in.
+I notice the climb less. The road is no shorter.
+Good. It will all be spent before the season turns.
+My wounds close faster. The ones that mattered never closed at all.
+Nothing out there has improved. Only me, and only a little.
+I expect nothing from this. It will be tested by nightfall.
+
+@ trigger=level_up archetype=scholar
+Curious. The same blow, the same arm, and the bone gives where it did not before.
+I want to know where the change happens. Sinew, or nerve, or something with no name.
+My breath comes back sooner after a long exchange than it used to.
+I have been keeping account of what my body can do. The account needs rewriting.
+There is a mechanism under this and nobody will explain it to me plainly.
+The grip holds through the full swing now. I would like to know which part of me learned that.
+
+@ trigger=level_up archetype=boastful
+Look at this arm. This is what the world gets for testing me.
+I make it look easy because it is easy, and because I enjoy watching myself do it.
+They will speak of how I carry myself before they speak of anything I did.
+Notice how the blade sits in the hand now. That is not luck. That is me.
+Let them come in greater numbers. I have room for more of them.
+I have outgrown my own reputation again. Someone should go and correct it.
+
+@ trigger=level_up archetype=wry
+My knees have stopped filing complaints. Small mercies.
+Something got easier, which I assume means something worse is nearby.
+Apparently all that bleeding was educational.
+I lifted the pack without swearing. I hardly know myself.
+Well. Slightly less of a liability today.
+The straps sit differently. That is the whole of my news.
+
+@ trigger=level_up archetype=haunted
+My hands are steady now. They were not steady when it mattered.
+This would have been enough, once. It came in the wrong order.
+I could carry someone out of there now. There is no one left in there.
+I am becoming what I needed to be, years after the need.
+I am stronger than I was. It changes nothing that already happened.
+The strength arrived. It does not know what it was meant for.
+
+@ trigger=level_up archetype=savage
+There is more room in me for this than there was. Bring something that fills it.
+My arms are not tired yet. That is the only thing wrong with today.
+I can feel where the next one breaks before I have touched him.
+Whatever they send, send it closer. I have appetite left over.
+Something in me is hungrier and better fed at once.
+The swing comes back faster now. I hated the waiting between them.
+
+@ trigger=level_up archetype=sinister
+I am worth more than I was this morning, and nobody has noticed. Good.
+Let them keep the measure they took of me. It is out of date.
+Strength is most useful while it is still underestimated.
+I will not show the whole of it. A portion is enough to be obeyed.
+A door in the world has quietly unlocked for me.
+I keep a careful account of what I can do to people now.
+Patience did this, and patience will decide where it gets spent.

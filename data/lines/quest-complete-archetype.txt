@@ -1,0 +1,65 @@
+@ trigger=quest_complete archetype=devout
+It is finished, and I did not cut a corner where no one would have seen it.
+I gave my word and my word is kept. That is the whole of it.
+Small work, done whole. The Light does not grade by size.
+No one thanked me. I did not do it to be thanked.
+My hands are tired and my conscience is quiet. I will take that trade.
+%quest is done, and the doing of it steadied me more than I expected.
+Another errand kept. Faith is mostly errands, if you are honest about it.
+
+@ trigger=quest_complete archetype=grim
+Done. It cost about what I thought it would.
+I expected worse. I do not trust that yet.
+That is finished, and nothing is better for it. Fine. Next.
+I said I would and I did. Do not make more of it than that.
+Nobody will believe the middle part, so I will leave the middle out.
+Put it down. My shoulder has been waiting all day for that.
+
+@ trigger=quest_complete archetype=scholar
+Finished, and I was wrong about the hard part. The hard part was the walking.
+It is done. I have notes I will not be showing anyone.
+Curious. The work was not the work I was described.
+Concluded. I would like to know who benefits, and I suspect it is not the one who asked.
+Done, and smaller than advertised. I prefer knowing that to not knowing.
+That is settled. I want the next one before I lose the thread of it.
+
+@ trigger=quest_complete archetype=boastful
+Done, and done beautifully, and no one was here to see it. A tragedy.
+Ask anyone how %quest ended. Ask me first, I tell it better.
+Finished. I would describe it, but you would think me a liar.
+Another one behind me. Someone ought to be keeping count. I am keeping count.
+They asked for it done. They did not ask for it done like that.
+That was hardly a test. Bring me something that is.
+
+@ trigger=quest_complete archetype=wry
+Well. That is off my list and onto nobody else's.
+Done. The thanks were memorable for how brief they were.
+All that walking for that. And I would do it again, apparently.
+Finished. Somehow the world looks exactly the same as it did.
+%quest, complete. The title promised rather more than the work delivered.
+Setting that down was the best part of my day, and I mean that kindly.
+They asked if it was hard. I said no, which was the second hardest thing I did.
+
+@ trigger=quest_complete archetype=haunted
+It is done. I kept a promise, and it was not the one I wanted to keep.
+Finished. For an hour there I forgot, and that is worth something.
+Done. Work is quiet company, and I was grateful for the hours.
+That is over. I would tell someone, if I still had the someone.
+It mattered more than I was told. Things often do, after.
+My hands stop moving and it all comes back. So I will find more to do.
+
+@ trigger=quest_complete archetype=savage
+Done, and I am not even winded. Find me something with teeth.
+That is finished. I want the next one now, while the blood is up.
+Over too quickly. I had more in me than that.
+Done. I enjoyed the middle of it more than a decent sort should.
+The job is closed. My arms ache in the good way.
+They wanted it ended. I ended it thoroughly.
+
+@ trigger=quest_complete archetype=sinister
+Done, and precisely as arranged. I keep my arrangements.
+It is finished. I learned rather more than they intended to teach me.
+That errand had a second purpose. I served both.
+Completed. Whoever sent me now owes me something they have not noticed yet.
+Their little favour is done. I will remember that they asked.
+Concluded quietly. Quiet is the part nobody values until it is missing.

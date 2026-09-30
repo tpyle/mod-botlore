@@ -1,0 +1,93 @@
+@ trigger=death class=warrior
+I left my right side open. That is the whole of it.
+A clean end is still an end. I will take it standing if I can.
+I have given worse than this and watched men get up from it.
+
+@ trigger=death class=paladin
+The Light does not leave. I am only going where it already is.
+I swore to stand between. I stood. Let that be the accounting.
+%target, my oath was never to live. It was to hold.
+
+@ trigger=death class=hunter
+Go home, girl. There is nothing here worth staying for.
+Someone loose my beast and let her hunt free, she has earned it.
+I tracked everything but this. Fair enough.
+
+@ trigger=death class=rogue
+Being killed I can forgive. Being noticed is the insult.
+I should have been three streets away by now.
+
+@ trigger=death class=priest
+Tend the others first. I know what is coming and I do not need calming.
+I have sat with enough of the dying to know my own voice in it.
+
+@ trigger=death class=death_knight
+The first time was colder. This one at least is mine.
+I have crossed already. There is nothing in there to frighten me.
+%target, you only ended what somebody else began long ago.
+
+@ trigger=death class=shaman
+The elements lent me this shape and now they want it back.
+Air, take my breath. Earth, take the rest. I go willingly.
+I hear the ancestors and they are not angry with me.
+
+@ trigger=death class=mage
+I misjudged the distance. Two paces closer and the ward would have held.
+The arithmetic was sound. I simply ran out of time to finish it.
+
+@ trigger=death class=warlock
+The debt is called in. I always knew the hour would be theirs to choose.
+Something is coming to collect, and it is not %target.
+
+@ trigger=death class=druid
+Root and leaf, take me back. Nothing is wasted in the turning.
+The cycle does not stop for me. It only takes me with it.
+
+@ trigger=death race=tauren
+Earth Mother, I return what you lent me. It was well used.
+Lay me where the grass is long. She will know her own.
+I have walked lightly. I hope the ground remembers me kindly.
+
+@ trigger=death race=orc
+Ancestors, look now. I want you to see how I finished.
+No bed, no sickness, no shame. This is the death I asked for.
+
+@ trigger=death race=dwarf
+Put me in the stone with the rest of them. I have earned the place.
+The mountain keeps its own. I hear my grandfathers in it.
+
+@ trigger=death race=nightelf
+My mother never had to learn this. I was born too late for that mercy.
+Ten thousand years, and the last hundred taught me how to end.
+
+@ trigger=death race=undead
+Familiar. Same cold, same quiet, and I know the way from here.
+I have done this before. It did not take the first time either.
+
+@ trigger=death race=gnome
+Write down the cause. I want the next one to have better figures than I did.
+Note the hour and the error. Precision is all I am leaving behind.
+
+@ trigger=death race=troll
+Dis not be de end of me. De loa know where to find me.
+Bury me shallow, mon. I be needin de way back out.
+
+@ trigger=death race=goblin
+Hazard pay. Widow's share. Somebody owes my estate and I want it itemised.
+I had contracts pending. Tell them the terms survive me.
+
+@ trigger=death race=bloodelf
+This is beneath me. I had intended something far more deliberate.
+I will not beg %target for another hour. I have some dignity left.
+
+@ trigger=death race=draenei
+I have watched a world die. One life is a small grief beside that.
+The Light took us from ruin once. It knows the road out of this too.
+
+@ trigger=death race=worgen
+Let the man go last. Let it be the man who finishes this, not the beast.
+I am afraid of what stays behind when I stop holding it down.
+
+@ trigger=death race=human
+Tell them I did not run. That is all I want carried home.
+Short life, and I spent it on something. I can rest on that.

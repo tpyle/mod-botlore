@@ -1,0 +1,89 @@
+@ trigger=level_up class=warrior
+My guard came back up before the blow had finished falling. I did not have to think about it.
+The shield used to drag on the way back. It does not drag now.
+I have taken worse than that and given more ground for it. Something in the footwork has settled.
+
+@ trigger=level_up class=paladin
+The words left me and the Light was already there. I am not certain I have earned that speed.
+I asked for less than I used to and more came. That should trouble me more than it does.
+My hands warm before the prayer is done. A better man would wonder why he was answered.
+
+@ trigger=level_up class=hunter
+The draw is smoother than it was this morning, and the pull sits easier in my shoulder.
+My companion watched me nock that one and did not flinch. She knows my hand has changed.
+The string comes back to the same place every time. I have stopped hunting the mark and simply find it.
+
+@ trigger=level_up class=rogue
+I crossed that floor and heard nothing of myself. That is the only wage I want.
+My boots have gone quieter. The rest of me will have to keep up.
+I was beside him before the lantern turned. I used to need the dark for that.
+
+@ trigger=level_up class=priest
+I took more of her hurt than I could have held before, and I am still standing.
+There is more room in me for other people's pain. I do not know whether to be glad of it.
+He screamed and I did not have to look away. My hands kept working.
+
+@ trigger=level_up class=death_knight
+The runes bit deeper into the steel this time. The blade drank and asked for more.
+Something in the cold fits the metal better now. It answers when I set my hand to it.
+I carved and the rune held without fighting me. Whatever is left of me is the better smith.
+
+@ trigger=level_up class=shaman
+I had not finished the asking and the wind was already moving.
+The stones answer before the words are out of me. That is a courtesy I have not repaid.
+I spoke to the water and it turned toward me first. We are learning each other's patience.
+
+@ trigger=level_up class=mage
+The proportions came out right the first time. I have been getting that wrong for years.
+The figure closed cleanly, with no wasted lines and no correcting halfway through.
+I held the shape without bracing against it. That is the whole of the difference.
+
+@ trigger=level_up class=warlock
+The bargain has deepened, and so has the interest owed on it.
+More was given to me tonight, and something wrote it down. Nothing here is a gift.
+I felt the debt shift when the power came. I am further in than I was.
+
+@ trigger=level_up class=druid
+The change came faster than I asked for. The fur was on me before I had finished deciding.
+My bones found the other shape without arguing. That used to cost me a breath.
+I did not have to remember how. The shape was waiting nearer the surface than before.
+
+@ trigger=level_up race=tauren
+My grandfather grew this way across seasons. I will not hurry what the herd measures in lifetimes.
+The plains are patient and so am I. What I gained today my sons will pass without noticing.
+
+@ trigger=level_up race=orc
+I can carry more for the Horde than I could at dawn. Give me the load.
+My back takes weight that would have bent me. There is always more waiting to be carried.
+
+@ trigger=level_up race=troll
+Da bones knit faster now. Broke dis arm before de sun was high and it be sound already.
+Wounds close quick on me. Dat be de blood of me people, not any doing of mine.
+
+@ trigger=level_up race=undead
+I changed. I did not think anything about me could still change.
+Something in me grew stronger, and I stand here astonished that anything in me still moves.
+
+@ trigger=level_up race=nightelf
+I was given ten thousand years and spent them slowly. Now I have fewer and I grow faster than I ever did.
+We had ages and I used mine poorly. This borrowed pace suits me better than I care to admit.
+
+@ trigger=level_up race=draenei
+I am stronger, and it gives nothing back of what we left behind.
+Set this against what was taken from us and it is a small coin. I will keep gathering small coins.
+
+@ trigger=level_up race=dwarf
+My father could lift the anvil clean off the block. I am nearer to those arms than I was.
+I am closer to the arms my father had. He would still laugh at me for saying so.
+
+@ trigger=level_up race=gnome
+I want to measure this properly. There must be a way to put a mark on it.
+
+@ trigger=level_up race=bloodelf
+The thirst goes quiet when I am strong. That is the only reason I chase strength.
+
+@ trigger=level_up race=worgen
+Whatever runs under my skin grew with me. I am not certain which of us gained the more.
+
+@ trigger=level_up race=goblin
+If I could put a price on what I just picked up, I would still be asking too little.

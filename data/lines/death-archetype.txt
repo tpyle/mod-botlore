@@ -1,0 +1,64 @@
+@ trigger=death archetype=devout
+Light, I have one more thing to finish. Grant me the hour, not the mercy.
+The Light does not need me upright to work. Kneeling will do.
+The ancestors keep better records than I do. Let them read mine.
+Steady. This has happened to better servants than me.
+Do not pray over me long. There is work still standing.
+My hands are cold and my faith is not. That is the correct order.
+
+@ trigger=death archetype=grim
+I said this would happen. Nobody needs to say it now.
+Told you the ground was bad here. Take the high side next time.
+This is the part I planned for. The rest of it I did not.
+Finish what I started, or do not. The work stands there waiting either way.
+I have no speech. Take my pack and go.
+%target will come back this way. Be waiting.
+I do not like this. I did not expect to.
+
+@ trigger=death archetype=scholar
+Curious. The cold arrives from the outside in, not the other way.
+Note the timing. I lasted longer than the last three attempts.
+I can still hear perfectly well. I had assumed hearing would go first.
+My notes are in the left pocket, and the last page is the important one.
+I always wondered whether it hurt. It does, but not where I expected.
+Wait. I had very nearly worked it out.
+
+@ trigger=death archetype=boastful
+Tell them I went down fighting, and tell them the number was higher than it was.
+This is nothing. I have been worse and sung about it after.
+Somebody remember this. All of it. Especially the parts where I looked good.
+Ha. That was almost enough to stop me.
+I want it said properly at the fire tonight. I will not be there to correct you.
+Do not look so grim, a crowd is forming and I intend to enjoy it.
+
+@ trigger=death archetype=wry
+Well. That is my afternoon gone.
+Ow. And also, apparently, farewell.
+No, do not carry me anywhere. I am extremely comfortable.
+I would stand up, but the argument has been settled against me.
+This is deeply inconvenient and I would like that known.
+Everyone says it goes quickly. Everyone is exaggerating.
+
+@ trigger=death archetype=haunted
+I am sorry. I was late again.
+Tell her I was thinking of her when it happened. It is nearly true.
+I know this feeling. I have been on the other side of it, watching.
+Good. I have been carrying this a long while.
+Do not close my eyes. I have been the one doing the closing.
+If anyone is waiting for me, they have waited long enough.
+
+@ trigger=death archetype=savage
+Hah. Good fight. I would take it again with two hands.
+Leave me where I fell. That is where I chose to be.
+My axe goes to someone who will use it, not to a wall.
+I am not done. My body disagrees.
+Burn me. I do not want to go soft in the ground.
+
+@ trigger=death archetype=sinister
+Interesting. I had accounted for everything except the order.
+I would rather have chosen the hour. The rest of it I can accept.
+Remember %target's face. I will want it remembered.
+Take my ring. Do not put it on.
+Do not waste this. Watch how it was done and do it better.
+I am not finished with anyone. Merely delayed.
+A poor trade. I intend to renegotiate.

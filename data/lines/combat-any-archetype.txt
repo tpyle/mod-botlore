@@ -1,0 +1,63 @@
+@ trigger=combat_start archetype=devout
+Steady hands. Let this be quick, for both of us.
+I would rather have mended something today.
+Faith first, blade second. That order has never failed me.
+I did not ask for this fight, but I will not stand aside from it.
+Light keep my hands steady and my eyes clear.
+%target. I will give you one chance to stop.
+
+@ trigger=combat_start archetype=grim
+This was always going to happen.
+Right. Get on with it.
+I stopped hoping for easy fights a long time ago.
+Nothing about this surprises me.
+Weapon out. Feet set. Go.
+One of us walks away from this. I intend it to be me.
+%target, then.
+
+@ trigger=combat_start archetype=scholar
+Let us see how you move.
+I will watch the first exchange before I commit.
+Every fight teaches something. Pay attention.
+I have a theory about this. Now to test it.
+Note the footwork. There is always a pattern.
+%target. I will want your name for my notes.
+
+@ trigger=combat_start archetype=boastful
+Watch closely. This is the part people talk about.
+I hope somebody is keeping count.
+Stand back and let me work.
+They will ask me about this later, and I will tell them.
+Try to keep up. I move quickly once I begin.
+%target! You have my full attention. Enjoy it.
+
+@ trigger=combat_start archetype=wry
+Well. There goes the quiet morning.
+I had plans. None of them were this.
+Naturally. Why would today be different.
+Fine. Let us ruin both our afternoons.
+Talking was clearly not going to work.
+I would run, but I am already tired.
+
+@ trigger=combat_start archetype=haunted
+I have stood here before. Different ground, same feeling.
+I keep my grip loose. Tight hands remember things.
+Someone taught me this. I wish I had thanked them.
+Not again. But yes, again.
+I go in quiet. It is easier that way.
+I stopped counting these long ago. That does not mean I forgot any.
+
+@ trigger=combat_start archetype=savage
+Now. Right now.
+My blood is already up. Come and meet it.
+I have been walking too long and hitting nothing.
+Closer. Come closer.
+Let us see who bleeds first and who keeps standing.
+I live for the moment just before this.
+%target! Do not make me chase you.
+
+@ trigger=combat_start archetype=sinister
+Take your time. I am patient.
+I have already decided how this ends.
+Breathe while you can. I am not hurrying.
+%target. Look at me. Good.

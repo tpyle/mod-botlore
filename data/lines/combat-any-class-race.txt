@@ -1,0 +1,93 @@
+@ trigger=combat_start class=warrior
+Step aside if you like. I am going forward.
+I close the distance first. Everything after that is simple.
+%target will not have to look for me. I am coming to the front of this.
+
+@ trigger=combat_start class=paladin
+I will stand between this and everyone behind me.
+%target comes through me or it does not come at all.
+I take the first blow on purpose. It is the part of this I am surest of.
+
+@ trigger=combat_start class=hunter
+I have the range already. Now I want more of it.
+I would rather keep %target at the far end of this field than the near one.
+Every step toward me costs something. Let the counting begin.
+
+@ trigger=combat_start class=rogue
+The front of a fight is the loudest place to stand. I am taking the other side.
+There is always one angle nobody is watching. I am already in it.
+%target is facing the wrong part of this. I intend to keep it that way.
+
+@ trigger=combat_start class=priest
+I am watching who takes the hits. Nothing goes unmended while I stand here.
+Someone is about to be hurt. I mean to make it brief.
+I will keep the count of every wound, and I will undo them in order.
+
+@ trigger=combat_start class=death_knight
+The runes are awake. They do not much care which way I point them.
+Cold is moving through my blade again. It has been waiting a while.
+The runes stir without asking me now. I only choose the direction.
+
+@ trigger=combat_start class=shaman
+Winds, lend me your weight. I ask, as I always ask.
+I do not command the earth. I request, and it has been generous with me.
+Spirits, stand near me a while. I would not trouble you for nothing.
+
+@ trigger=combat_start class=mage
+Three seconds. Three seconds is all I ever have to buy myself.
+A little distance and a little time. I will make both of them out of nothing.
+Let the air go cold first. Then I begin properly.
+
+@ trigger=combat_start class=warlock
+Go on ahead of me. I will follow once the way is busy.
+Something of mine goes first. I have never seen a reason to change that order.
+I have never been the first thing struck in a fight, and I will not start now.
+
+@ trigger=combat_start class=druid
+I will not meet this as a man. Something else of mine will.
+Bone and fur, now. The talking part is finished.
+I change what I am, and then all of this gets simpler.
+
+@ trigger=combat_start race=human
+I was drilled for this until it stopped being a choice. The drills hold.
+
+@ trigger=combat_start race=orc
+You stand against me, so you are my foe. That is the whole of it.
+Blood and thunder. Meet me honestly and I will give you the same.
+
+@ trigger=combat_start race=dwarf
+My feet are planted. Move me if you are able.
+I will not give ground. That is the entire plan and it has served me well.
+
+@ trigger=combat_start race=nightelf
+I have been doing this longer than I care to count. It does not get harder.
+Centuries of this. The motions are old friends by now.
+
+@ trigger=combat_start race=undead
+I have nothing left to lose and I know it. That makes me very hard to stop.
+Death and I are already acquainted. You bring me nothing new.
+
+@ trigger=combat_start race=tauren
+I regret this. I will see it through regardless.
+There is no joy in this for me. Only necessity, and I answer to it.
+
+@ trigger=combat_start race=gnome
+I worked out the angles before I drew. Now I only have to be right.
+
+@ trigger=combat_start race=troll
+Dis be no trouble. I be loose an ready, mon.
+I not be worried. I never be worried, an dat never change.
+
+@ trigger=combat_start race=goblin
+Let me tally this properly. Whatever it costs me, I still intend to profit.
+Time is money, and this is already running me into the red.
+
+@ trigger=combat_start race=bloodelf
+Precision first. I have no interest whatsoever in doing this twice.
+I will do this exactly, and exactly once.
+
+@ trigger=combat_start race=draenei
+I was set here to serve. So I serve, and I do not ask for better terms.
+
+@ trigger=combat_start race=worgen
+Short leash on the beast. Short, but not sleeping.

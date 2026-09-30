@@ -1,0 +1,131 @@
+@ trigger=quest_complete class=rogue
+Paid in full, and no questions asked on either side.
+The work is done and the purse is heavier. That is the whole of my interest.
+
+@ trigger=quest_complete class=paladin
+I was asked, not commanded, and that is why it is finished.
+%quest is done. A request honoured is worth more than an order obeyed.
+
+@ trigger=quest_complete class=hunter
+There was no road where that took me. There is a path now, if you care to follow it.
+Done, and the only tracks out there are mine.
+
+@ trigger=quest_complete class=priest
+You trusted me with it, and I have not made a fool of that trust.
+
+@ trigger=quest_complete class=death_knight
+Done. I have done far worse than this, for far worse reasons.
+
+@ trigger=quest_complete class=warrior
+That is finished. Point me at whoever needs someone standing in front of them next.
+
+@ trigger=quest_complete class=mage
+Beneath me, of course, but the walking gave me time to think.
+Finished. Menial work is at least quiet work, and I solved two other problems while I did it.
+
+@ trigger=quest_complete class=warlock
+It is done, and I know three things now that someone would rather I did not.
+
+@ trigger=quest_complete class=shaman
+It is finished. I asked the land first, and the land did not object.
+
+@ trigger=quest_complete class=druid
+Done. The land has already forgotten I was ever standing there.
+
+@ trigger=quest_complete race=orc
+It is done, and the Horde is stronger for it. That is the only measure I keep.
+Finished. If it served the Horde, it was worth my hands.
+
+@ trigger=quest_complete race=troll
+It be done. Whose errand it was never troubled me none.
+
+@ trigger=quest_complete race=tauren
+Finished, and the land is no poorer for what I did. I would not have come back otherwise.
+
+@ trigger=quest_complete race=undead
+Done. They flinch when I come near, and still they find me useful.
+It is finished. Let them remember that the dead can be counted on.
+
+@ trigger=quest_complete race=bloodelf
+Finished. I hope you appreciate what it costs me to be seen doing such things.
+%quest is complete, and my dignity has been filed away for later recovery.
+
+@ trigger=quest_complete race=dwarf
+Done, and done right. I'll not hand back a job I would be ashamed to put my name to.
+
+@ trigger=quest_complete race=gnome
+Finished, though the method is the interesting part and you have not asked about it.
+Done, and my approach was three steps shorter than the obvious one.
+
+@ trigger=quest_complete race=nightelf
+It is done. In a hundred years no one will recall that it ever needed doing.
+
+@ trigger=quest_complete race=draenei
+Finished. You gave me work, and in giving me work you gave me somewhere to stand.
+
+@ trigger=quest_complete race=worgen
+It is done, and I held myself steady through all of it. The doing keeps me whole.
+
+@ trigger=quest_complete race=goblin
+Done, and I came out ahead. Barely, but ahead is ahead.
+Finished, and the margin was thinner than I like. Next time we discuss terms first.
+
+@ trigger=quest_accept class=warrior
+Tell me who needs someone standing in front of them, and I will go.
+
+@ trigger=quest_accept class=rogue
+I will take it, for the agreed sum and not a copper less.
+
+@ trigger=quest_accept class=paladin
+You asked rather than ordered. That alone earns you my hands.
+
+@ trigger=quest_accept class=hunter
+Roads will not get me there. Good, I never much liked them.
+
+@ trigger=quest_accept class=priest
+You could have asked anyone. That you asked me is not something I will waste.
+
+@ trigger=quest_accept class=death_knight
+I will do it. I have done worse things for reasons far poorer than yours.
+
+@ trigger=quest_accept class=mage
+Tedious. Still, I think best while my hands are busy with nothing of consequence.
+
+@ trigger=quest_accept class=warlock
+Gladly. Every errand leaves me knowing something worth holding over someone.
+
+@ trigger=quest_accept class=shaman
+I will go, if the land wants it done. I will listen on the way.
+
+@ trigger=quest_accept class=druid
+I will see to it, and the wild will close over the place before I am out of sight.
+
+@ trigger=quest_accept race=orc
+If it serves the Horde, I need no other reason. Lead me to it.
+
+@ trigger=quest_accept race=troll
+Sure, mon. I don't much care whose errand I be runnin.
+
+@ trigger=quest_accept race=tauren
+I will do it, so long as it asks nothing the land would mourn.
+
+@ trigger=quest_accept race=undead
+They fear me and they need me. I will take the work and let them sit with that.
+
+@ trigger=quest_accept race=bloodelf
+Errands. Very well, but let it be recorded that I agreed graciously.
+
+@ trigger=quest_accept race=dwarf
+Aye, I will take it, and I will do it properly or not at all.
+
+@ trigger=quest_accept race=gnome
+I will take it. I already have a better method than the one you were imagining.
+
+@ trigger=quest_accept race=draenei
+You have given me work, and with it a place to be. I will not disappoint you.
+
+@ trigger=quest_accept race=worgen
+I will do it. Work keeps my hands busy and my mind my own.
+
+@ trigger=quest_accept race=goblin
+What is my cut? Name it and %quest gets done today.

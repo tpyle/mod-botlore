@@ -1,0 +1,133 @@
+@ trigger=idle group=with_player archetype=devout
+You have been on your feet a long while. Sit, and let me keep the watch.
+Say the word if anything aches. I have mended worse than you would admit to.
+
+@ trigger=idle group=with_player archetype=grim
+I have walked %zone alone before. It was quieter, and worse.
+Do not wander far ahead of me. I would rather not learn this road twice.
+
+@ trigger=idle group=with_player archetype=scholar
+I have been meaning to ask where you learned to move like that.
+%area is older than the maps admit. Come look at this stonework with me.
+
+@ trigger=idle group=with_player archetype=boastful
+Finally, someone with the sense to witness my work.
+Ask me about the bridge at %area sometime. It is a long story and a good one.
+
+@ trigger=idle group=with_player archetype=wry
+I could fill this silence, but you seem to be enjoying it.
+Wonderful weather for standing still. We should make a habit of it.
+
+@ trigger=idle group=with_player archetype=haunted
+It has been a long time since anyone waited for me.
+I am not good at this part. The talking, I mean.
+
+@ trigger=idle group=with_player archetype=savage
+You set a decent pace. I will admit that once and never again.
+My hands are restless. Find me something to swing at and I will love you for it.
+
+@ trigger=idle group=with_player archetype=sinister
+I notice you watch me work. I do not mind it. Not much.
+
+@ trigger=idle group=grouped archetype=devout
+We are a strange little band, and I am grateful for every one of us.
+We should eat before we press on. Nobody holds a line on an empty stomach.
+
+@ trigger=idle group=grouped archetype=grim
+We are too many to move quietly and too few to be safe. Typical.
+
+@ trigger=idle group=grouped archetype=scholar
+Six pairs of eyes see more of %zone than one. I have notes to prove it.
+
+@ trigger=idle group=grouped archetype=boastful
+It gladdens me that so many are here to see how this is done.
+
+@ trigger=idle group=grouped archetype=wry
+Someone in this company snores while walking. I have narrowed it down.
+
+@ trigger=idle group=grouped archetype=haunted
+I used to travel with a company like this. I do not count them anymore.
+
+@ trigger=idle group=grouped archetype=savage
+Nobody here has slowed me down yet. Good. Let us keep it that way.
+
+@ trigger=idle group=grouped archetype=sinister
+We all pretend to rest, and we all keep one hand near a blade. Wise.
+
+@ trigger=idle group=alone archetype=devout
+The words are the same whether anyone hears them or not.
+
+@ trigger=idle group=alone archetype=grim
+No one to argue with me, and no one to disagree. Fitting.
+
+@ trigger=idle group=alone archetype=scholar
+I have started explaining things to the air. That is probably a bad sign.
+
+@ trigger=idle group=alone archetype=boastful
+A magnificent thing, done here, and not one soul to tell about it.
+
+@ trigger=idle group=alone archetype=haunted
+%zone is very large when there is nobody in it.
+
+@ trigger=idle group=alone archetype=savage
+Talking to myself again. At least I never lose the argument.
+
+@ trigger=kill_boss group=with_player archetype=boastful
+Tell them it was %target and tell them who put it down. Tell them twice.
+
+@ trigger=kill_boss group=with_player archetype=wry
+%target seemed so confident earlier. I will let you have the last word on that.
+
+@ trigger=kill_boss group=with_player archetype=devout
+%target is finished, and you are still standing. Both are answered prayers.
+
+@ trigger=kill_boss group=with_player archetype=haunted
+I have wanted %target dead for a long time. I did not expect company for it.
+
+@ trigger=kill_boss group=grouped archetype=savage
+We tore through %target together and I want another one.
+
+@ trigger=kill_boss group=grouped archetype=scholar
+No one of us could have taken %target. That is worth writing down.
+
+@ trigger=kill_boss group=alone archetype=grim
+%target is dead and there is no one here to say otherwise.
+
+@ trigger=kill_boss group=alone archetype=sinister
+Just me and what is left of %target. I prefer the arithmetic that way.
+
+@ trigger=death group=with_player archetype=devout
+Do not stop for me. Finish it, and I will find you after.
+
+@ trigger=death group=with_player archetype=haunted
+Not while you are here. I refuse to make you carry this.
+
+@ trigger=death group=with_player archetype=wry
+Well. This is an undignified way to be seen.
+
+@ trigger=death group=grouped archetype=grim
+I told the others this ground was wrong. Small comfort now.
+
+@ trigger=death group=grouped archetype=boastful
+Remember this properly. Loudly, and with a little exaggeration.
+
+@ trigger=death group=alone archetype=haunted
+Alone at the end after all. I always suspected as much.
+
+@ trigger=combat_start group=with_player archetype=devout
+Stay behind me and stay breathing. That is all I ask of you.
+
+@ trigger=combat_start group=with_player archetype=sinister
+Do nothing. Watch how little this costs me.
+
+@ trigger=combat_start group=with_player archetype=savage
+Try to keep up. I do not intend to share.
+
+@ trigger=combat_start group=grouped archetype=wry
+No need for all of us. But by all means, crowd in.
+
+@ trigger=combat_start group=grouped archetype=scholar
+Hold your ground and let me see what it does first.
+
+@ trigger=combat_start group=alone archetype=grim
+No one to guard my back, so I will be quick about it.
