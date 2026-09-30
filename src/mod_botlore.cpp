@@ -219,11 +219,25 @@ namespace
         uint32      itemId = 0;
         int32       itemClass = -1;
         int32       itemSubClass = -1;
+        int32       creatureRank = -1;
+        uint8       itemQuality = 0;
         uint32      personality = 0;
         std::string target;
         std::string quest;
         std::string item;
     };
+
+    // The rank of the creature on the other side of a trigger, or -1 when
+    // there is no creature (the other party was a player, or the trigger has
+    // nothing to do with a fight).
+    int32 RankOf(Creature const* creature)
+    {
+        if (!creature)
+            return -1;
+
+        CreatureTemplate const* info = creature->GetCreatureTemplate();
+        return info ? int32(info->rank) : -1;
+    }
 
     void LoadConfig()
     {
@@ -264,12 +278,15 @@ namespace
         QueryResult result = WorldDatabase.Query(
             "SELECT `Trigger`, ZoneId, AreaId, CreatureEntry, RaceMask, ClassMask, TeamId, "
             "MinLevel, MaxLevel, Channel, Weight, Text, Id, PersonalityMask, QuestId, ItemId, "
-            "ItemClass, ItemSubClass, Gender, SpecMask FROM bot_lore_text");
+            "ItemClass, ItemSubClass, Gender, SpecMask, CreatureRank, MinQuality, MaxQuality, "
+            "GroupState FROM bot_lore_text");
 
         if (!result)
         {
             LOG_WARN("module", "mod-botlore: table `bot_lore_text` is missing or empty, bots will stay quiet. "
-                               "Apply sql/13_bot_lore.sql.");
+                               "The module ships the table and its lines in "
+                               "data/sql/db-world/base/botlore_lore_text.sql, which the core's database "
+                               "updater applies at startup - check the `updates` table and Errors.log.");
             return 0;
         }
 
@@ -317,6 +334,17 @@ namespace
             line.itemSubClass  = fields[17].Get<int32>();
             line.gender        = fields[18].Get<int8>();
             line.specMask      = fields[19].Get<uint32>();
+            line.creatureRank  = fields[20].Get<int32>();
+            line.minQuality    = fields[21].Get<uint8>();
+            line.maxQuality    = fields[22].Get<uint8>();
+            line.groupState    = fields[23].Get<uint8>();
+
+            if (line.groupState > BotLoreSelection::GROUP_WITH_PLAYER)
+            {
+                LOG_ERROR("sql.sql", "mod-botlore: `bot_lore_text` row for trigger '{}' has unknown GroupState {}, ignoring it.",
+                    trigger, line.groupState);
+                line.groupState = BotLoreSelection::GROUP_ANY;
+            }
 
             if (line.channel > CHANNEL_GUILD)
             {
@@ -386,7 +414,26 @@ namespace
         return who;
     }
 
-    BotLoreSelection::Context SelectionContext(LoreContext const& context)
+    // Whether the bot's group holds a real player. Walked here rather than in
+    // ContextFor because ContextFor runs on every trigger for every bot,
+    // whereas this is only reached once a line is actually being chosen -
+    // after the earshot, cooldown and chance gates.
+    bool GroupHasRealPlayer(Player* bot, Group* group)
+    {
+        for (GroupReference const* ref = group->GetFirstMember(); ref; ref = ref->next())
+        {
+            Player* member = ref->GetSource();
+            if (!member || member == bot)
+                continue;
+
+            if (listeners.count(member->GetGUID()))
+                return true;
+        }
+
+        return false;
+    }
+
+    BotLoreSelection::Context SelectionContext(Player* bot, LoreContext const& context)
     {
         BotLoreSelection::Context ctx;
         ctx.zoneId        = context.zoneId;
@@ -397,6 +444,14 @@ namespace
         ctx.personality   = context.personality;
         ctx.itemClass     = context.itemClass;
         ctx.itemSubClass  = context.itemSubClass;
+        ctx.creatureRank  = context.creatureRank;
+        ctx.itemQuality   = context.itemQuality;
+
+        if (Group* group = bot->GetGroup())
+        {
+            ctx.inGroup = true;
+            ctx.groupHasRealPlayer = GroupHasRealPlayer(bot, group);
+        }
 
         return ctx;
     }
@@ -419,7 +474,7 @@ namespace
         // stays in the draw, which is what keeps a long session from
         // repeating.
         BotLoreSelection::Speaker const who = SpeakerFor(bot);
-        BotLoreSelection::Context const ctx = SelectionContext(context);
+        BotLoreSelection::Context const ctx = SelectionContext(bot, context);
 
         std::vector<LoreLine const*> candidates;
         std::vector<uint32> weights;
@@ -733,6 +788,7 @@ public:
 
         LoreContext context = ContextFor(killer);
         context.creatureEntry = killed->GetEntry();
+        context.creatureRank = RankOf(killed);
         context.target = killed->GetName();
         Speak(killer, notable ? TRIGGER_KILL_BOSS : TRIGGER_KILL, context);
     }
@@ -746,6 +802,7 @@ public:
         if (killer)
         {
             context.creatureEntry = killer->GetEntry();
+            context.creatureRank = RankOf(killer);
             context.target = killer->GetName();
         }
 
@@ -774,6 +831,7 @@ public:
         context.itemId = proto->ItemId;
         context.itemClass = int32(proto->Class);
         context.itemSubClass = int32(proto->SubClass);
+        context.itemQuality = uint8(proto->Quality);
         Speak(player, TRIGGER_LOOT_RARE, context);
     }
 
@@ -784,7 +842,20 @@ public:
 
         LoreContext context = ContextFor(player);
         if (enemy)
+        {
             context.target = enemy->GetName();
+
+            // The enemy arrives as a Unit because it can be another player.
+            // When it is a creature, carry its identity too, so a combat line
+            // can be written for one named creature or for elites in general
+            // the same way a kill line can. Against a player both stay unset
+            // and only the name substitutes.
+            if (Creature const* creature = enemy->ToCreature())
+            {
+                context.creatureEntry = creature->GetEntry();
+                context.creatureRank = RankOf(creature);
+            }
+        }
 
         Speak(player, TRIGGER_COMBAT_START, context);
     }
@@ -871,8 +942,9 @@ public:
             handler->PSendSysMessage("{} ({} lines):", trigger, uint32(entries.size()));
             for (LoreLine const& line : entries)
             {
-                handler->PSendSysMessage("  zone {} area {} creature {} team {} level {}-{} ch {} w{}: {}",
-                    line.zoneId, line.areaId, line.creatureEntry, line.teamId,
+                handler->PSendSysMessage("  zone {} area {} creature {} rank {} quality {}-{} group {} team {} level {}-{} ch {} w{}: {}",
+                    line.zoneId, line.areaId, line.creatureEntry, line.creatureRank,
+                    line.minQuality, line.maxQuality, line.groupState, line.teamId,
                     line.minLevel, line.maxLevel, line.channel, line.weight, line.text);
                 ++shown;
             }

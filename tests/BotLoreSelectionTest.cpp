@@ -1,7 +1,7 @@
 /*
  * Tests for mod-botlore's selection rules (src/BotLoreSelection.h).
  *
- * The corpus is ~12,000 lines across fifteen filter columns. A filter that
+ * The corpus is ~12,000 lines across nineteen filter columns. A filter that
  * matches when it should not is invisible in play - a night elf saying a
  * dwarf's line reads as flavour, not as a bug - so these are the rules worth
  * pinning down.
@@ -27,6 +27,10 @@ namespace
         who.specTree  = 1;
         return who;
     }
+
+    // CreatureTemplate::rank for an elite. Spelled out here so the tests do
+    // not depend on the core's enum, which this header deliberately cannot see.
+    constexpr std::int32_t RANK_ELITE_FOR_TEST = 1;
 
     Context InDuskwood()
     {
@@ -204,6 +208,193 @@ TEST(BotLoreSpecificity, Accumulates)
     f.questId = 26;       // 3
     f.gender = 0;         // 1
     EXPECT_EQ(Specificity(f), 7u);
+}
+
+// ------------------------------------------------------------ creature rank
+
+TEST(BotLoreMatches, NoRankRequirementMatchesAnything)
+{
+    Context ctx = InDuskwood();
+    ctx.creatureRank = 3;                  // world boss
+    EXPECT_TRUE(Matches(Filter{}, Bot(), ctx));
+
+    ctx.creatureRank = -1;                 // no creature at all
+    EXPECT_TRUE(Matches(Filter{}, Bot(), ctx));
+}
+
+TEST(BotLoreMatches, ARankLineNeedsThatRank)
+{
+    Filter f;
+    f.creatureRank = RANK_ELITE_FOR_TEST;
+
+    Context elite = InDuskwood();
+    elite.creatureRank = RANK_ELITE_FOR_TEST;
+    EXPECT_TRUE(Matches(f, Bot(), elite));
+
+    Context trash = InDuskwood();
+    trash.creatureRank = 0;
+    EXPECT_FALSE(Matches(f, Bot(), trash));
+}
+
+// Rank 0 is a real rank - an ordinary creature - so it cannot double as the
+// wildcard the masks use. A line asking for rank 0 must not fire on an elite,
+// and must not fire when there is no creature at all.
+TEST(BotLoreMatches, RankZeroIsOrdinaryNotWildcard)
+{
+    Filter f;
+    f.creatureRank = 0;
+
+    Context trash = InDuskwood();
+    trash.creatureRank = 0;
+    EXPECT_TRUE(Matches(f, Bot(), trash));
+
+    Context elite = InDuskwood();
+    elite.creatureRank = RANK_ELITE_FOR_TEST;
+    EXPECT_FALSE(Matches(f, Bot(), elite));
+
+    Context none = InDuskwood();           // creatureRank stays -1
+    EXPECT_FALSE(Matches(f, Bot(), none));
+}
+
+// ----------------------------------------------------------- item quality
+
+TEST(BotLoreMatches, NoQualityBoundsMatchAnyItem)
+{
+    Context ctx = InDuskwood();
+    ctx.itemQuality = 4;
+    EXPECT_TRUE(Matches(Filter{}, Bot(), ctx));
+}
+
+TEST(BotLoreMatches, MinQualityExcludesLesserItems)
+{
+    Filter epicOnly;
+    epicOnly.minQuality = 4;
+
+    Context epic = InDuskwood();
+    epic.itemQuality = 4;
+    EXPECT_TRUE(Matches(epicOnly, Bot(), epic));
+
+    // Legendary is better than epic, so an epic-or-better line still fires.
+    Context legendary = InDuskwood();
+    legendary.itemQuality = 5;
+    EXPECT_TRUE(Matches(epicOnly, Bot(), legendary));
+
+    Context rare = InDuskwood();
+    rare.itemQuality = 3;
+    EXPECT_FALSE(Matches(epicOnly, Bot(), rare));
+}
+
+TEST(BotLoreMatches, MaxQualityKeepsARareLineOffEpics)
+{
+    Filter rareOnly;
+    rareOnly.minQuality = 3;
+    rareOnly.maxQuality = 3;
+
+    Context rare = InDuskwood();
+    rare.itemQuality = 3;
+    EXPECT_TRUE(Matches(rareOnly, Bot(), rare));
+
+    Context epic = InDuskwood();
+    epic.itemQuality = 4;
+    EXPECT_FALSE(Matches(rareOnly, Bot(), epic));
+}
+
+// A quality bound on a trigger that has no item (a kill, a zone change) must
+// not match, rather than matching everything: itemQuality is 0 there.
+TEST(BotLoreMatches, AQualityLineDoesNotFireWithoutAnItem)
+{
+    Filter f;
+    f.minQuality = 2;
+    EXPECT_FALSE(Matches(f, Bot(), InDuskwood()));
+}
+
+// ------------------------------------------------------------- group state
+
+TEST(BotLoreMatches, GroupAnyMatchesAloneAndGrouped)
+{
+    Context alone = InDuskwood();
+    EXPECT_TRUE(Matches(Filter{}, Bot(), alone));
+
+    Context grouped = InDuskwood();
+    grouped.inGroup = true;
+    EXPECT_TRUE(Matches(Filter{}, Bot(), grouped));
+}
+
+TEST(BotLoreMatches, AnAloneLineNeedsNoGroup)
+{
+    Filter f;
+    f.groupState = GROUP_ALONE;
+
+    EXPECT_TRUE(Matches(f, Bot(), InDuskwood()));
+
+    Context grouped = InDuskwood();
+    grouped.inGroup = true;
+    EXPECT_FALSE(Matches(f, Bot(), grouped));
+}
+
+TEST(BotLoreMatches, AGroupedLineNeedsAGroupOfAnyKind)
+{
+    Filter f;
+    f.groupState = GROUP_GROUPED;
+
+    Context withBots = InDuskwood();
+    withBots.inGroup = true;
+    EXPECT_TRUE(Matches(f, Bot(), withBots));
+
+    EXPECT_FALSE(Matches(f, Bot(), InDuskwood()));
+}
+
+// "Stay close to me" is only worth saying where a person will read it, so the
+// strictest group line needs a real player in the group, not just other bots.
+TEST(BotLoreMatches, AWithPlayerLineNeedsARealPlayerInTheGroup)
+{
+    Filter f;
+    f.groupState = GROUP_WITH_PLAYER;
+
+    Context withPlayer = InDuskwood();
+    withPlayer.inGroup = true;
+    withPlayer.groupHasRealPlayer = true;
+    EXPECT_TRUE(Matches(f, Bot(), withPlayer));
+
+    Context botsOnly = InDuskwood();
+    botsOnly.inGroup = true;
+    EXPECT_FALSE(Matches(f, Bot(), botsOnly));
+
+    EXPECT_FALSE(Matches(f, Bot(), InDuskwood()));
+}
+
+// ---------------------------------------------------- specificity additions
+
+TEST(BotLoreSpecificity, TheNewFiltersEachCountOne)
+{
+    Filter rank;
+    rank.creatureRank = RANK_ELITE_FOR_TEST;
+    EXPECT_EQ(Specificity(rank), 1u);
+
+    Filter quality;
+    quality.minQuality = 4;
+    EXPECT_EQ(Specificity(quality), 1u);
+
+    // Both ends of the quality range are one filter, not two.
+    quality.maxQuality = 4;
+    EXPECT_EQ(Specificity(quality), 1u);
+
+    Filter group;
+    group.groupState = GROUP_WITH_PLAYER;
+    EXPECT_EQ(Specificity(group), 1u);
+}
+
+// A named creature must stay more specific than its rank, so a Hogger line
+// outweighs a generic elite line when Hogger is the one who died.
+TEST(BotLoreSpecificity, ANamedCreatureOutweighsItsRank)
+{
+    Filter named;
+    named.creatureEntry = 448;             // Hogger
+
+    Filter anyElite;
+    anyElite.creatureRank = RANK_ELITE_FOR_TEST;
+
+    EXPECT_GT(Specificity(named), Specificity(anyElite));
 }
 
 // -------------------------------------------------------------------- Weight

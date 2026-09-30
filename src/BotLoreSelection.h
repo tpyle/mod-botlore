@@ -29,6 +29,17 @@ namespace BotLoreSelection
     using u32 = std::uint32_t;
     using i32 = std::int32_t;
 
+    // Who the bot has for company. A line can ask for one of these, because
+    // "stay close to me" and "watch my left" only make sense said to someone,
+    // and a bot talking to an empty field reads as broken.
+    enum GroupState : u8
+    {
+        GROUP_ANY          = 0,   // no requirement
+        GROUP_ALONE        = 1,   // not in a group at all
+        GROUP_GROUPED      = 2,   // in a group, whoever is in it
+        GROUP_WITH_PLAYER  = 3,   // in a group that holds at least one real player
+    };
+
     // The filter columns of one bot_lore_text row. Zero (or -1 for the signed
     // ones) always means "any", so a generic line is a row of defaults.
     struct Filter
@@ -48,6 +59,21 @@ namespace BotLoreSelection
         i8  teamId          = -1;
         u8  minLevel        = 0;
         u8  maxLevel        = 0;
+
+        // Creature rank, for a line about elites in general rather than one
+        // named creature: 0 normal, 1 elite, 2 rare elite, 3 world boss,
+        // 4 rare. -1 is "any", because 0 is a real rank and cannot double as
+        // the wildcard the way the masks do.
+        i32 creatureRank    = -1;
+
+        // Item quality, as a range like minLevel/maxLevel: 2 uncommon,
+        // 3 rare, 4 epic, 5 legendary. 0 means no bound at that end, so an
+        // epic-only line is minQuality 4 and a line that must not fire on
+        // epics is maxQuality 3.
+        u8  minQuality      = 0;
+        u8  maxQuality      = 0;
+
+        u8  groupState      = GROUP_ANY;
     };
 
     // The bot itself.
@@ -70,14 +96,24 @@ namespace BotLoreSelection
     // What is happening, and to whom.
     struct Context
     {
-        u32 zoneId        = 0;
-        u32 areaId        = 0;
-        u32 creatureEntry = 0;
-        u32 questId       = 0;
-        u32 itemId        = 0;
-        u32 personality   = 0;
-        i32 itemClass     = -1;
-        i32 itemSubClass  = -1;
+        u32  zoneId        = 0;
+        u32  areaId        = 0;
+        u32  creatureEntry = 0;
+        u32  questId       = 0;
+        u32  itemId        = 0;
+        u32  personality   = 0;
+        i32  itemClass     = -1;
+        i32  itemSubClass  = -1;
+
+        // -1 when there is no creature involved, or when the other party is a
+        // player rather than a creature.
+        i32  creatureRank  = -1;
+
+        // 0 when no item is involved.
+        u8   itemQuality   = 0;
+
+        bool inGroup           = false;
+        bool groupHasRealPlayer = false;
     };
 
     // How specific a line is. Used to weight the draw, not to filter it.
@@ -105,6 +141,15 @@ namespace BotLoreSelection
         if (f.classMask)
             score += 1;
         if (f.personalityMask)
+            score += 1;
+        // Worth less than a named creature or a named item, which stay the
+        // most specific things a line can ask for, but more than a zone: a
+        // line written for elites should beat a line written for a continent.
+        if (f.creatureRank >= 0)
+            score += 1;
+        if (f.minQuality || f.maxQuality)
+            score += 1;
+        if (f.groupState != GROUP_ANY)
             score += 1;
         return score;
     }
@@ -146,6 +191,31 @@ namespace BotLoreSelection
             return false;
         if (f.maxLevel && who.level > f.maxLevel)
             return false;
+        if (f.creatureRank >= 0 && f.creatureRank != ctx.creatureRank)
+            return false;
+        if (f.minQuality && ctx.itemQuality < f.minQuality)
+            return false;
+        if (f.maxQuality && ctx.itemQuality > f.maxQuality)
+            return false;
+
+        switch (f.groupState)
+        {
+            case GROUP_ALONE:
+                if (ctx.inGroup)
+                    return false;
+                break;
+            case GROUP_GROUPED:
+                if (!ctx.inGroup)
+                    return false;
+                break;
+            case GROUP_WITH_PLAYER:
+                if (!ctx.inGroup || !ctx.groupHasRealPlayer)
+                    return false;
+                break;
+            case GROUP_ANY:
+            default:
+                break;
+        }
 
         return true;
     }

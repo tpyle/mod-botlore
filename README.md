@@ -38,14 +38,37 @@ restart, apply the regenerated file by hand and run `.botlore reload`.
 ## The table
 
 `bot_lore_text` in the world database: a trigger name, the line, and filter
-columns that are all "any" when left at 0 - zone, area, creature entry, race
-mask, class mask, team, level range, item class/subclass, gender, spec mask.
-A specific match suppresses generic candidates, so hand-written Duskwood
-lines actually show up in Duskwood. Placeholders `%zone`, `%area`, `%target`,
-`%quest`, `%item`, `%level`, `%name` are substituted at emit time.
+columns that are all "any" when left at their default - zone, area, creature
+entry, creature rank, race mask, class mask, team, level range, item quality
+range, item class/subclass, gender, spec mask, group state. A more specific
+line outweighs a generic one rather than suppressing it, so hand-written
+Duskwood lines show up in Duskwood without the rest of the corpus going
+unheard. Placeholders `%zone`, `%area`, `%target`, `%quest`, `%item`, `%name`
+are substituted at emit time.
 
 Triggers: `zone_enter`, `quest_accept`, `quest_complete`, `kill`,
 `kill_boss`, `death`, `level_up`, `loot_rare`, `combat_start`, `idle`.
+
+Three of the filters are about *how notable* the thing is rather than which
+thing it is, which is what lets one line cover every elite instead of naming
+each one:
+
+* `CreatureRank` - `-1` any, then `CreatureTemplate::rank`: 0 ordinary,
+  1 elite, 2 rare elite, 3 world boss, 4 rare. `-1` rather than 0 is the
+  wildcard because 0 is a real rank. Set on `kill`, `kill_boss`, `death` and
+  `combat_start`; left at `-1` when the other party is a player.
+* `MinQuality` / `MaxQuality` - an item quality range in the style of
+  `MinLevel`/`MaxLevel`, where 0 at either end means no bound: 2 uncommon,
+  3 rare, 4 epic, 5 legendary. An epic-only line is `MinQuality` 4; a rare
+  line that must not fire on epics is 3 and 3.
+* `GroupState` - 0 any, 1 alone, 2 in a group, 3 in a group holding a real
+  player. The last exists because lines like "stay close to me" and "watch my
+  left" need somebody there to hear them, and a group of nothing but bots is
+  not somebody.
+
+`%level` is deliberately absent from the corpus. A character who announces a
+number is describing a game statistic; one who notices their hands are
+steadier than yesterday is not.
 
 ## Keeping it quiet
 

@@ -17,9 +17,15 @@ specific line that matches, so a Duskwood line beats a generic one in Duskwood
 and a Hogger line beats both when Hogger dies.
 
 Placeholders substituted at speak time: %zone %area %target %quest %item
-%level %name. Text must stay under 255 characters and must not contain a
-vertical bar (the direct Player::Say path skips the hyperlink validation the
-chat opcode would have done).
+%name. Text must stay under 255 characters and must not contain a vertical bar
+(the direct Player::Say path skips the hyperlink validation the chat opcode
+would have done).
+
+There is deliberately no %level. A character who announces a number is
+describing a game statistic, which breaks the fiction the corpus exists to
+support; one who notices their hands are steadier than yesterday does not. The
+module still substitutes the token if it ever meets one, but line() refuses it,
+so it cannot come back by accident.
 """
 
 import os
@@ -47,6 +53,20 @@ CLASS_NAMES = {
 # --------------------------------------------------------------------- channels
 SAY, EMOTE, PARTY, GUILD = 0, 1, 2, 3
 
+# ------------------------------------------------------------- creature ranks
+# CreatureTemplate::rank. -1 is "any"; 0 is a real rank so it cannot be the
+# wildcard the way the masks are.
+RANK_ANY, RANK_NORMAL, RANK_ELITE, RANK_RARE_ELITE, RANK_WORLD_BOSS, RANK_RARE = -1, 0, 1, 2, 3, 4
+
+# ------------------------------------------------------------- item qualities
+# 0 means "no bound at that end", so an epic-only line is minq=EPIC and a line
+# that must not fire on epics is maxq=RARE.
+POOR, COMMON, UNCOMMON, RARE, EPIC, LEGENDARY = 0, 1, 2, 3, 4, 5
+
+# ---------------------------------------------------------------- group state
+# Must match BotLoreSelection::GroupState.
+GROUP_ANY, GROUP_ALONE, GROUP_GROUPED, GROUP_WITH_PLAYER = 0, 1, 2, 3
+
 ALLIANCE, HORDE = 0, 1
 
 rows = []
@@ -54,15 +74,18 @@ rows = []
 
 def line(trigger, text, zone=0, area=0, creature=0, race=0, cls=0,
          personality=0, quest=0, item=0, iclass=-1, isub=-1, gender=-1,
-         spec=0, team=-1, minlvl=0, maxlvl=0, channel=SAY, weight=1,
-         comment=None):
+         spec=0, team=-1, minlvl=0, maxlvl=0, rank=-1, minq=0, maxq=0,
+         group=GROUP_ANY, channel=SAY, weight=1, comment=None):
     assert len(text) <= 255, f"too long ({len(text)}): {text}"
     assert "|" not in text, f"contains a bar: {text}"
+    # Bots do not name their level. Say what changed in the body instead.
+    assert "%level" not in text, f"names the level: {text}"
     rows.append(dict(trigger=trigger, text=text, zone=zone, area=area,
                      creature=creature, race=race, cls=cls,
                      personality=personality, quest=quest, item=item,
                      iclass=iclass, isub=isub, gender=gender, spec=spec,
-                     team=team, minlvl=minlvl, maxlvl=maxlvl, channel=channel,
+                     team=team, minlvl=minlvl, maxlvl=maxlvl, rank=rank,
+                     minq=minq, maxq=maxq, group=group, channel=channel,
                      weight=weight, comment=comment))
 
 
@@ -106,7 +129,7 @@ many("death", [
 
 many("level_up", [
     "Stronger than I was. Not yet what I must be.",
-    "Level %level. The road does not get shorter.",
+    "Stronger than I was. The road does not get shorter.",
 ])
 
 many("loot_rare", [
@@ -258,7 +281,7 @@ PERSONALITY_LINES = {
             "Do not tell them it ended like this.",
         ],
         "level_up": [
-            "Level %level. And I am only getting started.",
+            "Stronger again, and I am only getting started.",
         ],
         "combat_start": [
             "Good. I was getting bored.",
@@ -293,7 +316,7 @@ PERSONALITY_LINES = {
             "Fine. Fine. I did not want to live forever anyway.",
         ],
         "level_up": [
-            "Level %level, and still nobody sends a horse.",
+            "Stronger, and still nobody sends a horse.",
         ],
         "combat_start": [
             "Right. Let us all do something stupid together.",
@@ -1117,7 +1140,7 @@ many("combat_start", [
     "I have the first one. Somebody watch the second.",
 ], channel=PARTY)
 
-many("level_up", ["Level %level. Thanks for the pull.",], channel=PARTY)
+many("level_up", ["That is another one. Thanks for the pull.",], channel=PARTY)
 
 # =============================================================================
 # Ambient depth. These triggers fire most often once idle chatter is on, so
@@ -1183,17 +1206,309 @@ for _p, _texts in LOOT_EXTRA.items():
     many("loot_rare", _texts, personality=_p, comment=f"loot {PERSONALITY_NAMES[_p]}")
 
 LEVEL_EXTRA = {
-    DEVOUT: ["Level %level. Let it be spent in service, not on myself."],
-    GRIM: ["Level %level. Still not enough for what is coming."],
-    SCHOLAR: ["Level %level. Curious how much of this is practice and how little is theory."],
-    BOASTFUL: ["Level %level! They will have to start writing faster."],
-    WRY: ["Level %level. Do I get a horse yet? No? Splendid."],
-    HAUNTED: ["Level %level. If I had been this strong then, perhaps..."],
-    SAVAGE: ["Level %level. The hunt sharpens me."],
-    SINISTER: ["Level %level. Every step closer to not needing anyone's permission."],
+    DEVOUT: ["Let it be spent in service, not on myself."],
+    GRIM: ["Stronger. Still not enough for what is coming."],
+    SCHOLAR: ["Curious how much of this is practice and how little is theory."],
+    BOASTFUL: ["Another step, and they will have to start writing faster."],
+    WRY: ["Stronger. Do I get a horse yet? No? Splendid."],
+    HAUNTED: ["If I had been this strong then, perhaps..."],
+    SAVAGE: ["The hunt sharpens me."],
+    SINISTER: ["Every step closer to not needing anyone's permission."],
 }
 for _p, _texts in LEVEL_EXTRA.items():
     many("level_up", _texts, personality=_p, comment=f"level {PERSONALITY_NAMES[_p]}")
+
+# =============================================================================
+# Authored archetype lines for the three short triggers.
+#
+# combat_start, death and level_up used to get most of their volume from the
+# combinatorial layer, which joined an object or situation fragment to an
+# archetype reaction. That layer is switched off for these three triggers now
+# (AUTHORED_ONLY in gen_bot_lore_combos.py) because the joins were never
+# checked for coherence and produced the lines that read as machine-made.
+# These are written as whole utterances instead.
+#
+# Two constraints shaped them. The enemy is usually a trivial animal, so a line
+# that only works against a great foe reads as farce against a Mangy Wolf; and
+# no line names a level, because a character who announces a number is
+# describing a game statistic.
+# =============================================================================
+
+AUTHORED = {
+    DEVOUT: {
+        "combat_start": [
+            "Hold still, %target. I will make this clean.",
+            "I take no joy in this, only the duty of it.",
+            "%target, I have no quarrel with you, but you have left me none either.",
+            "Light forgive me the small cruelties.",
+            "Better my hand than a slower one.",
+            "Mercy first. If not mercy, then speed.",
+            "Stand aside, %target, and live out your season.",
+            "I will not let %target suffer longer than it must.",
+            "Nothing dies uncounted. Not even this.",
+            "My hands are for the wounded, but they will answer for this too.",
+        ],
+        "death": [
+            "Do not carry me far. Lay me where the Light can find me.",
+            "Tend the others first. I have had my share of care.",
+            "I am not afraid. I only wanted more hours.",
+            "Be at peace, %target. I forgive you the whole of it.",
+            "Say nothing over me that I did not earn.",
+            "The Light never needed my hands. It only borrowed them.",
+            "Go on. There are still people waiting on you.",
+            "I kept faith. Let that be enough.",
+        ],
+        "level_up": [
+            "A little more strength. I will find someone who needs it.",
+            "Steadier hands than yesterday. Good.",
+            "Stronger than I was, and the need has not shrunk.",
+            "More reach today than yesterday, and more to answer for.",
+            "Whatever I am given, I am given to spend.",
+            "The burden sits better on me today.",
+        ],
+    },
+    GRIM: {
+        "combat_start": [
+            "Something has to die here. Fair chance it is me.",
+            "%target. Small thing. They all add up the same way.",
+            "No sense putting it off.",
+            "I have never once walked away clean. Start swinging.",
+            "%target wants a fight. Everything out here does, eventually.",
+            "Something in the way, and me still walking. This is how it goes.",
+            "I do not expect to enjoy this.",
+            "%target. You will not be the last one today.",
+            "Nothing dies quietly. Get on with it.",
+            "Draw your steel. The odds do not improve with waiting.",
+        ],
+        "death": [
+            "There. Done, and no surprises in it.",
+            "%target. Of all the things that could have had me.",
+            "Keep moving. Standing over me changes nothing.",
+            "I always knew the ground would win.",
+            "Cold. That is all it turns out to be.",
+            "Take what I carried. It is no use to me now.",
+            "No last words worth keeping. Go on.",
+            "I told myself I would see this coming. I did. It did not help.",
+        ],
+        "level_up": [
+            "I am harder than I was. The ground is no softer.",
+            "Stronger today. It buys another day, no more.",
+            "Harder to kill. Not impossible. Never that.",
+            "A little more in me, and I will need every bit of it before long.",
+            "Something in me grew. It will be spent by evening.",
+            "I feel it settle. Another thin layer between me and the dirt.",
+        ],
+    },
+    SCHOLAR: {
+        "combat_start": [
+            "I have notes on %target. None of them cover this part.",
+            "Wait. I want to see how it moves before I stop it moving.",
+            "A pity. Live specimens teach so much more than dead ones.",
+            "Observe the posture. That is a threat display, and it is fully committed to it.",
+            "%target, and it has already decided. Very well.",
+            "I had three questions. I will settle for one answer.",
+            "Every creature defends itself. I keep hoping one will explain why.",
+            "I will try to remember which end the teeth are on.",
+            "This is the part of the work I like least.",
+            "Let the record show that %target began it.",
+        ],
+        "death": [
+            "Ah. So that is what that feels like.",
+            "%target. Write the name down correctly, whoever is listening.",
+            "I was wrong about something. I wish I knew which thing.",
+            "Do not move me yet. I want to notice this properly.",
+            "The notes in my pack are nearly finished. Someone finish them.",
+            "%target, and not even an unusual specimen. That is the part that stings.",
+            "I have no conclusion. Only the observation.",
+            "Keep the pages dry. That is all I ask.",
+        ],
+        "level_up": [
+            "Something settled. I could not tell you the mechanism.",
+            "My hands are steadier than they were last week. Noted.",
+            "Stronger. I would like to know what was exchanged for it.",
+            "Growth. Inconvenient that it requires so much hitting.",
+            "I feel the change and cannot name it, which will bother me all day.",
+            "The body learns faster than I can describe it.",
+        ],
+    },
+    BOASTFUL: {
+        "combat_start": [
+            "Watch closely. This will be over quickly and I want it remembered correctly.",
+            "%target has chosen to become part of my story. A small part.",
+            "I will keep this brief. Nobody wants a long verse about %target.",
+            "Not every legend is built on giants. Some of it is built on days like this.",
+            "Stand back and let me work. I am at my best with an audience.",
+            "%target, you will not be the hardest thing I face today, but you may be the loudest.",
+            "One moment. I have something small to handle in front of witnesses.",
+            "I have fought worse before breakfast, and I will fight better after.",
+            "There is no glory in this one, but there will be style. Watch for the style.",
+            "%target picked a fight with the wrong sort of person. An excellent sort, but the wrong one.",
+        ],
+        "death": [
+            "Tell them I was magnificent. Tell them nothing else.",
+            "%target. Of all the endings I rehearsed, never this one.",
+            "Remember the good parts. There were so many good parts.",
+            "This verse was meant to come much later.",
+            "Do not let anyone write this one down.",
+            "I had a far better line ready than this.",
+            "Carry on without me. You will find it harder than I made it look.",
+            "Even the great ones fall. I am simply more graceful about it.",
+        ],
+        "level_up": [
+            "The stories are barely keeping pace with me.",
+            "Stronger again. I do make it look easy.",
+            "Stronger, and nobody is surprised, least of all me.",
+            "Another step up. I will save the celebrating for something worth it.",
+            "Stronger than yesterday, and yesterday was impressive enough.",
+            "My sword feels lighter than it did this morning.",
+        ],
+    },
+    WRY: {
+        "combat_start": [
+            "Well. This is beneath both of us.",
+            "Come along then, %target. Let us get this over with.",
+            "Of course it wants a fight. Everything in this land wants a fight.",
+            "I had plans for this afternoon. They were modest, but I had them.",
+            "%target, you have chosen the least interesting way to spend a morning.",
+            "Do you know, I was very nearly sitting down.",
+            "Nothing has ever simply walked past me. Not once.",
+            "Very well. Teeth it is.",
+            "%target appears to have strong opinions about me.",
+            "I would run, but then I would be tired and still fighting.",
+        ],
+        "death": [
+            "Well. That was not the plan, but it was certainly a plan.",
+            "%target. Truly. Of all the things.",
+            "When you tell this, make it sound better than it was.",
+            "I am going to lie down now, and I would rather nobody watched.",
+            "Well. I suppose that answers that.",
+            "Do not blame yourselves. Blame me, I clearly earned it.",
+            "I always assumed I would see it coming.",
+            "If anyone is keeping count, I would like this one struck from the record.",
+        ],
+        "level_up": [
+            "Stronger, apparently. My knees have not been informed.",
+            "Stronger than I was yesterday. Yesterday set a low bar.",
+            "Harder to kill, and the same boots.",
+            "I notice I am harder to kill. Good. That was becoming an issue.",
+            "Something in me improved. It declined to say which part.",
+            "Stronger, and the road is exactly as long as it was.",
+        ],
+    },
+    HAUNTED: {
+        "combat_start": [
+            "I will not turn away this time.",
+            "Another one. They blur together after a while.",
+            "%target is nothing. I have seen worse things walk upright.",
+            "Someone used to stand at my shoulder for this.",
+            "I remember the sound of this. I always remember the sound.",
+            "Quickly, then. I do not like drawing these things out.",
+        ],
+        "death": [
+            "I am sorry. I could not do it a second time.",
+            "Do not tell them how small the thing was that took me.",
+            "I am coming. You waited long enough.",
+            "It is quiet. I had forgotten quiet.",
+            "Go on without me. I know how that is done.",
+            "I held on to it as long as I could.",
+            "%target, then. It hardly matters who.",
+            "Do not carry this. I carried mine too long.",
+        ],
+        "level_up": [
+            "Stronger now. I did not expect to get this far.",
+            "I will be enough one day. Not yet.",
+            "Steadier hands. I have wanted steady hands a long time.",
+            "Something came back to me today. Not all of it.",
+            "Still walking, and stronger for it. That is all I ask.",
+            "Stronger, yes. It does not undo anything.",
+        ],
+    },
+    SAVAGE: {
+        "combat_start": [
+            "Good. My hands were getting cold.",
+            "Stand still, %target. It goes easier.",
+            "Something to kill. That is enough for me.",
+            "You came at me. I respect that much.",
+            "Small teeth. Still teeth.",
+            "%target started this. I only finish it.",
+            "Then we find out which of us is hungrier.",
+            "I was made for worse than you.",
+            "Hold your ground and I will make it quick.",
+            "Do not run, %target. I would rather earn this.",
+        ],
+        "death": [
+            "Ha. You had it in you after all.",
+            "Not clean, but mine.",
+            "%target earned this. Say so when you tell it.",
+            "I go down facing it. That is the whole of it.",
+            "Leave me here and finish what I started.",
+            "My blood is out, and so is the fight in me.",
+            "Put me where I fell. I like the ground here.",
+            "Good. I would have hated a slow ending.",
+        ],
+        "level_up": [
+            "Stronger. The killing taught me that.",
+            "Sharper than the day I started.",
+            "My grip is better than it was this morning.",
+            "Send me something that can hurt me now.",
+            "I eat, I fight, I grow. Simple enough.",
+            "Another notch in me. I will use it tonight.",
+        ],
+    },
+    SINISTER: {
+        "combat_start": [
+            "Nothing personal. You are simply in the ledger now.",
+            "I would offer terms, but you have nothing worth bargaining with.",
+            "%target. Small. That makes this quick, not merciful.",
+            "Hold still and this costs you very little.",
+            "You chose this the moment you decided to look at me.",
+            "Struggle if it comforts you. It changes only the duration.",
+            "I take what I need from whatever happens to be standing there.",
+            "%target has something I want. It does not know that yet.",
+            "I have done this for less reason than you have given me.",
+            "Come closer. My patience has been generous enough today.",
+        ],
+        "death": [
+            "A poor return on everything I put in.",
+            "I knew the price. I had hoped to pay it much later.",
+            "Take what I carry. I will want it back.",
+            "Do not mourn. Collect.",
+            "The bargain holds. Only the terms have moved.",
+            "%target. Remember what you took from me. Someone will come asking.",
+            "Leave me here and say nothing. I prefer to be underestimated.",
+            "I am owed too much for this to be... the end of it.",
+        ],
+        "level_up": [
+            "Something in me has settled. Useful.",
+            "Fewer things in this world can refuse me now.",
+            "Stronger. I will not say by how much.",
+            "Another step, and no one saw me take it.",
+            "Patience pays better than courage. I am the proof.",
+            "Whatever this cost me, it was a fair trade.",
+        ],
+    },
+}
+
+for _p, _triggers in AUTHORED.items():
+    for _trigger, _texts in _triggers.items():
+        many(_trigger, _texts, personality=_p, weight=3,
+             comment=f"authored {_trigger} {PERSONALITY_NAMES[_p]}")
+
+# Lines addressed to somebody standing there. Said alone they read as a bot
+# talking to an empty field, so they need a real player in the group - other
+# bots are not an audience. This is what the GroupState column is for.
+AUTHORED_TO_COMPANIONS = {
+    HAUNTED: [
+        "Keep your eyes open. I was not, once.",
+        "Stay close to me. I have lost people who wandered off.",
+        "Do not let it get behind you. That is how it happens.",
+        "Watch my left. I am slow on my left now.",
+    ],
+}
+
+for _p, _texts in AUTHORED_TO_COMPANIONS.items():
+    many("combat_start", _texts, personality=_p, group=GROUP_WITH_PLAYER, weight=3,
+         comment=f"authored combat_start {PERSONALITY_NAMES[_p]} to companions")
 
 DEATH_EXTRA = {
     DEVOUT: ["The Light... take me..."],
@@ -1713,11 +2028,11 @@ for _entry, _texts in MORE_BOSSES.items():
 
 many("level_up", [
     "That is another step. I can feel the difference in my arms.",
-    "Level %level. The next one always takes longer.",
+    "Stronger. The next one always takes longer.",
     "Stronger. Whether it is strong enough is another question.",
-    "Level %level. I will put it to use before I celebrate it.",
+    "I will put it to use before I celebrate it.",
     "I remember being too weak for this road. I do not intend to be again.",
-    "Level %level. Nobody hands you these.",
+    "Harder won than it looks. Nobody hands you these.",
 ])
 
 many("death", [
@@ -1790,6 +2105,10 @@ CREATE TABLE `bot_lore_text` (
   `ItemSubClass`    int          NOT NULL DEFAULT '-1' COMMENT 'loot triggers; -1 = any subclass',
   `Gender`          tinyint      NOT NULL DEFAULT '-1' COMMENT '-1 any, 0 male, 1 female',
   `SpecMask`        int unsigned NOT NULL DEFAULT '0' COMMENT '0 = any; bit per talent tree, 1/2/4',
+  `CreatureRank`    int          NOT NULL DEFAULT '-1' COMMENT '-1 any; 0 normal, 1 elite, 2 rare elite, 3 world boss, 4 rare',
+  `MinQuality`      tinyint unsigned NOT NULL DEFAULT '0' COMMENT 'loot triggers; 0 = no lower bound. 2 uncommon, 3 rare, 4 epic, 5 legendary',
+  `MaxQuality`      tinyint unsigned NOT NULL DEFAULT '0' COMMENT 'loot triggers; 0 = no upper bound',
+  `GroupState`      tinyint unsigned NOT NULL DEFAULT '0' COMMENT '0 any, 1 alone, 2 in a group, 3 in a group with a real player',
   `TeamId`          tinyint      NOT NULL DEFAULT '-1' COMMENT '-1 any, 0 Alliance, 1 Horde',
   `MinLevel`        tinyint unsigned NOT NULL DEFAULT '0',
   `MaxLevel`        tinyint unsigned NOT NULL DEFAULT '0' COMMENT '0 = no upper bound',
@@ -1844,15 +2163,16 @@ def main():
         fh.write(HEADER)
         fh.write("INSERT INTO `bot_lore_text` (`Trigger`, ZoneId, AreaId, CreatureEntry, "
                  "RaceMask, ClassMask, PersonalityMask, QuestId, ItemId, ItemClass, "
-                 "ItemSubClass, Gender, SpecMask, TeamId, MinLevel, MaxLevel, Channel, "
-                 "Weight, Text, Comment) VALUES\n")
+                 "ItemSubClass, Gender, SpecMask, TeamId, MinLevel, MaxLevel, CreatureRank, "
+                 "MinQuality, MaxQuality, GroupState, Channel, Weight, Text, Comment) VALUES\n")
         parts = []
         for r in rows:
-            parts.append("({}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {})".format(
+            parts.append("({})".format(", ".join(str(v) for v in (
                 q(r["trigger"]), r["zone"], r["area"], r["creature"], r["race"], r["cls"],
                 r["personality"], r["quest"], r["item"], r["iclass"], r["isub"], r["gender"],
-                r["spec"], r["team"], r["minlvl"], r["maxlvl"], r["channel"], r["weight"],
-                q(r["text"]), q(r["comment"])))
+                r["spec"], r["team"], r["minlvl"], r["maxlvl"], r["rank"], r["minq"],
+                r["maxq"], r["group"], r["channel"], r["weight"],
+                q(r["text"]), q(r["comment"])))))
         fh.write(",\n".join(parts) + ";\n")
 
     triggers = {}

@@ -24,8 +24,43 @@ and constants so both halves append to the same row list.
 """
 
 
+# Triggers the corpus covers with hand-authored lines per archetype, in
+# gen_bot_lore.py, rather than with fragments joined here.
+#
+# Joining two independently written sentences with a space is what gives this
+# layer its volume, and for most triggers it works: an object observation
+# followed by an archetype reaction reads as one thought. For the three short,
+# high-attention triggers it did not. The pairs were never checked for
+# coherence, so a bot praised a sword and then dismissed it in the same breath
+# ("It moves like cloth and stops like steel. Not what I asked for. Better than
+# what I expected."), or answered its own childhood with a remark about a book.
+# Those are the lines that read as machine-made.
+#
+# So these triggers are authored instead. Emptying the set puts the joined
+# lines back, which is the whole of the revert.
+AUTHORED_ONLY = {"combat_start", "death", "level_up"}
+
+
 def build(ns):
     globals().update(ns)
+
+    # Every emit below goes through here, so the authored-only triggers are
+    # filtered in one place rather than at each of the eight call sites.
+    _line = ns["line"]
+    _many = ns["many"]
+
+    def line(trigger, *args, **kw):
+        if trigger in AUTHORED_ONLY:
+            return
+        _line(trigger, *args, **kw)
+
+    def many(trigger, *args, **kw):
+        if trigger in AUTHORED_ONLY:
+            return
+        _many(trigger, *args, **kw)
+
+    globals()["line"] = line
+    globals()["many"] = many
 
     # ======================================================================
     # Archetype reactions to acquiring something. Each is a standalone
@@ -402,54 +437,54 @@ def build(ns):
 
     CLASS_LEVEL = {
         WARRIOR: [
-            "Stronger. The armour sits differently at %level.",
+            "Stronger. The armour sits differently now.",
             "Another rank earned the honest way.",
-            "The drill finally paid out. %level, and the arms know it.",
+            "The drill finally paid out, and the arms know it.",
         ],
         PALADIN: [
             "The Light grants a little more when you have proved you will carry it.",
-            "%level, and still nowhere near worthy. Good.",
+            "Stronger, and still nowhere near worthy. Good.",
             "The vow gets heavier. That is how you know it is real.",
         ],
         HUNTER: [
             "The bow feels lighter. Or my arms got serious.",
-            "%level. The wild teaches faster than any academy.",
+            "The wild teaches faster than any academy.",
             "My beast noticed before I did.",
         ],
         ROGUE: [
-            "Quieter, quicker, and harder to find. %level suits me.",
+            "Quieter, quicker, and harder to find. This suits me.",
             "The trade rewards practice more than talent.",
             "Nobody handed me this one either.",
         ],
         PRIEST: [
             "The prayers carry further now.",
-            "%level. More strength to spend on other people.",
+            "More strength to spend on other people.",
             "The Light does not reward ambition. It rewards attendance.",
         ],
         DEATH_KNIGHT: [
-            "The runes drink deeper. %level, and colder for it.",
+            "The runes drink deeper, and I am colder for it.",
             "Stronger. Not warmer. That was never on offer.",
             "The Ebon Blade does not celebrate. It simply notes the improvement.",
         ],
         SHAMAN: [
-            "The elements speak a little plainer at %level.",
+            "The elements speak a little plainer now.",
             "They trust me with more. I intend to deserve it.",
             "The ancestors approve, in their own silence.",
         ],
         MAGE: [
-            "%level. The theory finally caught up with the practice.",
+            "The theory finally caught up with the practice.",
             "More power, and more ways to lose a hand. Precision, then.",
             "Dalaran would grudgingly acknowledge this.",
         ],
         WARLOCK: [
-            "%level. The terms improve, and so does the interest.",
+            "The terms improve, and so does the interest.",
             "It gave me more. It always wants something for more.",
             "Stronger, and one step further from anything that would take me back.",
         ],
         DRUID: [
-            "The Dream widened a little. %level, and deeper in.",
+            "The Dream widened a little, and I am deeper in.",
             "The shapes come easier now, and come back harder to leave.",
-            "Balance at %level. Ask me again in a season.",
+            "Closer to balance. Ask me again in a season.",
         ],
     }
 
