@@ -1,0 +1,87 @@
+@ trigger=idle archetype=devout
+I still say the evening words in my mother's order, not the temple's. She would not know the difference by now, but I would.
+The offering box takes silver the same as copper. I have tried both and the ache afterward is the same.
+Bread and salt before dawn, nothing else until the work is done. My aunt kept that fast and lived to bury three husbands.
+I will not cross a threshold left foot first. The Light does not care, I am certain of it, and I do it anyway.
+I light the candle even when there is daylight in the room. It is not for seeing by.
+
+@ trigger=idle race=human archetype=devout
+There was a chapel bell in Goldshire that rang flat on the third stroke. I hear it here in %zone when nothing else is moving.
+
+@ trigger=idle race=draenei archetype=devout
+I dreamed of the Exodar with every lamp lit and nobody aboard. I woke up grateful, which I cannot account for.
+
+@ trigger=idle archetype=grim
+I owe a man in Southshore forty silver and he is dead, so now I owe it to nobody at all.
+The wind has turned round since midday. Something will be wet and miserable by dark.
+There is a letter to my sister in my pack, three winters old, still unsealed. Paper keeps better than nerve.
+When I stop I will keep goats. People laugh at that, then they eat the cheese.
+A grey dog followed me two days out of %area and turned back at the water. Smarter than me.
+
+@ trigger=idle race=undead archetype=grim
+I remember the taste of apples and I remember the word apple. They no longer arrive together.
+
+@ trigger=idle archetype=scholar
+The same hawk has crossed this ridge four days running, always west, always at the same hour. I have started expecting it.
+I write things down because I have learned that I lie to myself about last week, kindly and without meaning to.
+Last week I watched frost form on one side of a stone in %zone and not the other, in open sun. I have no account of it.
+I paid a woman in Dalaran a fortune for a book on tides. It turned out to be mostly poems, and I still read it.
+I have never learned to whistle and I keep trying when there is nobody to hear me fail.
+
+@ trigger=idle race=gnome archetype=scholar
+My first trade was clockwork springs. Fine work, warm shop, and I have not held a spring in years.
+
+@ trigger=idle archetype=boastful
+A cooper in Stormwind stopped me in the street and knew my face. Fifteen years of work, and one afternoon paid for the lot.
+When I am finished with all this I will buy a house with a view of water and bore my neighbours to death.
+The sailors have a song about a man who fights bears. It has been in my head since Menethil and I refuse to stop humming it.
+I could buy any horse in %area now. What I wanted was for my father to see me do it.
+I told a girl in Lakeshire I would come back famous. Half of that has happened.
+
+@ trigger=idle race=tauren archetype=boastful
+Nobody makes the flatbread my grandmother made, and I have asked in every camp between here and Thunder Bluff.
+
+@ trigger=idle archetype=wry
+I keep a lucky button in my left boot. It has never worked once and I would not dream of taking it out.
+I had a whole speech ready for my old captain. He has been dead two years and I am still improving it.
+Last night I dreamed I was doing paperwork. Of all the things to carry out of sleep.
+A woman shared her fire with me outside %area and would not take coin for it. I have thought about that more than I expected to.
+
+@ trigger=idle race=dwarf archetype=wry
+My uncle told me never to trust a man who waters his ale. I have since met two who were otherwise excellent.
+
+@ trigger=idle race=goblin archetype=wry
+I have more gold than my whole street had growing up, and I still cannot sleep past four in the morning.
+
+@ trigger=idle archetype=haunted
+I set out two bowls when I cook. I notice at about the third mouthful.
+Her name was Aldis. I say it aloud now and then so the shape of it does not go.
+I dream of the house with the blue door and wake before anyone opens it. Every time, just before.
+A boy in %zone called me by my brother's name last month. I let him.
+A woman mended my coat on the road once and asked for nothing. I never learned where she was going.
+
+@ trigger=idle race=nightelf archetype=haunted
+Ten thousand years, and what I keep is the smell of one particular rain in Ashenvale. Not the war. The rain.
+
+@ trigger=idle archetype=savage
+I eat before a fight and everyone tells me that is wrong. I have never once been sorry.
+Coin is for meat and boot leather. Past that I do not know what people do with it.
+I drove cattle before any of this. Slow beasts, long roads, and I was bored out of my skull.
+I will not put a stone to a blade after dark. My mother's rule, and she would have thrashed me for asking why.
+When I am too old for this I want a bench in the sun and somebody to lie to about it.
+
+@ trigger=idle race=orc archetype=savage
+I dream of running and wake with my legs already moving. Best sleep there is.
+
+@ trigger=idle race=troll archetype=savage
+There be a big cat on the ridge above %area, watchin me eat. She and me got an understanding.
+
+@ trigger=idle archetype=sinister
+I never carry more coin than I can lose without changing any of my plans.
+I would tell the boy I was that patience is not a virtue but a tool, and that he should stop weeping in the barn.
+A man in %zone greeted me warmly and I have no memory of him whatsoever. That is the sort of thing worth knowing about oneself.
+I keep a ledger of debts in my head. Two names left on it, and both of them still breathe.
+I sleep four hours and wake clean. People find that unsettling, which is why I mention it.
+
+@ trigger=idle race=bloodelf archetype=sinister
+There was a pastry shop off the Court of the Sun that did honey and pistachio. I think of it more often than I think of the Sunwell.

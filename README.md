@@ -24,7 +24,7 @@ That file is generated. The corpus itself is kept in two shapes:
 
     data/lines/*.txt               most of it - plain text, a header naming the
                                    filters and the lines under it inheriting
-                                   them. Thirty files, 1,578 lines, each a slice
+                                   them. Forty files, 2,075 lines, each a slice
                                    of the filter space
     tools/gen_bot_lore.py          the lines that need code beside them: a loop,
                                    or a table of creature and quest ids. Also
@@ -43,6 +43,14 @@ silently reading as "any":
     @ trigger=combat_start rank=elite archetype=savage
     Big one. Finally something that will not fall over when I look at it.
     %target has real weight to it. Good. I want to feel the swing land.
+
+Talent trees are named per class rather than numbered, and resolved inside the
+class, because the names collide: protection belongs to the warrior and the
+paladin, frost to the death knight and the mage, restoration to the shaman and
+the druid. A `spec=` without a `class=` is a build error, and so is
+`spec=arms` on a mage. Career stage is `minlevel=`/`maxlevel=`, so a character
+three weeks out of their village does not sound like one who has walked
+Northrend, and `team=alliance` or `team=horde` carries the war.
 
 `rank=normal` is the workhorse of that vocabulary. Most combat lines are written
 for the common case, where the enemy is a small animal, and `%target`
@@ -109,9 +117,37 @@ and per-trigger switches (`.Trigger.*`). Read in `OnAfterConfigLoad`, so
 
 ## Commands
 
-    .botlore reload                       re-read the table, no restart
-    .botlore list [trigger]               print the loaded lines and filters
-    .botlore test <bot> <trigger> [entry] resolve and emit one line
+    .botlore reload                        re-read the table, no restart
+    .botlore list [trigger]                print the loaded lines and filters
+    .botlore test <bot> [trigger] [options...]   resolve and emit one line
+
+`test` takes any number of trailing options. A bare number is an entry id, as
+it always was; the rest are `key=value`, in any order:
+
+    entry=<id>       a creature, item or quest, depending on the trigger
+    rank=<kind>      any, normal, elite, rare_elite, world_boss, rare, or 0-4
+    quality=<grade>  poor, common, uncommon, rare, epic, legendary, or 0-5
+                     (colours work too: grey, white, green, blue, purple,
+                     orange; `rarity=` is accepted as a synonym)
+
+So:
+
+    .botlore test Fyraes combat_start rank=elite
+    .botlore test Fyraes loot_rare quality=legendary
+    .botlore test Fyraes kill_boss entry=448
+
+`rank` and `quality` exist because without them the rank- and quality-gated
+lines were **unreachable from the console**. The command supplies no creature
+and no item, so the context carried rank -1 and quality 0, and every line gated
+on either was silently excluded from the draw - they could only be seen by
+finding a real elite or waiting for a real epic to drop. An entry id now also
+carries its own rank or quality from the template, and an explicit option
+overrides it, so a kobold can be tested as though it were a world boss.
+
+An unrecognised option is an error rather than being ignored, because a
+silently dropped filter would make the command lie about what it tested. The
+command also prints the bot's group state, since that filter comes from the
+real group and cannot be forced.
 
 ## Requirements
 

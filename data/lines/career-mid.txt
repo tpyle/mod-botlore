@@ -1,0 +1,109 @@
+@ trigger=idle minlevel=20 maxlevel=59
+I used to count the days on the road. Now I just walk them.
+My boots know this kind of country better than I do.
+There is a village somewhere that still remembers my name. Only the one.
+I keep favoring my right side in a fight. One day that will finish me.
+I met a recruit yesterday who held a blade like a broom. I had forgotten anyone ever did.
+The work is still mine to choose. It stopped being an adventure a long while back.
+Rations, bandages, whetstone. I can pack for %area without thinking now.
+
+@ trigger=idle minlevel=20 maxlevel=59 archetype=grim
+I expect this road to go badly. I have expected that for years and I am still on it.
+
+@ trigger=idle minlevel=20 maxlevel=59 archetype=devout
+I pray the same words every morning, whether I feel them or not. That is the discipline.
+
+@ trigger=idle minlevel=20 maxlevel=59 archetype=scholar
+I have begun writing down what kills things in %zone. My earlier notes were guesses.
+
+@ trigger=idle minlevel=20 maxlevel=59 archetype=boastful
+They tell a version of my deeds in two taverns. I have stopped correcting either one.
+
+@ trigger=idle minlevel=20 maxlevel=59 archetype=wry
+I am very good at a small number of things. %area asks for all of them at once.
+
+@ trigger=idle minlevel=20 maxlevel=59 archetype=haunted
+I still set out two cups some mornings. Old habits take longer than grief.
+
+@ trigger=idle minlevel=20 maxlevel=59 archetype=savage
+Quiet stretches like this sit badly with me. My hands want something to do.
+
+@ trigger=idle minlevel=20 maxlevel=59 archetype=sinister
+I know three ways out of %area and who watches each one.
+
+@ trigger=combat_start minlevel=20 maxlevel=59
+%target it is, then. Let us be quick about it.
+I have done this more times than I can recall. That does not make it nothing.
+Same footwork, same breath, same ending. Come on.
+Blade first, questions after. %target has made the choice for both of us.
+I know how this goes. Hold the ground, watch the flank.
+No speeches. I have work here.
+
+@ trigger=combat_start minlevel=20 maxlevel=59 archetype=grim
+This will hurt somewhere before it is done. It usually does.
+
+@ trigger=combat_start minlevel=20 maxlevel=59 archetype=devout
+A short prayer, and then hands. That is the order of it.
+
+@ trigger=combat_start minlevel=20 maxlevel=59 archetype=scholar
+I have fought the kind %target is before. I remember where they are slow.
+
+@ trigger=combat_start minlevel=20 maxlevel=59 archetype=boastful
+Watch the footwork. Few people get to see it done properly.
+
+@ trigger=combat_start minlevel=20 maxlevel=59 archetype=wry
+Well. There goes the quiet afternoon.
+
+@ trigger=combat_start minlevel=20 maxlevel=59 archetype=haunted
+I learned this guard from someone who is not here to see me use it.
+
+@ trigger=death minlevel=20 maxlevel=59
+Careless. I saw it coming and stepped in anyway.
+%target had the better of me. I would like to say that was a surprise.
+Right side again. I always meant to fix that.
+Not how I pictured it, but I stopped picturing it years ago.
+Tell them I was still working.
+
+@ trigger=death minlevel=20 maxlevel=59 archetype=grim
+I said it would end this way. Small comfort in being right.
+
+@ trigger=death minlevel=20 maxlevel=59 archetype=devout
+I kept the discipline to the last. Let that be the account of me.
+
+@ trigger=death minlevel=20 maxlevel=59 archetype=scholar
+%target moves faster than I recorded. Correct the note.
+
+@ trigger=death minlevel=20 maxlevel=59 archetype=haunted
+I am not the first of us to go down out here.
+
+@ trigger=death minlevel=20 maxlevel=59 archetype=sinister
+I miscounted the exits. Only once, and once was enough.
+
+@ trigger=level_up minlevel=20 maxlevel=59
+Something settled in me just now. It does not feel like a beginning.
+Steadier hands than last season. That is all I asked for.
+I am better at this than I was. It is still the same work tomorrow.
+Whatever I just learned, I paid for it in full.
+
+@ trigger=level_up minlevel=20 maxlevel=59 archetype=devout
+I am given a little more to carry. So I carry it.
+
+@ trigger=level_up minlevel=20 maxlevel=59 archetype=wry
+Stronger. Same wages, mind.
+
+@ trigger=level_up minlevel=20 maxlevel=59 archetype=boastful
+I have grown again. Pity so few were here to witness it.
+
+@ trigger=level_up minlevel=20 maxlevel=59 archetype=savage
+More in my arms than there was. There is plenty left to swing at.
+
+@ trigger=quest_complete minlevel=20 maxlevel=59
+%quest is finished. There will be another before the week is out.
+Done, and done properly. I will take the pay and the quiet.
+%quest took longer than I promised. It usually does.
+
+@ trigger=quest_complete minlevel=20 maxlevel=59 archetype=scholar
+%quest is closed. I have kept notes, in case it comes round again.
+
+@ trigger=quest_complete minlevel=20 maxlevel=59 archetype=grim
+%quest is settled for now. Nothing out here stays settled.

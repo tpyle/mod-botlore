@@ -1,0 +1,133 @@
+@ trigger=combat_start class=priest spec=discipline
+Ward first, then everything else. Nothing gets through that I saw coming.
+I would rather spend my strength on a wound that never opens.
+
+@ trigger=combat_start class=priest spec=holy archetype=devout
+Light, stay close. There will be hurt here and I mean to answer it.
+I have sat with worse pain than anything waiting here. Begin.
+
+@ trigger=combat_start class=priest spec=shadow archetype=haunted
+The mind is the softest thing anyone carries. I go there first.
+I am already inside its thinking, and it has not noticed the door.
+
+@ trigger=combat_start class=mage spec=arcane archetype=scholar
+The power is awake in me and asking. I will decide how much it gets.
+I hold the reins. Everything that follows is measured.
+
+@ trigger=combat_start class=mage spec=fire archetype=boastful
+I have been holding this heat all morning. Out it comes.
+Something here is about to burn and I am glad of it.
+
+@ trigger=combat_start class=mage spec=frost
+Cold first. Nothing reaches me through cold.
+
+@ trigger=combat_start class=warlock spec=affliction archetype=sinister
+I am in no hurry. Rot keeps its own appointments.
+I plant the sickness now and wait. It does the rest without me.
+
+@ trigger=combat_start class=warlock spec=demonology
+My servant wants this more than I do. I only hold the leash.
+
+@ trigger=combat_start class=warlock spec=destruction archetype=savage
+Everything I have, all at once, right there.
+I will spend myself down to nothing for one good blast.
+
+@ trigger=combat_start class=shaman spec=elemental
+The storm does not care about this fight. It comes when I ask anyway.
+
+@ trigger=combat_start class=shaman spec=enhancement archetype=savage
+Wind in my hands, lightning down my arms. Now the close work.
+I do not send the elements ahead of me. I carry them in.
+
+@ trigger=combat_start class=shaman spec=restoration
+Water always comes back. So will anything that falls here.
+
+@ trigger=level_up class=priest spec=discipline
+I see the wound now before it happens. That is new.
+
+@ trigger=level_up class=priest spec=holy archetype=devout
+My patience runs deeper than it did. The Light poured more in.
+
+@ trigger=level_up class=priest spec=shadow archetype=haunted
+I looked further into the dark and came back knowing more. Some of it I wish I did not.
+
+@ trigger=level_up class=mage spec=arcane archetype=scholar
+More power, and more of me holding it. The second part is the harder study.
+
+@ trigger=level_up class=mage spec=fire archetype=wry
+The heat runs hotter and I only laugh at it. A terrible habit.
+
+@ trigger=level_up class=mage spec=frost
+My stillness is colder. Less can reach me now.
+
+@ trigger=level_up class=warlock spec=affliction
+My rot works slower and surer. Time has become my servant.
+
+@ trigger=level_up class=warlock spec=demonology archetype=grim
+What I keep has grown. I am no longer certain which of us is kept.
+
+@ trigger=level_up class=warlock spec=destruction archetype=boastful
+Bigger fire, and more of me to spend on it. A fine trade.
+
+@ trigger=level_up class=shaman spec=elemental
+The elements answered louder this time. I did not ask any louder.
+
+@ trigger=level_up class=shaman spec=enhancement
+The storm sits easier in my grip. My hands have learned it.
+
+@ trigger=level_up class=shaman spec=restoration
+The tide in me rises further. More of it goes back out to others.
+
+@ trigger=idle class=priest spec=holy archetype=devout
+Sitting with someone's hurt is most of the work. Nobody writes songs about that part.
+
+@ trigger=idle class=priest spec=shadow archetype=haunted
+Quiet is the worst of it. The whispers fill a quiet the way water fills a boot.
+
+@ trigger=idle class=mage spec=arcane archetype=scholar
+I practice the holding, not the letting go. Anyone can let go.
+
+@ trigger=idle class=mage spec=fire
+I keep a small flame going just to have something to watch.
+
+@ trigger=idle class=mage spec=frost archetype=wry
+I stand apart. It is not coldness, it is simply where I am of use.
+
+@ trigger=idle class=warlock spec=affliction archetype=sinister
+Everything here is already decaying. I only know how to hurry it.
+
+@ trigger=idle class=warlock spec=demonology archetype=grim
+It breathes when I breathe. I have stopped wondering who began that.
+
+@ trigger=idle class=warlock spec=destruction archetype=wry
+Nothing to burn. I do hate a quiet afternoon.
+
+@ trigger=idle class=shaman spec=elemental
+I listen to the air. Vast, uninterested, and still it answers me.
+
+@ trigger=idle class=shaman spec=restoration
+Low tide now. It always comes back, so I wait without worry.
+
+@ trigger=kill_boss class=priest spec=discipline
+It never once got through. And now it is finished.
+
+@ trigger=kill_boss class=priest spec=shadow archetype=haunted
+I was inside its mind when it ended. I do not recommend the experience.
+
+@ trigger=kill_boss class=mage spec=fire archetype=boastful
+Ash, and a great deal of it. That was worth all my waiting.
+
+@ trigger=kill_boss class=mage spec=frost
+It slowed, then it stopped entirely. Distance did that.
+
+@ trigger=kill_boss class=warlock spec=affliction archetype=sinister
+It rotted from the inside while it fought me. Patience finished the rest.
+
+@ trigger=kill_boss class=warlock spec=destruction archetype=savage
+I gave everything I had at once, and there it lies in pieces.
+
+@ trigger=kill_boss class=shaman spec=enhancement
+I carried the storm to it by hand. Something great has fallen.
+
+@ trigger=kill_boss class=shaman spec=restoration
+It is over, and the water comes back. Let the mending start.

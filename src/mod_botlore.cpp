@@ -662,6 +662,189 @@ namespace
         return context;
     }
 
+    // The optional tail of ".botlore test". A bare number is still an entry id,
+    // as it always was; everything else is key=value. Named rather than
+    // positional because the useful combinations are sparse - a creature rank
+    // is worth forcing with no entry at all, and an item grade with neither.
+    //
+    // This exists because the rank and quality filters were unreachable from
+    // the console: the command supplies no creature and no item, so the context
+    // carried rank -1 and quality 0, and every line gated on either was
+    // silently excluded from the draw. They could only be seen by finding a
+    // real elite or waiting for a real epic to drop.
+    struct TestOptions
+    {
+        uint32 entry   = 0;
+        int32  rank    = -2;    // -2 "not given", -1 "any", 0..4 a real rank
+        int32  quality = -1;    // -1 "not given", 0..5 a real grade
+    };
+
+    bool ParseRankName(std::string value, int32& out)
+    {
+        static std::unordered_map<std::string, int32> const names = {
+            { "any", -1 }, { "none", -1 },
+            { "normal", 0 }, { "ordinary", 0 },
+            { "elite", 1 },
+            { "rare_elite", 2 }, { "rareelite", 2 },
+            { "world_boss", 3 }, { "worldboss", 3 }, { "boss", 3 },
+            { "rare", 4 },
+        };
+
+        std::transform(value.begin(), value.end(), value.begin(),
+            [](unsigned char c) { return char(std::tolower(c)); });
+
+        if (auto const itr = names.find(value); itr != names.end())
+        {
+            out = itr->second;
+            return true;
+        }
+
+        // Digits too, so the column's own values can be typed straight in.
+        if (!value.empty() && value.find_first_not_of("0123456789") == std::string::npos)
+        {
+            int32 const parsed = int32(std::strtol(value.c_str(), nullptr, 10));
+            if (parsed >= 0 && parsed <= 4)
+            {
+                out = parsed;
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    bool ParseQualityName(std::string value, int32& out)
+    {
+        static std::unordered_map<std::string, int32> const names = {
+            { "poor", 0 }, { "grey", 0 }, { "gray", 0 },
+            { "common", 1 }, { "white", 1 },
+            { "uncommon", 2 }, { "green", 2 },
+            { "rare", 3 }, { "blue", 3 },
+            { "epic", 4 }, { "purple", 4 },
+            { "legendary", 5 }, { "orange", 5 },
+        };
+
+        std::transform(value.begin(), value.end(), value.begin(),
+            [](unsigned char c) { return char(std::tolower(c)); });
+
+        if (auto const itr = names.find(value); itr != names.end())
+        {
+            out = itr->second;
+            return true;
+        }
+
+        if (!value.empty() && value.find_first_not_of("0123456789") == std::string::npos)
+        {
+            int32 const parsed = int32(std::strtol(value.c_str(), nullptr, 10));
+            if (parsed >= 0 && parsed <= 5)
+            {
+                out = parsed;
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    // Returns false and fills `error` on anything it does not understand, so a
+    // typo is reported rather than quietly ignored - a silently dropped filter
+    // would make the command lie about what it tested.
+    bool ParseTestOptions(std::string_view tail, TestOptions& out, std::string& error)
+    {
+        std::size_t at = 0;
+        while (at < tail.size())
+        {
+            while (at < tail.size() && std::isspace(static_cast<unsigned char>(tail[at])))
+                ++at;
+            if (at >= tail.size())
+                break;
+
+            std::size_t const end = tail.find_first_of(" \t", at);
+            std::string const token(tail.substr(at, end == std::string_view::npos ? std::string_view::npos : end - at));
+            at = (end == std::string_view::npos) ? tail.size() : end;
+
+            if (token.empty())
+                continue;
+
+            std::size_t const eq = token.find('=');
+            if (eq == std::string::npos)
+            {
+                if (token.find_first_not_of("0123456789") != std::string::npos)
+                {
+                    error = Acore::StringFormat("'{}' is not a number or a key=value option", token);
+                    return false;
+                }
+                out.entry = uint32(std::strtoul(token.c_str(), nullptr, 10));
+                continue;
+            }
+
+            std::string key = token.substr(0, eq);
+            std::string const value = token.substr(eq + 1);
+            std::transform(key.begin(), key.end(), key.begin(),
+                [](unsigned char c) { return char(std::tolower(c)); });
+
+            if (key == "entry")
+            {
+                if (value.empty() || value.find_first_not_of("0123456789") != std::string::npos)
+                {
+                    error = Acore::StringFormat("entry '{}' is not a number", value);
+                    return false;
+                }
+                out.entry = uint32(std::strtoul(value.c_str(), nullptr, 10));
+            }
+            else if (key == "rank")
+            {
+                if (!ParseRankName(value, out.rank))
+                {
+                    error = Acore::StringFormat("rank '{}' is not one of any, normal, elite, rare_elite, world_boss, rare, or 0-4", value);
+                    return false;
+                }
+            }
+            else if (key == "quality" || key == "rarity")
+            {
+                if (!ParseQualityName(value, out.quality))
+                {
+                    error = Acore::StringFormat("quality '{}' is not one of poor, common, uncommon, rare, epic, legendary, or 0-5", value);
+                    return false;
+                }
+            }
+            else
+            {
+                error = Acore::StringFormat("unknown option '{}' - try entry=, rank= or quality=", key);
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    char const* RankName(int32 rank)
+    {
+        switch (rank)
+        {
+            case 0:  return "ordinary";
+            case 1:  return "elite";
+            case 2:  return "rare elite";
+            case 3:  return "world boss";
+            case 4:  return "rare";
+            default: return "any";
+        }
+    }
+
+    char const* QualityName(int32 quality)
+    {
+        switch (quality)
+        {
+            case 0:  return "poor";
+            case 1:  return "common";
+            case 2:  return "uncommon";
+            case 3:  return "rare";
+            case 4:  return "epic";
+            case 5:  return "legendary";
+            default: return "unset";
+        }
+    }
+
     char const* RefusalText(Refusal refusal)
     {
         switch (refusal)
@@ -966,7 +1149,7 @@ public:
     // class, quest id or creature entry - which is most of the corpus.
     static bool HandleBotLoreTestCommand(ChatHandler* handler, std::string botName,
                                          Optional<std::string> triggerArg,
-                                         Optional<uint32> entryArg)
+                                         Optional<Tail> optionsArg)
     {
         Player* bot = ObjectAccessor::FindPlayerByName(botName, true);
         if (!bot)
@@ -977,6 +1160,17 @@ public:
 
         std::string const trigger = triggerArg ? *triggerArg : TRIGGER_ZONE_ENTER;
 
+        TestOptions options;
+        if (optionsArg)
+        {
+            std::string error;
+            if (!ParseTestOptions(*optionsArg, options, error))
+            {
+                handler->SendErrorMessage("{}", error);
+                return false;
+            }
+        }
+
         LoreContext context = ContextFor(bot);
 
         handler->PSendSysMessage("{} is a {} - class {}, zone {}.",
@@ -986,9 +1180,9 @@ public:
         context.quest = "A Test of Valour";
         context.item = "Test Trinket";
 
-        if (entryArg)
+        if (options.entry)
         {
-            uint32 const entry = *entryArg;
+            uint32 const entry = options.entry;
 
             if (trigger == TRIGGER_LOOT_RARE)
             {
@@ -1002,9 +1196,10 @@ public:
                 context.itemId       = entry;
                 context.itemClass    = int32(proto->Class);
                 context.itemSubClass = int32(proto->SubClass);
+                context.itemQuality  = uint8(proto->Quality);
                 context.item         = proto->Name1;
-                handler->PSendSysMessage("item {} '{}', class {}, subclass {}.",
-                    entry, proto->Name1, proto->Class, proto->SubClass);
+                handler->PSendSysMessage("item {} '{}', class {}, subclass {}, {} quality.",
+                    entry, proto->Name1, proto->Class, proto->SubClass, QualityName(int32(proto->Quality)));
             }
             else if (trigger == TRIGGER_QUEST_ACCEPT || trigger == TRIGGER_QUEST_COMPLETE)
             {
@@ -1029,10 +1224,34 @@ public:
                 }
 
                 context.creatureEntry = entry;
+                context.creatureRank  = int32(creature->rank);
                 context.target        = creature->Name;
-                handler->PSendSysMessage("creature {} '{}'.", entry, creature->Name);
+                handler->PSendSysMessage("creature {} '{}', {}.",
+                    entry, creature->Name, RankName(int32(creature->rank)));
             }
         }
+
+        // Explicit options win over whatever the entry implied, so a real
+        // creature can be tested as though it were bigger than it is.
+        if (options.rank != -2)
+        {
+            context.creatureRank = options.rank;
+            handler->PSendSysMessage("forcing creature rank: {}.", RankName(options.rank));
+        }
+
+        if (options.quality >= 0)
+        {
+            context.itemQuality = uint8(options.quality);
+            handler->PSendSysMessage("forcing item quality: {}.", QualityName(options.quality));
+        }
+
+        // The group filter comes from the bot's real group, so say which way it
+        // will read rather than leaving it to be guessed at.
+        if (Group* group = bot->GetGroup())
+            handler->PSendSysMessage("in a group{}.",
+                GroupHasRealPlayer(bot, group) ? " holding a real player" : " of bots only");
+        else
+            handler->PSendSysMessage("not in a group.");
 
         std::string spoken;
         Refusal const refusal = Speak(bot, trigger, context, true, &spoken);

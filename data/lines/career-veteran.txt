@@ -1,0 +1,104 @@
+@ trigger=idle minlevel=60
+I stopped counting the names a long while back. I still say them when it is quiet.
+The cold here gets into the old breaks. Outland at least had the decency to be warm.
+Young ones keep asking how I am still standing. Luck, mostly, and they want a better answer than that.
+I walked through the Dark Portal when the sky was still green. Very little has surprised me since.
+%area is quiet tonight. That never means what you want it to mean.
+Someone asked me what I am afraid of. It took me longer than it should have to find an honest answer.
+I know roughly how this ends for me. There is a strange comfort in knowing the shape of it.
+I keep my kit the same way I did before Outland. The habits kept me alive when nothing else would.
+
+@ trigger=idle minlevel=60 archetype=grim
+Icecrown is out there whether I look at it or not. I look at it.
+
+@ trigger=idle minlevel=60 archetype=haunted
+I still lay out two rations some mornings. Old hands are slow to unlearn.
+
+@ trigger=idle minlevel=60 archetype=scholar
+I have made a fair study of how people break. Mostly it is the waiting that does it.
+
+@ trigger=idle minlevel=60 archetype=wry
+I have seen a world snapped clean in half. This one is holding together nicely by comparison.
+
+@ trigger=idle minlevel=60 archetype=devout
+I say the words every morning, same as always. Not for rescue. For steadiness.
+
+@ trigger=idle minlevel=60 archetype=boastful
+I have stood in two worlds coming apart and walked out of both. Ask anyone who was there.
+
+@ trigger=combat_start minlevel=60
+My hands are steady. That took a long time to earn.
+Take %target. I have done this more times than I can properly account for.
+Feet planted, breathe out, then move. Same as it always was.
+I have no speech left for this. Only the work.
+This is the part I know best. Everything else I had to learn twice.
+
+@ trigger=combat_start minlevel=60 archetype=wry
+Well. Back to the only trade I was ever any good at.
+
+@ trigger=combat_start minlevel=60 archetype=grim
+I expect this to go badly. I am going anyway.
+
+@ trigger=combat_start minlevel=60 archetype=haunted
+I have fought this fight before, with better people standing where I stand. It still gets done.
+
+@ trigger=combat_start minlevel=60 archetype=savage
+My blood still comes up for this. I had hoped the years would take that too.
+
+@ trigger=combat_start minlevel=60 archetype=sinister
+%target has a pattern. Give me a moment and I will have it.
+
+@ trigger=death minlevel=60
+There it is. I knew the shape of this a long time ago.
+Say it was %target, and say I was facing it.
+I carried a great many names. Someone else will have to carry mine now.
+The cold was always going to have me. %zone can keep the rest.
+
+@ trigger=death minlevel=60 archetype=haunted
+I am sorry. I am arriving later than I promised, but I am arriving.
+
+@ trigger=death minlevel=60 archetype=devout
+Not afraid. I have been walking toward this since the Portal opened.
+
+@ trigger=death minlevel=60 archetype=grim
+Expected. %target only did what I always knew something would.
+
+@ trigger=death minlevel=60 archetype=wry
+Well. That is one way to stop being the old one.
+
+@ trigger=kill_boss minlevel=60
+%target is down. There was a time that name would have kept me awake.
+That is finished. I have watched better than me fail at less.
+%target is dead. Put it in the report and let the rest of us keep walking.
+I have been at this long enough to know what that was worth. That was worth it.
+%target fell. Somewhere a younger version of me would not have believed it.
+
+@ trigger=kill_boss minlevel=60 archetype=boastful
+%target is dead by my hand. Add it to the list, and the list is long.
+
+@ trigger=kill_boss minlevel=60 archetype=grim
+%target is down. Icecrown will not even notice, and we do it anyway.
+
+@ trigger=kill_boss minlevel=60 archetype=haunted
+%target is dead. I wish that settled the debt. It does not.
+
+@ trigger=kill_boss minlevel=60 archetype=scholar
+%target is dead, and I understood it before it died. That was the part I wanted.
+
+@ trigger=kill_boss minlevel=60 archetype=wry
+%target is down. Took me longer than it once would have.
+
+@ trigger=quest_complete minlevel=60
+%quest is finished. I have stopped expecting to feel much about that.
+Another one done. I used to keep a tally, and then the tally turned unkind.
+%quest is closed out. Small work, and small work is what holds a line together.
+That is done. I have buried people over errands smaller than %quest.
+
+@ trigger=quest_complete minlevel=60 archetype=scholar
+%quest taught me one new thing. This late in my trade, that is worth noting.
+
+@ trigger=quest_complete minlevel=60 archetype=wry
+%quest done. They call me experienced now, which mostly means old.
+
+@ trigger=quest_complete minlevel=60 archetype=devout
+%quest is done, and done properly. That is the whole of the offering.

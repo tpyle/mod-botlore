@@ -1,0 +1,119 @@
+@ trigger=combat_start class=hunter spec=beast_mastery
+Every beast I ever ran with taught me how a fight like this ends.
+I learned patience from animals, and I learned the rest fighting alongside them.
+
+@ trigger=combat_start class=hunter spec=marksmanship
+One breath, one shot, and then we are finished here.
+I measured that distance before you ever turned toward me.
+Hold still and this takes a single arrow.
+
+@ trigger=combat_start class=hunter spec=survival
+I chose this ground days ago, and it has not changed its mind.
+The snares were laid before you arrived. Walk where you like.
+
+@ trigger=combat_start class=rogue spec=assassination archetype=sinister
+The poison was on my blade before I knew your name.
+This was arranged a long while ago. You are only catching up.
+I never rush. The dose does all my hurrying for me.
+
+@ trigger=combat_start class=rogue spec=combat archetype=wry
+No tricks from me. Only steel, and plenty of it.
+In quick and out quicker, and no one remembers my face.
+
+@ trigger=combat_start class=rogue spec=subtlety
+You looked left. That was the whole of your mistake.
+I have been standing here a while. You simply had no reason to notice.
+
+@ trigger=combat_start class=druid spec=balance archetype=scholar
+Sun and moon both have a say in what happens next.
+I have watched stars burn out. I can spare a moment for this.
+
+@ trigger=combat_start class=druid spec=feral archetype=savage
+I stop arguing with the animal in me now.
+Tooth and claw. Nothing further is needed here.
+
+@ trigger=combat_start class=druid spec=restoration
+Cut whatever you can reach. It grows back.
+I mend quicker than you can undo, and I have all day.
+
+@ trigger=level_up class=hunter spec=beast_mastery
+The animals trust me further than they once did. That is how I measure myself.
+
+@ trigger=level_up class=hunter spec=marksmanship
+My hands are steadier, and the long distances keep feeling shorter.
+I hold the draw longer now, and the arithmetic comes without thinking.
+
+@ trigger=level_up class=hunter spec=survival
+The land tells me more than it used to, and it tells it sooner.
+
+@ trigger=level_up class=rogue spec=assassination
+I have learned another quiet recipe, and someone will drink it.
+My patience has grown teeth of its own.
+
+@ trigger=level_up class=rogue spec=combat archetype=boastful
+Stronger arm, same simple plan, better results.
+
+@ trigger=level_up class=rogue spec=subtlety
+The shadows are growing generous with me.
+
+@ trigger=level_up class=druid spec=balance
+I see further out now, past the trees, past the sky itself.
+The moon and I are on better terms than we were.
+
+@ trigger=level_up class=druid spec=feral
+The beast and I share more of the same skin than we did.
+
+@ trigger=level_up class=druid spec=restoration archetype=devout
+Whatever I tend grows quicker for my touch now.
+
+@ trigger=idle class=hunter spec=beast_mastery archetype=devout
+A good animal gives you its whole trust and asks only that you be worth it.
+I would keep company with something four-legged before most men I have met.
+
+@ trigger=idle class=hunter spec=marksmanship
+A long shot is only arithmetic and a hand that refuses to shake.
+
+@ trigger=idle class=hunter spec=survival
+Learn the ground and you have already won half of whatever comes.
+
+@ trigger=idle class=rogue spec=assassination archetype=grim
+Every death I plan is mostly waiting. The rest takes a heartbeat.
+
+@ trigger=idle class=rogue spec=combat
+I never learned the fancy footwork, and I have never once needed it.
+
+@ trigger=idle class=rogue spec=subtlety
+The trick is not hiding. The trick is standing where nobody thought to look.
+
+@ trigger=idle class=druid spec=balance
+Down here it is all grove and green. I keep my eyes on the sky.
+
+@ trigger=idle class=druid spec=feral archetype=haunted
+Some nights I forget which of my shapes is the honest one.
+
+@ trigger=idle class=druid spec=restoration
+Nothing I heal is in a hurry, and neither am I.
+
+@ trigger=kill_boss class=hunter spec=beast_mastery
+Something that had never been brought down is lying down now.
+
+@ trigger=kill_boss class=hunter spec=marksmanship
+One shot found it in the end, the way one shot always does.
+
+@ trigger=kill_boss class=hunter spec=survival
+It knew this ground. I knew it better, and that decided everything.
+
+@ trigger=kill_boss class=rogue spec=assassination
+It died of something it swallowed hours ago, and never guessed why.
+
+@ trigger=kill_boss class=rogue spec=combat archetype=boastful
+No cleverness to it. I simply outlasted a thing that had never been outlasted.
+
+@ trigger=kill_boss class=rogue spec=subtlety
+It died still watching the door I did not come through.
+
+@ trigger=kill_boss class=druid spec=balance
+Something old has gone out of the world, and the sky above is unchanged.
+
+@ trigger=kill_boss class=druid spec=feral
+I let the animal finish it, and the animal was more than enough.

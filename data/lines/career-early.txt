@@ -1,0 +1,109 @@
+@ trigger=idle maxlevel=19
+My boots have worn through already. Nobody warned me the roads were this long.
+Everything in %zone costs more than they told me back home.
+I wrote home last week. I may have made the journey sound grander than it was.
+My sword needs mending again. I am learning what iron costs.
+I thought %area would be smaller. I thought everything out here would be smaller.
+I have slept under more trees than roofs this month.
+The bread in my pack is from home. I am saving it for a hard day.
+
+@ trigger=idle maxlevel=19 archetype=devout
+I say my prayers louder out here. There is more country to be heard across.
+
+@ trigger=idle maxlevel=19 archetype=scholar
+I am keeping a list of every beast I meet in %zone. The list is getting away from me.
+
+@ trigger=idle maxlevel=19 archetype=boastful
+One day they will tell stories about this. For now I am telling them myself.
+
+@ trigger=idle maxlevel=19 archetype=wry
+I was promised adventure. So far it has mostly been walking.
+
+@ trigger=idle maxlevel=19 archetype=grim
+They say the road ahead only gets worse. Good. At least someone told me the truth.
+
+@ trigger=idle maxlevel=19 archetype=haunted
+I left without saying goodbye properly. I keep meaning to write and I keep not writing.
+
+@ trigger=idle maxlevel=19 archetype=savage
+My hands still shake after a fight. Not from fear. I want the next one.
+
+@ trigger=idle maxlevel=19 archetype=sinister
+I am learning who talks too much in %area. That will be worth more than coin.
+
+@ trigger=combat_start maxlevel=19
+My hands know this part better than they did last week. Stand ready.
+Here we are then. I have been practicing for exactly this.
+%target has picked the wrong traveller today. I hope.
+Steady. Breathe. That is what they taught me and I mean to use it.
+I am not going to run. I decided that before I ever came out here.
+
+@ trigger=combat_start maxlevel=19 archetype=devout
+A short prayer, then work. That is the order of it.
+
+@ trigger=combat_start maxlevel=19 archetype=wry
+I did want to see the world. I suppose this is a part of the world.
+
+@ trigger=combat_start maxlevel=19 archetype=boastful
+Watch closely, %target. This is the part I am good at.
+
+@ trigger=combat_start maxlevel=19 archetype=grim
+This will hurt somewhere. Let us get on with it.
+
+@ trigger=combat_start maxlevel=19 archetype=scholar
+I read how to counter %target. Now we learn whether the book was honest.
+
+@ trigger=combat_start maxlevel=19 archetype=savage
+Finally. I have been waiting all morning for something to swing at.
+
+@ trigger=combat_start maxlevel=19 archetype=sinister
+I have been watching how %target moves. Long enough now.
+
+@ trigger=death maxlevel=19
+Is this all it takes? I thought I would get further than this.
+%target got me. My mother said this would happen and I hated her for saying it.
+I never even saw the sea. I wanted so badly to see the sea.
+Tell them at home that I stood up first. Tell them that part.
+
+@ trigger=death maxlevel=19 archetype=devout
+I am not afraid. I am only sorry it came so soon.
+
+@ trigger=death maxlevel=19 archetype=wry
+Well. That was in none of the stories I was told.
+
+@ trigger=death maxlevel=19 archetype=boastful
+Do not tell anyone about this. Not the way it actually happened.
+
+@ trigger=death maxlevel=19 archetype=haunted
+I am coming, then. I was never going to be long behind you.
+
+@ trigger=death maxlevel=19 archetype=savage
+I was not finished. I had so much more left in my arms than that.
+
+@ trigger=death maxlevel=19 archetype=grim
+I expected this. I did not expect it to be today.
+
+@ trigger=level_up maxlevel=19
+Something has settled in me. The pack does not sit as heavy as it did.
+I swung without thinking just now, and it went exactly where I wanted.
+I am not the same as the one who walked out of the village gate.
+My arms ache less at the end of a day. That is worth something.
+I am beginning to believe I might actually be good at this.
+
+@ trigger=level_up maxlevel=19 archetype=devout
+I feel steadier than I was. I will try to deserve it.
+
+@ trigger=level_up maxlevel=19 archetype=wry
+I appear to be improving. Do not look so surprised.
+
+@ trigger=level_up maxlevel=19 archetype=scholar
+I can name what I did wrong last week and not do it again. That is the whole of it.
+
+@ trigger=quest_complete maxlevel=19
+That is %quest finished. My first proper piece of work out here.
+%quest is done. I want to tell someone at home about this one.
+They paid me less for %quest than I was promised. I did the work anyway.
+%quest, finished. I am keeping count of these.
+
+@ trigger=quest_complete maxlevel=19 archetype=boastful
+%quest is done, and I would like that written down somewhere.

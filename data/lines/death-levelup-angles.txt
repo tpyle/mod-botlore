@@ -1,0 +1,81 @@
+@ trigger=death archetype=devout
+I had a prayer half finished. I will trust it counts as spoken.
+Tell the ones who taught me I did not flinch at the end. That is all they ever asked.
+I am cold, and I did not expect the cold to be the part I minded.
+
+@ trigger=death archetype=grim
+I said this would happen. I did not think it would be so dull.
+My pack goes to whoever carries it fastest. Nothing in it is sentimental.
+Do not tell my sister. Tell everyone else.
+
+@ trigger=death archetype=scholar
+I always assumed the last thought would be profound. It is about my boots.
+I cannot remember what I said to her that morning. I would have chosen better words.
+Note that the cold comes before the dark. I had the order wrong.
+
+@ trigger=death archetype=boastful
+Do not let them find me folded up like this. Straighten me out first.
+I was in the middle of a story. Somebody finish it for me, and finish it generously.
+Tell the tavern I went loud. It is nearly true.
+
+@ trigger=death archetype=wry
+Well. Less fuss than I had budgeted for.
+I owe the smith for the strap repair. Somebody see to it.
+I have ended up face down in a puddle. Grant me the dignity of a roll.
+
+@ trigger=death archetype=haunted
+I thought I would see her. I am only cold.
+I never paid back what I took from that house. Say that I meant to.
+Where is this. I knew an hour ago.
+
+@ trigger=death archetype=savage
+Worse than I was promised. Nobody said it would take so long.
+My axe to whoever swings it, my boots to whoever needs them more.
+I was arguing about supper. Ridiculous last words, and mine.
+
+@ trigger=death archetype=sinister
+Do not let the others see me like this. Move me first.
+There is a debt in my ledger I never called in. Let it stand unpaid.
+Tell the one who is waiting. Tell no one else.
+Easier than I had arranged for. I am almost insulted.
+
+@ trigger=level_up archetype=devout
+My hands stopped shaking during the words this morning. I did not ask for that.
+I only noticed because the old prayer felt short. It used to take all my breath.
+The discipline holds, and I am no longer proud of holding it. That may be the point.
+
+@ trigger=level_up archetype=grim
+Something changed and I do not trust it. What arrives quietly asks for payment later.
+The shoulder I wrecked years back has stopped complaining. That is how I know.
+I set out wanting to see this finished. Now I only want it done.
+
+@ trigger=level_up archetype=scholar
+I have been measuring the wrong thing. It is not the strength, it is the time between.
+It happened while I was refilling a waterskin. There was no moment to it at all.
+I am the most dangerous thing standing here. I would like to record my objection.
+
+@ trigger=level_up archetype=boastful
+Did anyone see that. No. Of course not.
+I felt the exact moment it turned. It was in the footwork, not the blow.
+I have improved and nobody has remarked on it, so I am forced to remark on it myself.
+
+@ trigger=level_up archetype=wry
+Something improved. I believe I was asleep for it.
+I have become the one people stand behind. I would rather not have.
+My knee has stopped offering its usual opinions. That is the whole announcement.
+
+@ trigger=level_up archetype=haunted
+I am better than she was now. I never wanted to be better than her.
+I wanted to be strong enough to go back. I have stopped wanting to go back.
+It arrived while I was tying a strap. Nothing marked it, nothing at all.
+
+@ trigger=level_up archetype=savage
+The last one felt slow to me. That is new, and I am not sure I like knowing it.
+Something in me sharpened and I never felt it happen. Bring the next one closer.
+I am the worst thing in this valley now. Keep behind me and keep your hands empty.
+
+@ trigger=level_up archetype=sinister
+I did not notice until the room went careful around me. Useful, that.
+Whatever I have gained, I will not spend it yet. Let it be underestimated a while longer.
+I wanted a name when I began. Now I would prefer no one say it.
+The old wound has gone silent. I trust that less than I trusted the pain.

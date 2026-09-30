@@ -2102,6 +2102,25 @@ _QUALITY_BY_NAME = {
 _GROUP_BY_NAME = {
     "alone": GROUP_ALONE, "grouped": GROUP_GROUPED, "with_player": GROUP_WITH_PLAYER,
 }
+# Talent trees, as a mask of 1 << tree index. Resolved within the class because
+# the names repeat: protection belongs to the warrior and the paladin, holy to
+# the paladin and the priest, frost to the death knight and the mage, and
+# restoration to the shaman and the druid. A spec= without a class= is an error.
+_SPEC_BY_CLASS = {
+    WARRIOR:      {"arms": 1, "fury": 2, "protection": 4},
+    PALADIN:      {"holy": 1, "protection": 2, "retribution": 4},
+    HUNTER:       {"beast_mastery": 1, "marksmanship": 2, "survival": 4},
+    ROGUE:        {"assassination": 1, "combat": 2, "subtlety": 4},
+    PRIEST:       {"discipline": 1, "holy": 2, "shadow": 4},
+    DEATH_KNIGHT: {"blood": 1, "frost": 2, "unholy": 4},
+    SHAMAN:       {"elemental": 1, "enhancement": 2, "restoration": 4},
+    MAGE:         {"arcane": 1, "fire": 2, "frost": 4},
+    WARLOCK:      {"affliction": 1, "demonology": 2, "destruction": 4},
+    DRUID:        {"balance": 1, "feral": 2, "restoration": 4},
+}
+
+_TEAM_BY_NAME = {"alliance": ALLIANCE, "horde": HORDE}
+
 _GENDER_BY_NAME = {"male": 0, "female": 1}
 
 # ItemTemplate::Class, and the subclasses from ItemTemplate.h. Named rather
@@ -2172,6 +2191,16 @@ def _filters_from_header(header, where):
             kw["group"] = _GROUP_BY_NAME[value] if value in _GROUP_BY_NAME else _fail(where, key, value)
         elif key == "gender":
             kw["gender"] = _GENDER_BY_NAME[value] if value in _GENDER_BY_NAME else _fail(where, key, value)
+        elif key == "spec":
+            pass    # resolved below, once the class is known
+        elif key == "team":
+            kw["team"] = _TEAM_BY_NAME[value] if value in _TEAM_BY_NAME else _fail(where, key, value)
+        elif key == "minlevel":
+            assert value.isdigit(), f"{where}: minlevel must be a number, got {value!r}"
+            kw["minlvl"] = int(value)
+        elif key == "maxlevel":
+            assert value.isdigit(), f"{where}: maxlevel must be a number, got {value!r}"
+            kw["maxlvl"] = int(value)
         elif key == "weapon":
             kw["iclass"] = _ITEM_CLASS_WEAPON
             kw["isub"] = _WEAPON_BY_NAME[value] if value in _WEAPON_BY_NAME else _fail(where, key, value)
@@ -2188,6 +2217,18 @@ def _filters_from_header(header, where):
             kw["weight"] = int(value)
         else:
             raise AssertionError(f"{where}: unknown filter {key!r}")
+
+    if "spec" in spec:
+        assert "cls" in kw, f"{where}: spec= needs a class=, because spec names repeat across classes"
+        trees = _SPEC_BY_CLASS[kw["cls"]]
+        name = spec["spec"]
+        assert name in trees, \
+            f"{where}: spec={name!r} is not one of {sorted(trees)} for that class"
+        kw["spec"] = trees[name]
+
+    if "minlvl" in kw and "maxlvl" in kw:
+        assert kw["minlvl"] <= kw["maxlvl"], \
+            f"{where}: minlevel {kw['minlvl']} is above maxlevel {kw['maxlvl']}, so nothing can match"
 
     return trigger, kw
 

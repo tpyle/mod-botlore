@@ -1,0 +1,119 @@
+@ trigger=combat_start class=warrior spec=arms
+One clean stroke, well placed. That is all this needs.
+I have practiced this opening until my hands know it. Now it earns its keep.
+
+@ trigger=combat_start class=warrior spec=fury
+Both blades are out and I am not stopping to think.
+No brakes and no second guesses. Keep the steel moving.
+I have been waiting all morning for this.
+
+@ trigger=combat_start class=warrior spec=protection
+Feet planted. Nothing gets past me here.
+I hold this line. That is the whole of my work.
+
+@ trigger=combat_start class=paladin spec=holy archetype=devout
+The Light in me was never for me. Let it mend what breaks here.
+I did not come to strike. I came to keep the wounded on their feet.
+
+@ trigger=combat_start class=paladin spec=protection
+I swore an oath and here it takes shape. I will not move.
+Whatever crosses this ground crosses me first.
+
+@ trigger=combat_start class=paladin spec=retribution
+The Light does not only mend. Today it judges.
+Mercy was offered once. What follows is the verdict.
+
+@ trigger=combat_start class=death_knight spec=blood archetype=grim
+Take what you can from me. I will take it back twofold.
+I do not fall. I was dead once and found it wanting.
+
+@ trigger=combat_start class=death_knight spec=frost
+Cold first, then quiet, then two blades. In that order.
+I will be still until the moment comes, and then it is finished.
+
+@ trigger=combat_start class=death_knight spec=unholy archetype=sinister
+The plague goes ahead of me. I follow at my leisure.
+What killed me made more of me. I return the favour.
+Rise and serve. There is work here for the dead.
+
+@ trigger=level_up class=warrior spec=arms
+My grip has changed for the better. The stroke lands cleaner now.
+Technique before strength, and both of them have grown.
+
+@ trigger=level_up class=warrior spec=fury archetype=boastful
+Faster than I was yesterday, and yesterday was fast enough.
+
+@ trigger=level_up class=warrior spec=protection
+I can take more now than I could. That is the part that matters.
+
+@ trigger=level_up class=paladin spec=holy archetype=devout
+The Light pours through me more freely, and more of it reaches the hurt.
+
+@ trigger=level_up class=paladin spec=protection
+My oath sits heavier on me and holds better for it.
+
+@ trigger=level_up class=paladin spec=retribution
+My judgement carries further now. Let the guilty feel the reach of it.
+The Light burns hotter in my hands, and I will not spend it on mercy.
+
+@ trigger=level_up class=death_knight spec=blood archetype=grim
+Harder to put down than I was. Good.
+
+@ trigger=level_up class=death_knight spec=frost
+My hands are steadier and the cold answers quicker.
+Nothing shakes me now. Cold is never in a hurry.
+
+@ trigger=level_up class=death_knight spec=unholy
+The dead hear me more clearly now. They come when I call.
+
+@ trigger=idle class=warrior spec=arms archetype=scholar
+I whet the edge every evening. A dull blade insults the craft.
+
+@ trigger=idle class=warrior spec=fury
+Standing still is the hardest thing anyone has ever asked of me.
+
+@ trigger=idle class=warrior spec=protection
+I check the straps and the face of the shield. Small things keep people alive.
+
+@ trigger=idle class=paladin spec=holy archetype=devout
+Someone always needs mending. I am only waiting to learn who.
+Given the choice I would rather close a wound than open one.
+
+@ trigger=idle class=paladin spec=protection
+An oath is not words. It is where you choose to stand.
+
+@ trigger=idle class=paladin spec=retribution
+I have no patience left for the wicked and no wish to find more.
+
+@ trigger=idle class=death_knight spec=blood archetype=haunted
+I remember dying. I remember deciding not to stay that way.
+
+@ trigger=idle class=death_knight spec=frost
+The quiet suits me. It is the same quiet that comes before a strike.
+
+@ trigger=idle class=death_knight spec=unholy archetype=sinister
+Something rots under this ground. I find that companionable.
+
+@ trigger=kill_boss class=warrior spec=arms
+One blow, well placed, and the terror of a whole province is down.
+
+@ trigger=kill_boss class=warrior spec=fury archetype=boastful
+I never slowed and it never got the chance. Look at it now.
+
+@ trigger=kill_boss class=warrior spec=protection
+It broke itself on me. All I had to do was stand.
+
+@ trigger=kill_boss class=paladin spec=holy
+It is over, and the wounded will live. That was always the part I wanted.
+
+@ trigger=kill_boss class=paladin spec=retribution archetype=devout
+Judgement fell, and the Light does not take it back.
+
+@ trigger=kill_boss class=death_knight spec=blood
+It spent everything it had on me and I am still standing. It is not.
+
+@ trigger=kill_boss class=death_knight spec=frost
+Two blades, one breath, and the cold kept the rest. Gone.
+
+@ trigger=kill_boss class=death_knight spec=unholy archetype=sinister
+It will rise again. When it does, it rises as mine.

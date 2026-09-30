@@ -1,0 +1,91 @@
+@ trigger=kill archetype=devout
+Light keep it, whatever it was.
+That one is not my burden now.
+Another small mercy done.
+
+@ trigger=kill archetype=grim
+There will be more.
+That changes nothing.
+Still standing, for now.
+
+@ trigger=kill archetype=scholar
+Four, by my count.
+%target is down, as expected.
+I will want a closer look later.
+
+@ trigger=kill archetype=boastful
+Hardly warmed my arms.
+Count that one with the rest.
+Another for the tally.
+
+@ trigger=kill archetype=wry
+Well, it tried.
+Not much of a morning for it.
+That went about as I hoped.
+
+@ trigger=kill archetype=haunted
+I have done this too often.
+That face joins the others.
+It does not help.
+
+@ trigger=kill archetype=savage
+That was too quick.
+Barely a mouthful.
+Still hungry.
+
+@ trigger=kill archetype=sinister
+Quiet again, good.
+As arranged.
+One fewer to account for.
+
+@ trigger=kill archetype=grim class=death_knight
+Cold work, nothing more.
+
+@ trigger=kill archetype=devout class=priest
+I will not pray over that.
+
+@ trigger=kill archetype=scholar class=mage
+Predictable to the last.
+
+@ trigger=kill archetype=savage race=orc
+Weak blood in that one.
+
+@ trigger=kill archetype=wry race=dwarf
+Not worth the axe oil.
+
+@ trigger=kill archetype=boastful race=bloodelf
+It was never going to be close.
+
+@ trigger=combat_start archetype=devout
+Light steady my hands.
+I go where I am needed.
+Stand fast, the work is here.
+
+@ trigger=combat_start archetype=grim
+This will cost something.
+Come on, then.
+
+@ trigger=combat_start archetype=scholar
+Let us see how %target moves.
+I will learn something from this.
+
+@ trigger=combat_start archetype=boastful
+Watch how this is done.
+I have been waiting all day for this.
+
+@ trigger=combat_start archetype=wry
+Well, that settles the afternoon.
+So much for the quiet road.
+
+@ trigger=combat_start archetype=haunted
+Here we go again, then.
+I know how this feels already.
+
+@ trigger=combat_start archetype=savage
+Finally.
+Let me at it.
+I have been dull too long.
+
+@ trigger=combat_start archetype=sinister
+Hold still, %target.
+Everything in its order.

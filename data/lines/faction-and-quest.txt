@@ -1,0 +1,89 @@
+@ trigger=idle team=alliance
+The truce holds here, and not one man on this line believes it will hold long.
+Orders come down from Stormwind on clean paper. Nobody who signed it has stood in this snow.
+There are Horde banners fifty yards off, cutting the same dead men we are cutting. Strange season.
+We are told we fight for the living. Most days that is the only line I can keep straight.
+My grandfather fell to orcs, and today I guard their flank. The world did not ask my leave.
+Lordaeron was ours once. I do not say it loudly out here, but I have not forgotten it.
+Whatever they say of us, the Alliance arrives with bread and bandages as well as swords.
+Varian is a hard king and this is a hard country. Perhaps that is the fit of it.
+
+@ trigger=idle team=horde
+Thrall gave his word on this truce, so I keep it. That is discipline, not friendship.
+The Warchief's orders reach us late and gently worded. He has never breathed air this cold.
+Alliance blades are working the same corpses fifty paces off. I let them work.
+My people were forged in a war we did not choose. This one we chose, and it is against the dead.
+We came to Northrend with fewer ships and better reasons.
+Hillsbrad is not forgiven. It is only not today's business.
+The Horde is not one people, and that is our strength, whatever the humans make of it.
+They call us savages, and then they set their camp behind our line when the dead come walking.
+
+@ trigger=quest_complete team=alliance
+Done, and it goes in the report exactly as it happened. Stormwind may make of it what it likes.
+Finished. One more piece of this country that answers to the living.
+It is done. Say that the Alliance kept its word out here, where nobody was watching.
+Settled. If the truce lasts another day, work like this is the reason.
+Finished, and I did not have to ask the Horde for help with it. I note that with some relief.
+
+@ trigger=quest_complete team=horde
+It is done. The Horde does not leave a thing half carried.
+Finished. Let Orgrimmar hear that we hold this ground without being asked twice.
+Done. The Warchief asked for strength and not complaint, and he has both parts of that.
+It is finished. Strength is what we carry in place of a homeland, and it is enough.
+
+@ trigger=quest_complete archetype=devout
+It is finished, and I did not have to be brave about it. Only faithful, and on time.
+%quest is done. I kept the discipline, and the discipline kept me.
+
+@ trigger=quest_complete archetype=grim
+Done. It held together longer than I expected, which is not the same as well.
+Finished. I came prepared to lose more than I did.
+
+@ trigger=quest_complete archetype=scholar
+It is done, and I have the measurements. The doing was less interesting than the numbers.
+%quest is finished, and my first guess about it was wrong in a useful way.
+
+@ trigger=quest_complete archetype=boastful
+Finished, with a flourish nobody stood near enough to see. A waste of a good flourish.
+Done. Ask anyone who was there, or ask me, since I tell it better.
+
+@ trigger=quest_complete archetype=wry
+Done. It took twice as long as promised and involved twice as much water.
+Finished. I have been thanked with a nod, which is generous by local standards.
+
+@ trigger=quest_complete archetype=haunted
+It is done. I keep finishing things and the weight sits exactly where it sat.
+Finished. There was a time I would have had someone to tell about this.
+
+@ trigger=quest_complete archetype=savage
+Finished, and my arms are still warm. Find me the next one.
+Done. The killing was the short part; the walk back was the labour.
+
+@ trigger=quest_complete archetype=sinister
+It is done, in the manner I chose rather than the one they described.
+
+@ trigger=quest_accept archetype=devout
+I have said that I will do it, and the saying is already half the doing.
+
+@ trigger=quest_accept archetype=grim
+I will take it. I expect it to go badly, and I will be standing there regardless.
+%quest, and nobody will say plainly what it involves. I will find that out the hard way.
+
+@ trigger=quest_accept archetype=scholar
+I will do it, and I will keep notes. Half of any job is learning what it truly was.
+
+@ trigger=quest_accept archetype=boastful
+%quest. They want it done properly, which is precisely why they came to me.
+
+@ trigger=quest_accept archetype=wry
+Very well. Let us find out together how much further it is than they claimed.
+Yes, naturally. I was the only one standing still long enough to be asked.
+
+@ trigger=quest_accept archetype=haunted
+I will go. Having somewhere to walk to is worth more to me than the pay.
+
+@ trigger=quest_accept archetype=savage
+Agreed. Tell me what stands in the way, and you will not need to tell me twice.
+
+@ trigger=quest_accept archetype=sinister
+I accept. A favour given is a hand on a rope, and I am a patient sort.
