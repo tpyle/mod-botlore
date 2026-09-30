@@ -1,0 +1,65 @@
+@ trigger=level_up archetype=devout
+This was given, not earned. I will spend it accordingly.
+I am stronger than I was, and no more deserving.
+Whatever hand set this in me, I hope it chose well.
+Strength on loan. The Light will want an accounting.
+I did not ask for this much. I will not waste it.
+If this is grace, it is grace meant for someone else's rescue.
+Let it be for the ones who cannot carry their own.
+
+@ trigger=level_up archetype=grim
+Stronger. The thing ahead of me got worse at the same rate.
+I did not gain this to live longer. I gained it to get further in.
+Good. It will be enough for a while, and then it will not.
+Every bit of this was bought from something that wanted to keep it.
+I am better at this than I was. That is not a comfort, only a fact.
+Whatever I am ready for now, it is not what is coming.
+
+@ trigger=level_up archetype=scholar
+Something in me has changed and I cannot name the mechanism.
+I would like to know what was spent to buy this.
+Strength arrives without explanation, and I distrust anything that does.
+I have grown, and I hold no theory that accounts for it.
+There is a ledger somewhere. I would like to read my side of it.
+I have new capacities and no instruction in their limits. That is how people die.
+
+@ trigger=level_up archetype=boastful
+Look what I have become. Nobody is looking, which is its own lesson.
+I am formidable now, and there is no one here to tell.
+They used to walk past me in the street. Let them try that today.
+I have earned an audience. The road has not provided one.
+Songs should be written about this. I suppose I must write them myself.
+I wanted them to fear me. Now they do, and they cross the road.
+
+@ trigger=level_up archetype=wry
+Stronger. Still nobody's first choice for anything.
+Turns out the reward for surviving is being sent somewhere worse.
+I set out to fix one small thing. It has rather grown since.
+I am considerably harder to kill. The world has not noticed.
+People ask me for help now. That was never the plan.
+I got what I wanted. I have since changed my mind about wanting it.
+
+@ trigger=level_up archetype=haunted
+I am what I needed to be, a season too late.
+This would have saved them. It did not arrive in time to.
+There was a day when this much would have mattered. It has passed.
+Someone should have lived to see me become this.
+I am strong enough for that night now. That night is over.
+I kept growing after there was nothing left to protect.
+They would not recognize what they made of me.
+
+@ trigger=level_up archetype=savage
+More of me to throw at it. That is all I ever wanted from this.
+Whatever was too much for me before should run.
+I traded quiet for this and I would trade it again.
+Give me something that fights back. The rest has stopped counting.
+I did not come by this gently, and nothing after it will be gentle either.
+Every scrap of this came off somebody. I keep it.
+
+@ trigger=level_up archetype=sinister
+Let them keep guessing what I can do. The guess is worth more than the truth.
+I am stronger. No one needs to know by how much.
+Power kept quiet is power kept.
+They were comfortable when they thought they had my measure.
+I will not show this until showing it buys something.
+The ones who used to ignore me have begun to be careful. Good.

@@ -1,0 +1,65 @@
+@ trigger=quest_complete archetype=devout
+She asked me to do it for coin. I did it for the vow I made before she asked.
+The woman who begged this of me would not meet my eyes after. I did not need her eyes.
+No one thanked me and the morning came anyway. That is thanks enough.
+He told me it was a small thing. He believed it, and I will not correct a man who sleeps better ignorant.
+An old man carried water for me the whole way and asked nothing. Pray for him, whoever he was.
+They wish my name kept out of it. My name was never the point.
+
+@ trigger=quest_complete archetype=grim
+He left out the part with the bodies. They always leave out that part.
+The one who asked me is going to be disappointed. It is done, but nobody comes home glad.
+Someone stood in the doorway and told me not to. I should have listened to her, and I would do it again.
+%quest, he called it, like it was errands. He had never once been down there.
+He did not lie to me. He simply did not know, and now he never has to.
+A stranger held the lantern and walked off before I could learn his name. Best that way.
+They will thank the wrong man for this by winter. Let them.
+
+@ trigger=quest_complete archetype=scholar
+I asked her three times what it involved. She answered three different ways, and all three were short.
+The one who wanted this cannot have understood the scale of it, and I have no wish to explain.
+Curious, that the man who gains the most from this never spoke to me once.
+A girl told me where to look and refused payment. I wrote down her description, since I never got her name.
+They have asked me to set it down under another hand. A false attribution, willingly given.
+I met the woman it was all for. Perfectly ordinary. I confess I expected otherwise.
+
+@ trigger=quest_complete archetype=boastful
+Done, and the man who asked shook my hand as though I had fetched his boots.
+%quest is finished and the crowd that ought to be here is elsewhere. I shall have to tell it myself.
+They asked me to keep this quiet. Me. Quiet.
+Six people swore it could not be done and one of them was paying me.
+The lad who came along will be telling this story for years. He may even mention me.
+She wept on my shoulder and called me by three names, none of them mine.
+The name on every tongue tonight ought to be mine, and I mean to see to that myself.
+
+@ trigger=quest_complete archetype=wry
+He asked me for a favour. Favour is a generous word for what that was.
+Finished, and the man who wanted it has thanked me at such length I nearly went back out.
+Nobody wanted this done but one man, and he has since forgotten asking.
+She said it would take an afternoon. She was right, in the sense that afternoons exist.
+I am to say a friend of his did it. His friend is welcome to it.
+A man tried very hard to stop me. He was not good at it, but he was sincere.
+
+@ trigger=quest_complete archetype=haunted
+Someone asked this of me. I did it for a woman long dead who will never know.
+A boy thanked me with both his hands and I could not look at him.
+I did it because she would have done it. She never asked me for anything.
+The one who asked reminded me of somebody. That was all it took.
+They want no mention of my part in it. Good. There is a name I would keep out of the telling anyway.
+Nobody is waiting to hear that I finished. I have grown used to the quiet of that.
+
+@ trigger=quest_complete archetype=savage
+He asked for a job done and I gave him a slaughter. He can decide which he wanted.
+Whoever wanted this will be pleased. I was already pleased, for my own reasons.
+Someone put himself between me and the work. He is no longer between anything.
+The man who sent me said there would be two. There were nine, and I will thank him for that.
+They will hand the credit to some captain. Let him carry it, I got the fighting.
+One of them begged me to stop. Not the one who hired me. Too late for either.
+
+@ trigger=quest_complete archetype=sinister
+The debt is settled, and the man who owed it never knew he was in it.
+He understated the work. I have noted the difference, and he will hear the figure.
+Whoever asked wanted it done and not seen. One of those costs a great deal more.
+She helped and would take nothing for it. I dislike a debt I cannot repay.
+It will be credited to another man, who now owes me something he cannot name.
+I met the one it was all for at last. Nothing about him explained the price.

@@ -39,7 +39,6 @@ Steady. Breathe. That is what they taught me and I mean to use it.
 I am not going to run. I decided that before I ever came out here.
 
 @ trigger=combat_start maxlevel=19 archetype=devout
-A short prayer, then work. That is the order of it.
 
 @ trigger=combat_start maxlevel=19 archetype=wry
 I did want to see the world. I suppose this is a part of the world.

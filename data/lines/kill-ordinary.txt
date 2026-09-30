@@ -71,7 +71,6 @@ I will learn something from this.
 
 @ trigger=combat_start archetype=boastful
 Watch how this is done.
-I have been waiting all day for this.
 
 @ trigger=combat_start archetype=wry
 Well, that settles the afternoon.

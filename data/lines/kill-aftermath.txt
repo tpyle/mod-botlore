@@ -1,0 +1,85 @@
+@ trigger=kill_boss archetype=devout
+%target is still now. I would rather it were still and breathing.
+%target is cooling and I have no prayer that fits it. I will say one anyway.
+Let me sit with %target a while. Something ought to stay by it.
+My hands are shaking. Mending would have cost me less than this did.
+I have bound three cuts I never felt taking. That frightens me more than the fight.
+
+@ trigger=kill_boss archetype=devout rank=elite
+There was a wound in %target older than any of mine. Someone hurt it long before I came.
+
+@ trigger=kill_boss archetype=devout rank=world_boss
+Something that large should not go quiet so quickly. I am sorry for the quiet.
+
+@ trigger=kill_boss archetype=grim
+That went as badly as I expected and I am still standing. Twice fortunate.
+%target very nearly had me. I will not pretend otherwise to anybody.
+Give me a moment. My legs have only now understood what happened.
+%target is smaller dead than alive. They always are, and it never helps.
+Something will come and eat this by morning. That is the whole of it.
+
+@ trigger=kill_boss archetype=grim rank=elite
+I came knowing what %target could do. The knowing did not make it any lighter.
+
+@ trigger=kill_boss archetype=scholar
+Now let me look at it properly, while it is still warm enough to tell me things.
+%target has a mended break in the foreleg. Something fought it before me and walked off.
+Note the teeth of %target. Worn flat at the back, which means more years than I credited.
+I should measure the reach of it. I misjudged that reach very badly an hour ago.
+%target was standing over something. That is worth more study than the carcass is.
+
+@ trigger=kill_boss archetype=scholar rank=rare_elite
+I may never see another %target. Let me be slow and careful with this one.
+
+@ trigger=kill_boss archetype=scholar rank=rare
+Seldom seen, and now seen once more than it would have liked. I will write down all of it.
+
+@ trigger=kill_boss archetype=boastful
+Did anyone see that. No. Well. It happened all the same.
+I would tell this better with a crowd. %target will have to be witness enough.
+My voice is gone and there is nobody left to hear it. A fitting end to a great deed.
+I shall need a new tale for this. And a new shirt.
+I am sitting down. A hero may sit.
+
+@ trigger=kill_boss archetype=boastful rank=world_boss
+Look at %target lying there. Smaller than the story I will tell, and I admit that freely.
+
+@ trigger=kill_boss archetype=wry
+Well. That is one fewer problem and about four new holes in me.
+%target has stopped. I would quite like to stop too, for a bit.
+Turns out the hard part was the standing up afterwards.
+I appear to be bleeding from somewhere I cannot reach. Marvellous.
+Big thing, small heap. %target looks almost modest from up here.
+
+@ trigger=kill_boss archetype=wry rank=elite
+They did warn me %target was dangerous. They were, as it happens, entirely correct.
+
+@ trigger=kill_boss archetype=haunted
+I have knelt by a body like this before with nobody to walk back beside.
+%target is dead and the weight did not lift. It never does lift.
+This is the quiet I cannot stand. The noise I can manage well enough.
+Someone would have wanted to hear about this. There is no one left to tell.
+I nearly did not walk away from that, and I am not sure I minded.
+
+@ trigger=kill_boss archetype=haunted rank=rare_elite
+Scars on %target older than this fight. We both came here already broken.
+
+@ trigger=kill_boss archetype=savage
+Good. That one fought. I will say so aloud where it can almost still hear me.
+%target gave me everything it had. I will not spoil that by mocking it now.
+Ribs cracked, mine and its both. Fair trade.
+%target earned a clean end and I gave it one. The crows can have the rest.
+Blood on me and most of it is not mine. Let me breathe a while.
+
+@ trigger=kill_boss archetype=savage rank=world_boss
+I have wanted a thing that size my whole life. Now all I want is sleep.
+
+@ trigger=kill_boss archetype=sinister
+Note how quickly the fear of a thing dies along with it. Useful, that.
+%target was guarding something. I intend to know what before anyone else does.
+I am not hurt badly. I will say otherwise later, when it serves me.
+Old wounds on this one. Someone softened it for me and never knew they had.
+Let %target lie where it fell. The sight of it will do work for me.
+
+@ trigger=kill_boss archetype=sinister rank=rare_elite
+Few ever saw %target. Fewer still will know how it ended. Good.

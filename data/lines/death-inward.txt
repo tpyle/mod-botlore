@@ -1,0 +1,65 @@
+@ trigger=death archetype=devout
+The cold is coming up through me and it is very gentle.
+I had a prayer ready for this and now I cannot find the start of it.
+Oh. It is quiet. I did not expect it to be quiet.
+My hands have gone somewhere else. The rest of me is still here.
+I am not afraid. I keep waiting to be and it does not come.
+The light is only the light. That is enough, that is enough.
+Someone is saying the words for me. I think it is me.
+
+@ trigger=death archetype=grim
+Knew it would be cold. Did not know it would be slow.
+There it is. I have been walking toward this all morning.
+No arguing with it now. That is almost restful.
+Everything has gone far away and small, like looking down a well.
+I always thought I would mind this more than I do.
+The ground is warm. Odd, that.
+
+@ trigger=death archetype=scholar
+The sound is arriving late. Everything I hear has already happened.
+Fascinating. I can feel exactly where it stops being me.
+No pain yet. I am given to understand that comes later, or not at all.
+I am counting my own heart and losing my place.
+There is a beetle on this stone and it is the colour of oil.
+I had a question. I had it a moment ago and it was a good one.
+Time is not moving evenly. Someone ought to have written this down.
+
+@ trigger=death archetype=boastful
+Look at me. Actually no, look away, I am not at my best.
+This is not how I pictured it. I pictured better light.
+Am I making a sound? I want it to be a good sound.
+Wait. Wait, I was not finished being here.
+My voice has gone small. That is the part I mind.
+Someone is watching, surely. Someone must be watching.
+
+@ trigger=death archetype=wry
+Well. That escalated in the wrong direction.
+Cold feet. Cold everything, in fact.
+I appear to be lying down. I do not recall choosing that.
+The sky is doing something quite pretty and I cannot enjoy it properly.
+%target has made its point rather thoroughly.
+I would sit up, but I have gone out of the habit.
+
+@ trigger=death archetype=haunted
+Oh. It smells like the kitchen at home. Why now.
+I can hear a voice I have not heard in years and it is not saying anything.
+So this is what it was like. I have wondered a long time.
+I am not where I thought I was. Give me a moment, I will place it.
+Someone used to hum while they did this. I cannot get the tune.
+I thought I would be gladder of it than this.
+
+@ trigger=death archetype=savage
+Still warm. I am still warm, I can feel the going of it.
+My heart is loud. I never knew it could be that loud.
+Hungry. Strange thing to be, now.
+I want to get up. My legs have stopped listening to the wanting.
+It is all narrowing down to one bright hot line.
+Everything is red at the edges and I am not ready to leave it.
+
+@ trigger=death archetype=sinister
+Slower than I calculated. I will allow myself the error.
+I am watching my own hands and they are very far away.
+The cold begins at the fingers. Noted, and noted precisely.
+How curious. I have no argument left and no need of one.
+%target was thorough. I can respect a thing done properly.
+I expected to be frightened. Instead I am simply attentive.

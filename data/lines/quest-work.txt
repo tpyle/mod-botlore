@@ -82,7 +82,6 @@ Finished. It did not feel like anything, which is how I know it was work.
 It is over. Not cleanly, but over.
 
 @ trigger=quest_complete class=druid
-%quest is done, and the land has already forgotten I was there.
 
 @ trigger=quest_complete archetype=devout
 It is finished, and I took no more than I had to along the way.

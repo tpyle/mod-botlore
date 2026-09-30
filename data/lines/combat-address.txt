@@ -1,0 +1,65 @@
+@ trigger=combat_start archetype=devout
+Turn away now, %target, and I will not follow.
+I would rather set your bones than break them. Choose.
+Stand down and I will tend whatever I have already cost you.
+I am asking once, %target. Only once.
+Yield, and you walk out of here on your own feet.
+I have no quarrel I cannot put down. Put yours down first.
+Light keep you, %target, whichever way this ends.
+
+@ trigger=combat_start archetype=grim
+Go home, %target. You will not, but I said it.
+Nothing I offer you will be taken, so I offer nothing.
+You have chosen this, %target. Remember that you did.
+Last chance to walk away. I am not hopeful.
+I would let you go. You would only come back.
+Do not ask me for quarter later. Ask me now.
+
+@ trigger=combat_start archetype=scholar
+Tell me what you want here, %target, and we may both be spared.
+%target, what did you think would happen when I came closer?
+I would ask your name, but you will not give it.
+You could have gone around. Why did you not?
+Answer me, %target, and this stops. I expect nothing.
+I want to understand you. You are making that difficult.
+
+@ trigger=combat_start archetype=boastful
+Look at me when I speak to you, %target. There. Now we may begin.
+I will give you the honour of the first word. Say it well.
+Stand where the light falls, %target, and face me properly.
+Do you know who is addressing you? No? A pity.
+I announce myself, I give you fair warning, and still you stay.
+Compose yourself, %target. This will be remembered.
+
+@ trigger=combat_start archetype=wry
+I was going the other way, %target. Truly.
+You have my full attention now. I hope it was worth arranging.
+%target, is this how you greet everyone, or am I fortunate?
+Step aside and we can both call this a misunderstanding.
+I am going to ask you politely, and then I am not.
+Wonderful. Neither of us wanted this, and here we are.
+
+@ trigger=combat_start archetype=haunted
+I have let one thing go before. Do not ask me for that again.
+Run, %target. I am asking you for my own sake, not yours.
+You are nothing like what I lost, and still I hesitated.
+I am tired of this, %target. Give me a reason to stop.
+Say something. Anything. I would rather you were a person.
+I have done this before and I remember every time. Turn back, %target.
+
+@ trigger=combat_start archetype=savage
+Come on then, %target. Closer. That is it.
+Do not run. Running is the only thing I will hold against you.
+Yes. Show me what you have in you.
+Come here, %target. I will not make you wait.
+Do not stop now. You started so well.
+Look up. Look at me. Good.
+Stay in front of me, %target. That is all I ask.
+
+@ trigger=combat_start archetype=sinister
+Here are the terms, %target. There is only one, and it is mine.
+You may lower your weapon or keep it. It changes little.
+Speak now if you have something to say.
+I gave you room to leave, %target. Note that I gave it.
+Be still, %target. This will go easier for you if you are still.
+I will count to three. I would not rely on three.

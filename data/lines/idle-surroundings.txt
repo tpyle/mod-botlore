@@ -1,0 +1,65 @@
+@ trigger=idle archetype=devout
+Something died under that bramble. I will say the words over it and move on.
+Wet stone smell coming up off the ground. Good. The water here still runs.
+There is a cairn here and someone kept it tidy. I will add a stone before I go.
+The light is going amber across %zone. Time to kneel while I can still see my hands.
+A bird up there will not stop calling. I have stopped minding it.
+Rain coming. I can smell it on the dust before it lands.
+
+@ trigger=idle archetype=grim
+Boot in the mud, laces still tied. No foot in it.
+That fence rail is snapped outward. Whatever did it was leaving, not coming in.
+The birds here went quiet a moment ago. They know better than me.
+Burnt patch of grass here in %area, and the char is still warm.
+Track in the mud, deep at the toe. It was running.
+Something moved at the treeline. It has not moved again.
+
+@ trigger=idle archetype=scholar
+Three sorts of beetle on this one carcass, and each is working a different layer.
+The moss grows only on the north face of these stones. Reliable, if I need a bearing.
+That bird has four calls and keeps using the one nothing answers.
+Cold air is coming downhill along the ground. There is water below us, or a cave mouth.
+Fresh track, and the mud has not slumped at the edges yet. Within the hour.
+The ground gives under my heel here and not two paces back. Something is hollow.
+
+@ trigger=idle archetype=boastful
+Hear that bird? It has been announcing my arrival since the ridge.
+There is a track here the size of my shield. Good. I was getting bored.
+Smell that? Something big and dead, and none of it my work. A shame.
+This fence was flattened by something. I would like to have seen it try that with me here.
+Look at the light on this armour. %zone has never seen better.
+Wait. Something moved in the brush. Come out and see who you have found.
+
+@ trigger=idle archetype=wry
+A bird has chosen me to complain at. Lucky.
+This mud has taken my boot to the ankle. Firm ground, they told me.
+Something is rotting nearby and it has real ambition.
+That rain is coming straight for us and taking its time about it.
+There is a boot here with nobody in it. I will assume he found better ones.
+The insects in %area are very welcoming.
+
+@ trigger=idle archetype=haunted
+Someone stacked these stones by hand. I have done that.
+Smoke smell on the wind, faint. I stand still until it passes.
+The grass here has been pressed flat by something sleeping. It has gone cold.
+There is a small shoe in the ditch. I am not going to look for the other.
+Water running somewhere I cannot see. I have been listening to it too long.
+Nothing is moving. I keep watching the edge of the field anyway.
+
+@ trigger=idle archetype=savage
+Blood smell on the wind, old but there. Somebody bled well here.
+Something is watching from the rocks. Let it get brave.
+This ground is good and hard. Nothing slips on it.
+Flies this thick means meat close by.
+Deep tracks, claws out. I would like to meet the feet.
+Too quiet. My hands are getting restless.
+Bones in the grass, cracked open. Something strong eats here.
+
+@ trigger=idle archetype=sinister
+The wind comes up this slope toward the trees. Nothing downwind will smell me.
+One track in the mud and no second. It was carried from here.
+That bird will stop calling when something comes through. Useful.
+This fence is broken in one place only. Everything will come through there.
+The light is failing in %area. The shadows are lengthening on my side of the stones.
+Something rots under the leaves here. I will leave it exactly where it is.
+Water running below. Sound covers footsteps both ways.

@@ -6,7 +6,6 @@
 
 @ trigger=combat_start rank=normal archetype=devout
 Light guide my hand, and make this quick.
-I would rather have mended something today than ended it.
 Come on then, %target. I will not make a long thing of it.
 Hold still, %target. Nothing here needs to suffer longer than it must.
 %target does not know any better. That does not change what I have to do.

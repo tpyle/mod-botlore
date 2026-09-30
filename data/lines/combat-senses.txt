@@ -1,0 +1,65 @@
+@ trigger=combat_start archetype=devout
+Breath in, breath out, and my hands stop shaking. That is enough answer for me.
+Cold air down my throat, and the strength comes in with it.
+My grip settles the way it always does once I stop asking it to.
+I feel the ground take my weight. Nothing under me is going to give.
+The noise falls away and leaves me room to work.
+There is a warmth behind my ribs and it is steadier than my pulse.
+My knee aches in this damp. I set that aside and stand square.
+
+@ trigger=combat_start archetype=grim
+Heart slows right down. It always does, exactly when it should not.
+Shoulder is stiff. It will loosen once something hits it.
+Taste of iron already and nothing has touched me yet.
+Feet are set. Hands are where they need to be.
+The old break in my forearm is talking. Let it talk.
+Cold in my fingers. They will warm.
+
+@ trigger=combat_start archetype=scholar
+Curious. My pulse has doubled and my hands have gone perfectly still.
+The air here tastes of wet stone and something scorched.
+I can hear my own blood moving. Fascinating, and not at all helpful.
+Note the narrowing of the vision. It happens every time and I still cannot prevent it.
+My grip found its place without being told. The body remembers better than I do.
+%target is here, and my breathing changed before I chose to change it.
+
+@ trigger=combat_start archetype=boastful
+Feel that? My hands are steady as cut stone. Watch them.
+My blood is up and my footing is perfect. A fine combination.
+Breathe deep, the air is always sweeter when I am about to earn it.
+Not one tremor anywhere in me. Look closely if you doubt it.
+My heart is hammering and I love the sound it makes.
+The grip, the stance, the breath, all of it exactly where I put it.
+Shoulders warm, wrists loose. I am never better than this.
+
+@ trigger=combat_start archetype=wry
+Well. My knee has opinions about this.
+My mouth has gone dry. Standard, that.
+Heart in my throat, feet on the ground. Two out of two.
+Everything below my elbows has gone cold. Lovely.
+I would describe my current breathing as enthusiastic.
+My back complained the whole way here, and it is about to complain louder.
+
+@ trigger=combat_start archetype=haunted
+My hands know this. They do it without me.
+Cold in my chest. The same cold as always.
+The sound goes far away and I am somewhere else for a moment.
+My breath shortens. I have stood like this before, in other places.
+The smell of it. That is the part that stays with you.
+My fingers have gone quiet. They learned that a long time ago.
+
+@ trigger=combat_start archetype=savage
+Blood in my ears, heat in my arms. Now we start.
+I can feel every muscle in me waking at once.
+My teeth are set and my hands are hungry.
+Breath comes fast and deep and I want more of it.
+Heat in my belly climbing up into my throat. Good.
+Everything in me is leaning forward already.
+
+@ trigger=combat_start archetype=sinister
+My pulse has not changed. Note that.
+I breathe out slowly and my hands go still as a held note.
+The cold in my fingers is welcome. It keeps them precise.
+I can hear %target moving. Better than I can hear myself.
+Nothing in me hurries. Nothing in me shakes.
+My weight settles onto the front foot and stays there.

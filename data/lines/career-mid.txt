@@ -52,7 +52,6 @@ I have fought the kind %target is before. I remember where they are slow.
 Watch the footwork. Few people get to see it done properly.
 
 @ trigger=combat_start minlevel=20 maxlevel=59 archetype=wry
-Well. There goes the quiet afternoon.
 
 @ trigger=combat_start minlevel=20 maxlevel=59 archetype=haunted
 I learned this guard from someone who is not here to see me use it.
@@ -98,7 +97,6 @@ I have grown again. Pity so few were here to witness it.
 More in my arms than there was. There is plenty left to swing at.
 
 @ trigger=quest_complete minlevel=20 maxlevel=59
-%quest is finished. There will be another before the week is out.
 Done, and done properly. I will take the pay and the quiet.
 %quest took longer than I promised. It usually does.
 

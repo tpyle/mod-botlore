@@ -1,0 +1,65 @@
+@ trigger=level_up archetype=devout
+The morning prayers used to leave my knees stiff. I stood up from them today without thinking about it.
+My mail sits differently across the shoulders now, and I have not touched a single strap.
+I carried the water up from the well and did not set it down halfway.
+The old break in my wrist has stopped speaking to me in the cold.
+I woke before the light and found myself rested. That has not happened in some while.
+My hands were steady through the whole of the blessing, all of it.
+
+@ trigger=level_up archetype=grim
+Pack feels lighter. Nothing has been taken out of it.
+I had my breath back before the blood dried. Not how it used to go.
+The buckle sits tighter across my chest. Something has filled out under it.
+Grip held to the end. Usually it goes before the fight does.
+That slope up from the road did not cost me anything today.
+Less sleep than I am used to, and I still woke clear.
+
+@ trigger=level_up archetype=scholar
+My grip outlasted the exchange today, which it has never done before. Worth noting.
+Same road, same load, less breath spent. Something has shifted in me.
+I have loosened this strap more than once since spring. Today it wanted loosening again.
+The tremor in my drawing hand is gone. I have been watching for that.
+I slept less and woke with a clearer head. Those two rarely travel together.
+The blade weighs what it always weighed. My arm disagrees.
+
+@ trigger=level_up archetype=boastful
+Look at this strap. It no longer reaches the hole it used to, and that is all muscle.
+I ran the whole of that hill and I am barely breathing. Anyone on the road saw it.
+This axe used to have some weight to it. Now I must remember to swing it hard.
+My grip held to the last blow of that fight. The very last one.
+The pauldrons sit high on me now. They used to slump like a farmhand's.
+This was not this arm last season. Anyone with eyes could tell you.
+
+@ trigger=level_up archetype=wry
+My pack has stopped being heavy. I suspect foul play.
+I reached the top of that hill and forgot to complain.
+The strap wanted loosening again. Terrible problem to have.
+Sword feels light today. Either it shrank or I did not.
+Woke up rested. Deeply suspicious.
+My hands are still steady and the fight is already over. Novel.
+
+@ trigger=level_up archetype=haunted
+The old break in my ribs did not ache when I stood. It has ached every morning for years.
+I slept the night through. My body does not seem to need as much of it now.
+This buckle was set by hands that are gone. It does not sit where they set it anymore.
+My breath came back quickly. It used to take longer than I had.
+The weight on my shoulders is the same weight. I notice it less.
+My hands did not shake at the end. They have shaken at the end for a long while.
+
+@ trigger=level_up archetype=savage
+Blood is still up and my breath is already back. Good.
+Grip did not fail me. The last blow landed as hard as the first.
+The straps are cutting into me. Something under them has grown.
+I want to run that hill again. My legs have more in them than that.
+This hammer has gone light in my hands. Find me something heavier to break.
+Ran the whole ridge and my chest is quiet. Quiet chest, hungry hands.
+The old wound in my thigh kept its silence all day. Nothing slowing me.
+
+@ trigger=level_up archetype=sinister
+The strap sits a hole tighter. No one needs to see me adjust it.
+My hands stayed steady through the length of it. Steady hands are best kept quiet about.
+Breath back sooner than before. Useful, knowing what I can spend now.
+The blade has gone light in my hand. I will keep swinging it as though it were heavy.
+That climb cost me nothing today. I let it look as though it did.
+Less sleep, clearer waking. More hours in the dark to put to use.
+An old ache has left my shoulder. One fewer place anyone can press.

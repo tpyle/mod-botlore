@@ -1,0 +1,65 @@
+@ trigger=quest_complete archetype=devout
+The prayer at the start was the easy part. The walking was all the rest of it.
+I did it the way it ought to be done, with no one there to see. That is the only test that counts.
+Nothing here has changed. I never expected the work to show.
+My hands have stopped shaking. You set a burden down and it stays down, for a little while.
+The errand is finished, and the road was longer than the deed.
+This will want doing again when the season turns. I will be fit to walk it again.
+I lost my beads somewhere back along the trail. The words stayed with me regardless.
+
+@ trigger=quest_complete archetype=grim
+Done. The walking nearly finished me. The thing at the end took no time at all.
+I came back and this place is exactly as I left it. That is what I expected.
+%quest is finished. Come the thaw, somebody will be doing it over.
+I will not say what was down there. It is done and it can stay unsaid.
+Something of mine stayed behind out there. I am not going back to look for it.
+I want the next one now, while my nerve still holds.
+
+@ trigger=quest_complete archetype=scholar
+Finished. I note the difficulty lay entirely in the distance and not in the doing.
+%quest is complete, and the interesting part was something I found on the way that had no bearing on it.
+I timed the return. Half a day of walking for nine minutes of work.
+The site has changed past what my notes describe. I will have to set them down again from scratch.
+I did the work correctly with nobody to check it. Correctness is not a matter of witnesses.
+I lost a page of notes somewhere in the doing. What remains will have to argue for itself.
+Enough for today. I would rather sit down than begin another.
+
+@ trigger=quest_complete archetype=boastful
+Finished, and finished properly, and not a soul present to see how properly.
+The deed took a moment. The march took three days, and nobody sings about the march.
+%quest, complete. There are parts of it I keep to myself, and those were the best parts.
+I came back expecting to find the place transformed. It looks the same, which is thin reward for such a walk.
+Another, at once. Greatness does not sit down between labours.
+I will admit the doing was clumsy. I will also point out that it is done.
+
+@ trigger=quest_complete archetype=wry
+The hard part turned out to be the boots.
+I have put it down. Finest thing that has happened to me all day.
+%quest is settled. Nothing here noticed.
+I did that badly from beginning to end and it is still done.
+Back again, and the place has gone and rearranged itself. Very considerate.
+Somewhere between here and there I lost a glove. Small price, I suppose.
+
+@ trigger=quest_complete archetype=haunted
+It is done. I walked most of the day and thought about things I do not name.
+I came back and nothing here had changed. I had half hoped something would.
+Finished. There is a part of it I will not put into words, not tonight.
+Put down at last. My hands are empty and I do not care for that either.
+I found something out there that belonged to nobody. I am keeping it.
+Another one soon, please, before the quiet comes back.
+
+@ trigger=quest_complete archetype=savage
+Done, and the walking took more out of me than the killing did. What a waste of a day.
+Over too quickly. My blood is still up and there is nothing left to swing at.
+The next one. Now, while I am still warm.
+It is finished and I am not sorry how. Ugly work is work.
+%quest is done and my arms ache in the good way. Set it down, breathe, go again.
+Broke the haft halfway through and finished with what was left of it. Finished is finished.
+
+@ trigger=quest_complete archetype=sinister
+Complete. The distance was the only real obstacle, and distance yields to patience.
+It is finished. What it asked of me stays with me.
+I returned to find the place altered further than I had allowed for. I will adjust my accounting.
+Done correctly and unobserved, which is how I prefer a thing done.
+No more today. A blade always drawn tells everyone where it is.
+This will need doing again within the season. I intend to be the one who does it.

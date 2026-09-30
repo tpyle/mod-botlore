@@ -45,7 +45,6 @@ Remember the %target's face, I would like that settled later.
 The Earth Mother is calling and I am only late in answering.
 
 @ trigger=death race=undead
-I have done this before, and it was worse the first time.
 
 @ trigger=death race=troll
 Death an me be old acquaintances, mon, I be back soon enough.

@@ -1,0 +1,65 @@
+@ trigger=death archetype=devout
+Take my prayer book to the chapel and leave it open at the marked page.
+There is a tithe owed out of my purse. Count that out before anything else is spent.
+Say nothing to the children about how it went. Only that the work is covered.
+My bandages are clean and there are six of them. Someone will need them before dusk.
+Lay me facing east and do not mark the spot. The Light knows where I am.
+Tell the sisters the north road is unsafe from the mile stone onward.
+
+@ trigger=death archetype=grim
+My pack is behind the rock and the rations in it are still good. Take them.
+I left the route marked in chalk. Follow the marks and do not improvise.
+Burn me if there is time. If there is not, weigh me down and move on.
+Whatever comes up that slope next, it comes in from the left. Watch the left.
+Nobody needs a body carried home. Tell them the ground here was quiet.
+The coin in my boot pays the man at the ferry. He will not ask you questions.
+I owed nothing and nobody owes me. Do not go looking to settle anything.
+
+@ trigger=death archetype=scholar
+My notes are in the oilskin. The last three pages matter and the rest do not.
+Write down the hour. Someone will want to know how long it took.
+The measurements in my satchel are correct. Do not let anyone redo them from memory.
+Take the ledger to the archive and tell them the third column was wrong.
+Do not open the small sealed jar. Bury it as it is, still sealed.
+I was wrong about the depth of the shaft. Correct the map before anyone goes down.
+My instruments go to whoever can read them and to nobody who cannot.
+
+@ trigger=death archetype=boastful
+Tell it properly. Say I went forward, and say it where my brother can hear.
+The blade goes to the strongest arm in the company, and they all know whose that is.
+Have the story written down before strangers start improving it.
+My horse answers a whistle, two notes, high then low. Whoever takes her, learn it.
+Send word to the innkeeper that my tab stands and the tale was worth it.
+Do not bury my armour with me. Hang it somewhere it can be admired.
+
+@ trigger=death archetype=wry
+The debt I owe the quartermaster is now entirely his problem.
+My boots are better than yours and I will not be needing them.
+Someone should tell my landlord, though do take your time about it.
+There is a shovel in my pack, which in hindsight was optimistic.
+Do not let my sister handle the arrangements. She will make it a whole occasion.
+Whatever you do with me, do not stand me up for a portrait.
+
+@ trigger=death archetype=haunted
+There is a locket in my collar. It goes in the ground with me, not into a pocket.
+If a woman comes asking after me, tell her I was heading back. That is all of it.
+The second name on my letter, do not write to that one. She has had enough of these.
+Do not send my things home. Give them to strangers who need them.
+I kept a bundle of letters under the floor of the old house. Burn them unread.
+Put me anywhere but beside the water. I will not lie near water.
+
+@ trigger=death archetype=savage
+Leave me where I fell. That was the bargain I made with this ground.
+My axe goes to whoever swings it next, not onto a wall.
+The blood debt here is paid. Nobody hunts anything on my account.
+Feed my dogs first, then argue about the rest of it.
+Put a weapon in my hands before you cover me. Any weapon will do.
+%target fought clean enough. Let it be.
+
+@ trigger=death archetype=sinister
+The small key is sewn into my belt. Whoever finds it should ask no one about it.
+There is a name on a paper in my coat. Deliver it, and stay to watch nothing happen.
+Certain arrangements of mine continue without me. Do not interfere with them.
+Tell the one who hired me that the work was finished. He will not check.
+Two things are buried under the third stone. Take one and leave the other.
+Search me, take the purse, leave the ring. The ring is spoken for.
