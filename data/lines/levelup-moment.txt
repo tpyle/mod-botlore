@@ -1,0 +1,64 @@
+@ trigger=level_up archetype=devout
+The prayer came out whole while the ground was still shifting under me. It never used to.
+I had my hand on a man's wound before he finished falling.
+The light held in my palms the whole way across the ford. Last crossing it guttered at the first step.
+I knelt to close a scratch and stood back up without pushing off my knee.
+A blow came in while I was still speaking the words, and I did not lose the thread of them.
+Someone went down on my left and I reached him without setting down what I carried.
+
+@ trigger=level_up archetype=grim
+Something opened my shoulder to the bone this morning and I finished the walk anyway.
+The shield came up in time. Last season that would have gone through my teeth.
+I slipped on the wet stone and caught myself one handed, on the bad hand.
+I had counted on dying in that gully. I walked out of it instead.
+My footing went and my grip did not. That is the whole of it.
+I took a blow that was meant to finish me and only had to lean on the wall a moment.
+
+@ trigger=level_up archetype=scholar
+I marked the moment: the second shove on a swollen door, and the frame gave.
+The bar I could never lift clean off the trestle came up level. I tried it twice to be certain.
+I was counting my breaths on the climb and ran out of hill before I ran out of count.
+A vial slipped off the table and I had it before it turned over. My hand was quicker than my thinking.
+Same stair, same load, and this time I did not set it down at the landing.
+I noticed it while copying. My hand held the line steady to the foot of the page for once.
+Halfway across the ford I understood the current was not moving me, and I stood there testing it.
+
+@ trigger=level_up archetype=boastful
+That gate took one shoulder. It usually takes two of us and a bar.
+A cart wheel came loose and I held the axle up alone while they set it. The others only stared.
+The falling beam came down and I put it back one handed without changing my footing.
+His swing turned my blade a hand's width and no further, and I laughed into his helm.
+I went up the wall without the rope this time. Someone should have been watching.
+I threw a man off me who had me pinned last week. Same man, same grip.
+
+@ trigger=level_up archetype=wry
+The door I have been shouldering all month opened on the first push. I went most of the way into the room with it.
+I picked up both packs because nobody else would, and forgot to complain about it.
+I got to the top of the ridge with breath left over and nothing to say with it.
+I dropped my cup and caught it. The cup was empty, admittedly.
+Something bit me clean through the boot and I walked it off. Usually I sit down for that.
+I held the rope alone while the others found their footing. I was expecting to be dragged in after them.
+
+@ trigger=level_up archetype=haunted
+There is a stance I could never hold long enough. I held it today, years after it would have helped.
+I caught a man by the wrist before he went over the edge. My hand was not that fast once.
+I carried someone the whole way out without setting them down.
+A blow came from the side I do not watch, and I turned it. I have lost people to that side.
+I held the doorway alone until it was finished. I have stood in a doorway and failed to.
+The weight I could not lift off a body that day came up easy this morning, and I sat with that a while.
+
+@ trigger=level_up archetype=savage
+He broke my guard and I came back through his before he could set his feet.
+Something got its jaws on my arm and I tore it loose myself, no waiting, no help.
+I went through the second one without slowing down for the first.
+I took his charge standing. Last time that put me on my back in the mud.
+I hauled him off his feet by the belt. I did not think I could, and I did it anyway.
+My arm was still up when his came down, and I held it there to see how long it would stay.
+
+@ trigger=level_up archetype=sinister
+The knife went exactly where I put it, with the boat moving under me. I have been working on that.
+He had my wrist, and I turned out of it without appearing to struggle.
+I stayed under the water well past where I usually surface. Useful to know.
+I went over the wall and nothing heard me land. The dogs never lifted their heads.
+I had his throat before he finished turning, earlier than my count expected.
+The second lock of the night opened on the first try, and I stood there reconsidering what else is within reach now.

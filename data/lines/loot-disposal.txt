@@ -1,0 +1,65 @@
+@ trigger=loot_rare archetype=devout
+This goes to the shrine hands, not mine. They will know what to do with it.
+Someone poorer than me will be holding %item before the week is out.
+I will trade %item for bread and blankets, and call that the better bargain.
+I keep nothing I cannot give away twice over.
+%item pays for the orphanage roof, and that is the end of the matter.
+Let it go where it does the most good, and let that not be my pack.
+I will carry it until I find the hands that need it, and no further.
+
+@ trigger=loot_rare archetype=grim
+I will lose this long before I ever find a use for it.
+Better to sell %item now than watch it sit and sour.
+I will set it down somewhere and never see it again. That is how these things end.
+Trade it away quickly. Nothing fine stays with a man like me.
+I will pass %item on before it breaks, and let the breaking fall to someone else.
+However this goes, it goes badly, so I would rather be paid first.
+
+@ trigger=loot_rare archetype=scholar
+Nothing gets spent until it is named. I will find someone who can read it.
+%item stays wrapped and untouched until I know what I am carrying.
+I will not trade what I cannot yet describe.
+Let me set down where it was found before I decide where it goes.
+I would rather understand %item than profit from it.
+Parting with it unstudied would be a small crime against knowledge.
+I will copy every mark on %item first, and only then think about parting with it.
+
+@ trigger=loot_rare archetype=boastful
+This gets carried where the crowd is thickest.
+I will not sell %item. I will be seen with it.
+Let them ask me where I got it. I have the whole tale ready.
+Coin is spent and forgotten, but a thing like this they remember on me.
+I am walking into the city with %item held high.
+I will find the loudest tavern in the district and set it on the table.
+
+@ trigger=loot_rare archetype=wry
+I suppose I am a wealthy man until I spend it.
+%item will make somebody a fine gift, once I decide who has earned the trouble.
+I will sell it and be poor again by evening, which is a tidy little circle.
+I had plans for the coin already. I made them two days ago.
+This is the richest thing I have ever carried, which says very little for the rest.
+I will keep %item until something goes wrong, and then it is money.
+
+@ trigger=loot_rare archetype=haunted
+My sister would have wanted this. I have nowhere left to send it.
+There was a man who would have wept over %item, and I buried him myself.
+I will keep it. Not for me, but for the one I cannot hand it to.
+I would have put %item in her hands. Now it only stays in my pack.
+Someone I loved asked me to look out for something like this once.
+I will send it home. There is no home left, but I will send it.
+
+@ trigger=loot_rare archetype=savage
+It was his. Now it is mine. That is the whole of the trade.
+I pried %item loose with my own hands, so I say where it goes.
+Whatever meant to keep this is not arguing anymore.
+I will trade %item for an axe that bites and eat well on what is left.
+I took it, so I keep it. There is nothing more to settle.
+The spoils go to the one still standing.
+
+@ trigger=loot_rare archetype=sinister
+I know three men who would pay badly for this. Let them bid against each other.
+%item is worth more as a favour owed than as coin in hand.
+There is a quiet shop with a quiet man in the back, and he will want this.
+I will not sell %item. I will simply let the right person learn that I have it.
+Someone will want this enough to owe me for it, and that beats gold.
+Keep it close, keep it quiet, and hand it to the one who cannot refuse.

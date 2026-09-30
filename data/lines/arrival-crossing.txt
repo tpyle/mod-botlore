@@ -1,0 +1,65 @@
+@ trigger=zone_enter archetype=devout
+I crossed the line at prayer's end, and %zone begins the next one.
+No one blessed the road behind me. I will bless the road into %zone.
+The boundary stone was unmarked. The Light does not need markers.
+Long walk, and my feet kept the hours better than any bell.
+I left the last roof I was welcome under. %area asks nothing of me but faith.
+Whoever kept this border has gone. Someone must keep it, then.
+
+@ trigger=zone_enter archetype=grim
+The road got better just before %zone. That is usually a warning.
+I have crossed worse borders than the one into %zone. Not many.
+Nobody standing at the line. Nobody left to stand there, more like.
+The last village is behind me and %area promises no other.
+Wrong hour to cross into %area. Every hour is the wrong one lately.
+Long walk in. Longer walk out, if there is one.
+
+@ trigger=zone_enter archetype=scholar
+The boundary stone is older than the name %zone. Someone renamed the land and left the stone standing.
+Two paces back the road was gravel. Here it is not. Borders leave marks.
+I count four hours from the last settlement. %area sits further out than the maps allow.
+Curious - the signpost gives a distance but no direction.
+Whoever surveyed the edge of %area surveyed it badly, and never came back to correct it.
+A border is only an agreement. I would like to know who agreed to this one.
+The road in was maintained until recently. I would like to know what stopped.
+
+@ trigger=zone_enter archetype=boastful
+I walked into %zone on my own two feet and no one asked me to stop.
+There was a border here. I crossed it. Let that be recorded.
+The last place could not hold me and %area will not either.
+Watch how a proper hero enters a country - straight up the road, at a good pace.
+Longer walk into %zone than most would manage. I barely feel it.
+No guard at the line to announce me, so I will announce myself.
+
+@ trigger=zone_enter archetype=wry
+The signpost at the edge of %area had one word on it, and the word was worn off.
+Welcome to %zone, apparently. The road did not say so.
+I crossed the border. Nothing happened. Very reassuring.
+Someone stopped mending the road into %zone about halfway along.
+The last place set a low standard, so there is hope for this one.
+Border unguarded. I shall take that for confidence and not neglect.
+
+@ trigger=zone_enter archetype=haunted
+I have crossed here before. The stone was still standing then.
+The road into %zone has not changed. I have.
+I told myself I would not come back as far as %zone.
+There was a village behind me the last time, too. It is not there now.
+%area. I know the shape of this walk, and I know how it ended before.
+I crossed at this hour once, with company. I am quicker alone.
+Long way in. I remember every step of it, which is the trouble.
+
+@ trigger=zone_enter archetype=savage
+Nobody at the line to stop me. Their mistake, whoever they were.
+The last place had nothing left worth swinging at. %zone had better.
+Long walk into %area earns a good fight. I am owed one now.
+I crossed the border hungry, and it will be fed one way or another.
+No wall, no guard, no warning. Good. Let them find out late.
+Whatever holds this ground did not come out to meet me on the road.
+
+@ trigger=zone_enter archetype=sinister
+The border was unwatched. I noted the hour, and I will remember it.
+Nobody counted me into %zone. That suits my purposes.
+A road as poorly kept as the one into %zone tells me how rarely anyone looks this way.
+I came in by the quiet way. %area does not know it has a guest.
+The last place learned my face. This one will not, unless I choose.
+One boundary stone, no watchman. I do like to know where the gaps are.

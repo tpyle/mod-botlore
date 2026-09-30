@@ -1,0 +1,66 @@
+@ trigger=zone_enter archetype=devout
+I was sent to %zone, and I will not ask twice why.
+The work in %area is the same work as anywhere. Only the ground changes.
+I carry enough bread for three days and faith for the rest.
+Nobody sent me. I take that as instruction enough.
+Before I go deeper into %area I will find where the wounded would be carried.
+I will sleep where I can see the sky, and rise before whatever rises here.
+If there is an altar in %zone I will find it. If there is not, I will make do.
+
+@ trigger=zone_enter archetype=grim
+I have heard nothing about %zone. That is worse than hearing bad things.
+The last place was better, and I did not think much of the last place.
+I know the way out of %area. That is the only thing I need to know yet.
+Keep the blade loose. The ones who tuck it away are the ones we bury.
+Somebody wanted me here. I would like to know why they did not come themselves.
+Supplies for nine days. I do not expect to need nine.
+I have been in places that wanted me gone. %zone has not decided yet.
+
+@ trigger=zone_enter archetype=scholar
+I will want a map of %area before I trust a single step of it.
+Nobody told me what to expect in %zone, so I will be the one to write it down.
+I count three ways out of %zone and I mean to walk all of them before dark.
+My notes on this region are thin and secondhand. Both faults end today.
+I have provisions for eleven days and questions for rather longer.
+First the water, then the roads, then whoever sells here. In that order.
+
+@ trigger=zone_enter archetype=boastful
+%zone, you have heard of me, and if not, that is a matter I intend to correct.
+I came to %zone unsent and uninvited, which is how the best arrivals are made.
+They told me %area was dangerous. They tell me that everywhere, and here I stand.
+I need no guide and no warning. I brought both with me, in my own two hands.
+Let it be known I walked in by the front way, and did not check behind me once.
+I have supplies for a week and a name worth feeding for a month.
+
+@ trigger=zone_enter archetype=wry
+I have heard three things about %zone and believed one of them. The wrong one, probably.
+Nobody sent me. Nobody stopped me either, which I find less comforting than I should.
+I will find a bed in %area, a merchant, and a way out, in whatever order they turn up.
+The last place tried to kill me. I am told this is an improvement.
+My supplies will last exactly as long as I do not linger here.
+I keep the weapon loose. Not for any reason. Only a habit worth keeping.
+
+@ trigger=zone_enter archetype=haunted
+I came to %zone because there was nowhere left behind me to go.
+Nobody sent me here. There is nobody left to send me anywhere.
+I will not sleep indoors here. I learned that lesson somewhere I do not name.
+I know the way out already. I always know the way out now.
+I do not ask whether %area is safe. I stopped believing the answers.
+Supplies for four days. I have not planned past four days in a long while.
+I have been given a reason to come here, and it is not one I will say aloud.
+
+@ trigger=zone_enter archetype=savage
+I came to %zone for one reason, and it is not the scenery.
+Nobody sent me. I smelled a fight from a long way off and followed it.
+The blade stays out. Putting it away here would only waste my time.
+Tell me who fights hardest in %area and I will begin there.
+I did not bring supplies. Whatever lives here will be feeding me.
+The last place ran out of enemies. I expect better manners in %zone.
+
+@ trigger=zone_enter archetype=sinister
+Three ways out of %area. I will know a fourth before the day ends.
+I sleep with the door in view, and here I will sleep only briefly.
+Someone sent me to this place, and I have already decided what I will tell them.
+In %zone I want to know who buys, who sells, and who talks. The last one matters most.
+Before I go further in, I will walk the edge and count the gates.
+Nobody knows I am here. I intend to keep that advantage as long as it holds.

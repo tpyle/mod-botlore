@@ -1,0 +1,65 @@
+@ trigger=zone_enter archetype=devout
+The air changed the moment I crossed in. I will take that as a summons.
+%zone is cooler than the road behind me. I will walk it slowly and pay attention.
+Something in %zone has not been prayed over in a long while. I can smell it.
+The light falls differently in %area. I will not waste it.
+The ground gives under my boots now. Steady steps, steady heart.
+%zone has gone quiet. Quiet is where the work usually begins.
+
+@ trigger=zone_enter archetype=grim
+%zone smells wrong. It usually does.
+Too quiet here for the ground to be this trampled.
+The air is heavier past that line. Keep moving.
+No birds. Never a good sign, never a reason to stop.
+The ground here holds a print. Ours will hold too.
+%area smells lived in. That means something lives in it.
+
+@ trigger=zone_enter archetype=scholar
+Note the air: drier the moment I crossed into %zone. The boundary is sharper than any map admits.
+The insects here keep a different rhythm. Rhythm tells you more than terrain does.
+Underfoot the ground rings hollow. Worth knowing before I need to run on it.
+%area has an odd sound to it. Half of what I hear is coming back off something.
+Smell first, then light, then sound. That is the order things arrive in.
+The light in %zone reaches the ground unevenly. Something above is interrupting it.
+Every step here presses out a smell. I would like to know what is rotting and what is only wet.
+
+@ trigger=zone_enter archetype=boastful
+%zone knows I have arrived. Listen to how it went quiet.
+Fresh air, fresh ground, and an audience somewhere in it. I am in excellent spirits.
+Even the insects stopped to look. I am used to it.
+I can already smell the reputation I am about to earn in %area.
+The ground in %zone is firm enough to carry me. Barely.
+Whatever this place is, it has never had a guest of my standing.
+
+@ trigger=zone_enter archetype=wry
+Delightful. Everything here smells faintly of everything else.
+%zone sounds exactly like nothing at all. Very restful.
+The ground in %area has stopped being ground and started being a suggestion.
+New air, same taste. Someone has been reusing it.
+Ah, %zone. Whoever aired this out last did a poor job of it.
+Somewhere back there was noise. I miss it already.
+The light here is generous. It shows me everything I would rather not have seen.
+
+@ trigger=zone_enter archetype=haunted
+The air here has the same weight as a morning I remember. I would rather it did not.
+%zone smells like somewhere I used to stand.
+%zone is quiet. I was hoping for noise today.
+Something in %area sits wrong under my boots. Not the ground. The feeling of it.
+I know this hour of light. I know what it comes before.
+Still air, and nothing moving in it. Nothing here is mine.
+
+@ trigger=zone_enter archetype=savage
+Something breathes in %zone. I can hear it between my own breaths.
+The air tastes like blood waiting to happen.
+The ground here is soft. Bodies go down quiet on soft ground.
+Smell that. Something big has come through %area lately.
+%area is too quiet. I will fix that.
+Every place has a sound it makes when it breaks. I want to hear this one.
+
+@ trigger=zone_enter archetype=sinister
+%zone holds its breath when I enter. Sensible of it.
+Listen. Nothing at all. I will see how long that lasts.
+The air here carries sound a long way. I will keep my voice low.
+Something in %area has been left to rot. Someone was careless.
+Soft ground. It keeps footsteps to itself.
+The light does not reach far in %area. I work well in what it leaves.

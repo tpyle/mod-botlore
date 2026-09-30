@@ -1,0 +1,65 @@
+@ trigger=level_up archetype=devout
+The one who taught me the prayers called me adequate. I would like her to try that word on me now.
+My teacher's teacher wrote the words I said this morning. My hand is closer to hers than it was.
+There are novices who ask me things now. I remember being the one asking.
+I knelt beside better servants than myself once. Fewer of them are better today.
+The priest who turned me back at the door would not turn me back now.
+I was the slowest in that hall. Whoever is slowest there this year, I hope someone is patient with them.
+
+@ trigger=level_up archetype=grim
+The men who used to send me ahead would think twice about it now.
+Better than me have gone into the ground, and I am still here getting harder.
+My sergeant gave me one season. He has been wrong a long while.
+The ones who outranked me are mostly gone. That is not promotion, it is attrition.
+Someone who could do this better than me is dead, so it falls to me and gets done worse.
+I am harder than the man who trained me. He would not call that good news.
+
+@ trigger=level_up archetype=scholar
+My instructor's notes had a gap where this belongs. I have filled it and she never did.
+I can follow the argument that defeated me when I arrived. The text has not changed.
+There was always a student a lesson ahead of me. I would like to know where he stands now.
+My master said this could not be learned from books. He was mostly right, which is the interesting part.
+The ones who used to correct my work now wait to hear what I make of theirs.
+I have passed the man who taught me in this one narrow thing. He taught me nine others.
+
+@ trigger=level_up archetype=boastful
+My rival is out there somewhere, and he is having a worse morning than I am.
+The masters who would not take me as a student should hear what I can do today.
+Ask the one who trained me who his best pupil was. He will say my name or he will lie.
+There were men ahead of me on every list, and I have been passing them quietly, which is not my usual way.
+Somebody once told me I would end up hauling crates. I hope he is hauling crates.
+My brother was always the promising one. Promise is cheap standing next to this.
+No one in this room knows what they are standing beside. I will be happy to tell them.
+
+@ trigger=level_up archetype=wry
+My old instructor rated me poorly. I have since risen to middling disappointment.
+The man who said I would never amount to anything was never specific about a deadline.
+My sister will ask how I am getting on. I will tell her: slightly.
+I am better than I was last spring, which puts me level with the people I met last spring.
+Some rival of mine is improving at the same pace. We are both remarkable and nobody has noticed.
+The one who trained me would say I am coming along. He said that when I could barely stand up straight.
+
+@ trigger=level_up archetype=haunted
+He was better at this than I will ever be, and I am getting closer to him, and I hate the measure.
+She would have done this years before I managed it.
+Someone used to be a stride ahead of me in everything. I am walking that stretch alone now.
+I am stronger than the man who carried me out of there. He is not here to be stronger than.
+If she saw me now she would not be surprised. She always said I would get here.
+The ones I started out with are gone, so I improve against nobody.
+I used to measure myself against him. Now I measure myself against what he expected of me.
+
+@ trigger=level_up archetype=savage
+The ones who used to knock me down are welcome to come and try it again.
+My old pack leader could put me on my back. I want a second opinion on that now.
+Whoever is strongest here has not noticed he has company.
+I have chewed through everyone rougher than me. Bring me a stranger.
+The one who trained me hit harder than this. Not by much, and not for much longer.
+There is always a bigger one somewhere. He is getting smaller.
+
+@ trigger=level_up archetype=sinister
+Those who give me orders will go on giving them. I permit it, for now.
+My rival still thinks of me as I was, and that is worth more to me than the strength is.
+The one who taught me kept something back. I have found it without him.
+There are people ranked above me who should count their friends tonight.
+Nobody in this room has revised their estimate of me. Good.
+My old master took my measure once and never took it again. He is working from something stale.

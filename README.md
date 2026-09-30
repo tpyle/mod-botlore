@@ -24,7 +24,7 @@ That file is generated. The corpus itself is kept in two shapes:
 
     data/lines/*.txt               most of it - plain text, a header naming the
                                    filters and the lines under it inheriting
-                                   them. Fifty files, 2,568 lines, each a slice
+                                   them. Sixty files, 3,067 lines, each a slice
                                    of the filter space
     tools/gen_bot_lore.py          the lines that need code beside them: a loop,
                                    or a table of creature and quest ids. Also

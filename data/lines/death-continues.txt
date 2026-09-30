@@ -1,0 +1,65 @@
+@ trigger=death archetype=devout
+The Light does not pause for me. Tomorrow someone else will kneel where I knelt.
+There is a prayer said at dusk in my order, and tonight it will be said without my voice in it.
+The sick will still need tending in the morning. Someone will be found.
+I never finished learning the longer blessing, and nobody knew I was trying.
+The work was never mine. I carried a small part of it a short way.
+Light keep the ones I never reached. There were a great many of them.
+My name will fall out of the roll of the order within a season, and that is proper.
+
+@ trigger=death archetype=grim
+The road goes on past this spot. It always did.
+I knew how this ended. I did not expect the world to look so unbothered by it.
+The war does not notice one fewer of us. It never has.
+Someone will come this way tomorrow and step over this ground without slowing.
+There was never a version of this where the fighting stopped when I did.
+I am a small hole in a long line, and it will close before dark.
+%target will not remember this by evening. Nothing will.
+
+@ trigger=death archetype=scholar
+I had three pages left to write. Somebody will find them and not know what they were for.
+My notes are ordered by date, which will mean nothing to whoever opens them.
+Curious. The question outlives the one who was chasing it.
+Half my measurements were never copied out. That work will simply be done again in fifty years.
+I will be a footnote with the wrong date on it, if I am anything.
+There is a shelf that will stay unfinished. Shelves are patient.
+
+@ trigger=death archetype=boastful
+Tell it however you like. The story will be wrong within a week and better for it.
+I always assumed there would be a crowd for this part.
+They will remember the songs and not the singer. I suppose that is still something.
+Somewhere a tavern is full and not one man in it has looked up.
+My name will get shorter every time it is repeated, until it is just some fellow.
+I meant to do something worth a statue. The quarry will go on cutting stone for other men.
+
+@ trigger=death archetype=wry
+Well. The day will go on being a perfectly ordinary day.
+I had plans for this afternoon. The afternoon will manage.
+Nothing has stopped. I find that slightly rude.
+I owe a man two silver. He will wonder about me for a year and then forget.
+Somewhere bread is going into an oven and will come out exactly on time.
+Big world. Very short interruption.
+
+@ trigger=death archetype=haunted
+There was someone I looked for in every crowd. The crowds will go on being crowds.
+Someone is still waiting for me, and will keep waiting a long while yet.
+I carried a stone in my pocket for years and no one ever asked about it. No one ever will.
+The empty chair stays empty. Now there are two of them.
+I always thought I would be the one left standing at the end. Someone else gets that.
+Every year on a certain day I stopped walking for a moment. That day comes round again with nobody stopping.
+
+@ trigger=death archetype=savage
+The fight goes on without me in it. That is the part I cannot stand.
+Someone else gets the rest of this. Let them earn it.
+There will be better fighting tomorrow and I will not be in any of it.
+I wanted more of it. There is always more of it, and it never wanted me.
+Ha. The world does not even slow down to chew.
+My blood is on this ground and the grass will not remember by spring.
+
+@ trigger=death archetype=sinister
+The arrangement does not require me. I made certain of that long ago.
+Wheels turn whether or not a hand is on them. Mine were turning before today.
+There is a thing in motion that will not notice my absence for some time.
+%target has changed nothing. The shape of it was set before either of us arrived.
+I will be a rumour by winter, and rumours do useful work.
+Somewhere a door I opened is still open, and no one has thought to look.

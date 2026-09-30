@@ -1,0 +1,65 @@
+@ trigger=quest_accept archetype=devout
+I will do it, but I will not raise my hand against anyone who is only frightened.
+Agreed. If there are children in that place, the work stops and I come back for better instructions.
+I will take no coin for this. The Light knows I have been paid already, and paid well.
+Say a blessing over me or do not, but I am going either way.
+I will bury whatever I have to kill. That is not open to argument, and it will make me late.
+Consider %quest promised. I only ask that nobody tells me afterward that it was necessary.
+
+@ trigger=quest_accept archetype=grim
+I will go. I am not promising to come back, and I would rather nobody waited up.
+Fine. Understand that when this is finished it will not look like a victory.
+I will need the road described, because I do not intend to cross that ground twice.
+Agreed, on the understanding that half of what I was told is wrong.
+I will do the work. Do not ask me to do it quietly as well.
+Yes. Ask me again in a week and the answer might be different.
+
+@ trigger=quest_accept archetype=scholar
+Agreed, though I want the number again. First it was nine, then it was a dozen.
+I accept, provided I may keep one of them intact for study.
+Tell me the way twice. I would rather be tedious now than guess later.
+I will take %quest on, but I am writing down what was claimed, in case it differs.
+Yes, with one condition. No one hurries me while I am still measuring.
+I will do it, and I will be doing a second thing at the same time.
+Done, assuming the thing has not moved since anyone last looked. Things do move.
+
+@ trigger=quest_accept archetype=boastful
+Consider it done, and consider bringing witnesses. I do not perform twice.
+I accept on one condition: when it is finished, the telling of it must be accurate.
+I will do the work for nothing. The story afterward is payment enough.
+%quest is mine now. Anyone who wants a share of it can arrive early and ask nicely.
+I need no directions. Point me toward the general misery and stand well back.
+Agreed, though this is beneath me. I will pretend otherwise for the crowd.
+
+@ trigger=quest_accept archetype=wry
+Yes, fine. I want it recorded that I asked what could go wrong and received no answer.
+I will do it, since apparently nobody else was available, or foolish enough.
+Agreed. I am already regretting the agreeing, so that part is out of the way.
+Certainly. My afternoon was crowded with nothing in particular.
+I will handle %quest. My terms are modest: a road, some daylight, and low expectations.
+Glad to help, provided nobody watches me do the first ten minutes of it badly.
+
+@ trigger=quest_accept archetype=haunted
+I will go. I made this same promise once, to someone not here to see me keep it.
+Yes. Do not thank me, that is all I ask.
+I will do it on one condition. Nobody says her name while I am working.
+I want no payment. I am settling something, and the debt is not owed to anyone here.
+I will take the errand. If it goes the way the last one went, I will not be coming back through.
+Fine. Only tell me now if there are graves involved, so I can prepare for it.
+
+@ trigger=quest_accept archetype=savage
+I will go if it fights back. If it does not, find someone gentler.
+Agreed. How many are there, and do they carry anything worth breaking?
+Yes. I do not care about the reason, only the direction.
+I will run your errand, but I am keeping the teeth.
+Say yes on my behalf. I am busy deciding which one to reach first.
+%quest sounds like a fight with errands wrapped around it. I accept the fight.
+
+@ trigger=quest_accept archetype=sinister
+Agreed. I want it understood that I was asked, and that I remember being asked.
+I will do this favour. Favours are not gifts, and I collect at a time of my choosing.
+Yes. Let no price be named now, and I will name one later.
+I accept. I will do it my way, and it is better that the details go unheard.
+Consider the matter handled. Consider the debt noted, quietly, and for a long while.
+I will do the version of this that works, not the version that was described to me.
+Done. When someone asks who arranged it, no one will quite be able to remember.

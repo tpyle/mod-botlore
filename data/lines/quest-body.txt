@@ -1,0 +1,65 @@
+@ trigger=quest_complete archetype=devout
+The work is done and my knees hurt from it. I will kneel anyway, once I have eaten.
+Water first, then thanks. The Light does not mind waiting a moment behind a waterskin.
+My hands are filthy. I would rather wash them before I fold them.
+I ache in a way I have earned. Let me sit down in the shade and be still a while.
+There is bread in my pack and no appetite for it. I will eat it anyway, as discipline.
+%quest is finished and my body is asking for the rest of the day. I think I will give it.
+
+@ trigger=quest_complete archetype=grim
+Done. Now I want dry boots and a fire, in that order.
+There is blood in my left boot. It can wait until I am sitting.
+I am too tired to be pleased. That will come tomorrow, or it will not.
+I will eat, sleep, and be ready again by morning. That is the whole of my plan.
+My shoulder has been screaming since noon and I only just heard it.
+Cold meat and cold water, and I will not complain about either.
+
+@ trigger=quest_complete archetype=scholar
+Curious - I did not notice this cut on my forearm until the work stopped. Pain waits politely, it seems.
+I have been awake nineteen hours by my reckoning. The remedy is well documented: a bed.
+My hands are shaking too much for careful notes. Food, then ink.
+I should like to sit somewhere with a flat surface and something hot to drink.
+The coin will go to lamp oil and paper, which is where it always goes.
+My legs have decided the matter for me. I am going to sit until they change their minds.
+
+@ trigger=quest_complete archetype=boastful
+Bring me a whole roast and a tall cup. I have finished %quest and I intend to eat like it.
+Look at these hands. Filthy to the wrist, and I have never been prouder of a basin's fate.
+I could go again, truly. But I will not, for a hero must also be seen resting.
+Ruined boots again. I will buy a finer pair and tell the story of the old ones.
+My arms are heavy as anvils and I want that known. Greatness is a physical burden.
+The pay goes to the best meal to be had, and I will be loud about every course.
+I am going to bathe in water so hot it steams the whole street.
+
+@ trigger=quest_complete archetype=wry
+Work finished, boots finished, dignity mostly finished. I am going to sit on something flat.
+I appear to be bleeding a little. Nothing that a chair would not fix.
+My plan for the rest of the day is water, then bread, then lying very still.
+I have been smelling myself for an hour now. A bath has moved ahead of food on the list.
+%quest is done and my knees have submitted a complaint. I will consider it.
+I should eat. I would rather sleep. The argument continues.
+
+@ trigger=quest_complete archetype=haunted
+It is over and I feel nothing but the weight of my own arms. I think I prefer it that way.
+I am hungry and I cannot bring myself to eat. It happens, some evenings.
+I will keep walking a while. When I stop I start remembering, and I am too tired for that tonight.
+There is a bruise on my ribs I do not recall earning. So much of me is like that.
+A bed would be a mercy. Sleep is a different matter, and not one I am promised.
+I want a fire and voices nearby. Not to speak, just to hear something that is not my own head.
+
+@ trigger=quest_complete archetype=savage
+Done, and now I am starving. Something with bones in it, and plenty of it.
+My knuckles are split and my blood is still up. Feed me before I go looking for more.
+I could fight until dark. Instead I will eat until dark, which is nearly as good.
+I ache in every part of me, the good kind. Drink, meat, and sleep like a felled tree.
+The thirst on me could drain a river. Point me at anything wet.
+I am not sitting. If I sit I will not get up, and there is daylight left.
+Pay me in food. Coin does not fill a belly on its own.
+
+@ trigger=quest_complete archetype=sinister
+The work is finished. Now I will be careful what I put in my body - clean water, nothing else.
+There is a cut here I did not account for. I will tend it myself, quietly.
+I want an hour alone, a basin of hot water, and the door shut.
+Hunger sharpens me, but only for a while. I will eat before the edge turns dull.
+This coin buys a room with one door and a bolt on it. I have expensive tastes.
+My hands need washing before I touch anything I intend to keep.

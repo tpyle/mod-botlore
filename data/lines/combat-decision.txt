@@ -1,0 +1,64 @@
+@ trigger=combat_start archetype=devout
+I will hold the line first and strike second. That order matters.
+Grant me the discipline to finish this and the patience to do it properly.
+I made a promise about mercy, and I will keep it as long as it can be kept.
+A short prayer is enough. The resolve has to last longer.
+This could have been walked around. I chose not to walk around it.
+I will stand where the wounded can reach me and not one step beyond.
+
+@ trigger=combat_start archetype=grim
+This ends badly for someone. No reason to assume it is me.
+I counted three ways out before I started, and that will have to do.
+I give this until the light fails. After that I am walking away.
+Yes, this was avoidable. I walked into it anyway.
+If it turns, I go back the way I came and I do not stop.
+Two potions and a poor plan. Better odds than I have had.
+
+@ trigger=combat_start archetype=scholar
+The shortest route to the end of this, and I will examine the remains afterward.
+I allow this three passes. If the third teaches me nothing, I withdraw.
+Open ground, firm footing, my back to the slope. Now we may begin.
+I have the measure of %target's footwork already, so let us confirm it.
+My own rule is to observe before committing. Broken again, and noted.
+Decision made on insufficient evidence. I intend to be quick about correcting it.
+My supplies come to enough for this and not enough for a second mistake.
+
+@ trigger=combat_start archetype=boastful
+I could have chosen an easier morning. Where is the story in that?
+Watch the ground I have picked. That choice alone wins this.
+I swore I would stop making this look effortless. I lied to myself again.
+Let it be quick, so that the telling can be long.
+I have given myself a count of ten. Anything more would be embarrassing.
+I walked toward %target on purpose. Remember that part.
+
+@ trigger=combat_start archetype=wry
+I had one rule about this sort of afternoon, and here we are.
+Well. The long way round was clearly far too much effort.
+I will give this a moment of my full attention. Possibly two.
+The plan holds until roughly the second exchange, and then I improvise.
+I counted my bandages, and the number encourages a short fight.
+I could still leave. Noting that, and staying.
+
+@ trigger=combat_start archetype=haunted
+I promised I would not rush in again. I am rushing in again.
+I know where the door is this time. I checked it twice before I came.
+Be quick about it. Slow is how it went wrong before.
+I do not turn my back on this one. I did that once.
+If this goes the wrong way I take the low road out, and I take it early.
+I had a choice. I have stopped pretending otherwise.
+
+@ trigger=combat_start archetype=savage
+I could have kept walking. Never once wanted to.
+Close the ground fast and stay close. That is the whole plan.
+I told myself I would wait until I was certain. I am tired of waiting.
+No patience left to spend, so I spend what I have now.
+Straight in, no circling. Circling is for the careful.
+I give this until my arms tire, and they will not tire soon.
+
+@ trigger=combat_start archetype=sinister
+I considered letting this pass. I decided against it.
+Slowly. Nothing about this needs hurrying.
+I chose this ground before %target knew there was a choice.
+I never begin what I cannot finish quietly, and this qualifies.
+Count what is left to me. More than enough, and that is the pleasure of it.
+If it turns I withdraw without a word, and I return later.
