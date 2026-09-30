@@ -28,7 +28,9 @@ module still substitutes the token if it ever meets one, but line() refuses it,
 so it cannot come back by accident.
 """
 
+import glob
 import os
+import re
 
 # ---------------------------------------------------------------- personalities
 # Must match the Personality enum in mod_botlore.cpp.
@@ -1528,6 +1530,8 @@ for _p, _texts in DEATH_EXTRA.items():
 # =============================================================================
 HUMAN, ORC, DWARF, NIGHTELF, UNDEAD, TAUREN, GNOME, TROLL = 1, 2, 4, 8, 16, 32, 64, 128
 BLOODELF, DRAENEI = 512, 1024
+# mod-worgoblin's two races, 9 and 12, so the masks are 1 << (race - 1).
+GOBLIN, WORGEN = 256, 2048
 
 RACE_HOME = [
     (HUMAN, 12, "Elwynn raised me. Strange, how small it looks now."),
@@ -2140,6 +2144,153 @@ import gen_bot_lore_combos
 gen_bot_lore_combos.build(globals())
 
 
+
+# =============================================================================
+# The plain-text line files, data/lines/*.txt.
+#
+# Everything above is prose held in Python, which is right for lines that need
+# a loop or a table of creature ids beside them. It is the wrong shape for five
+# hundred hand-written lines whose only metadata is which filters they carry,
+# so those live in text files instead, one section per filter combination:
+#
+#     @ trigger=combat_start rank=elite archetype=savage
+#     Big one. Finally something that will not fall over when I look at it.
+#
+# A header names the filters, the lines under it inherit them, and a blank line
+# means nothing. Editing the corpus is then editing prose, with no Python
+# syntax to get wrong, and the files diff one line at a time.
+#
+# Every value is checked against the tables below and an unknown one stops the
+# build, because the alternative is a filter silently reading as "any" and a
+# line escaping into situations it was never written for.
+# =============================================================================
+
+_CLASS_BY_NAME = {
+    "warrior": WARRIOR, "paladin": PALADIN, "hunter": HUNTER, "rogue": ROGUE,
+    "priest": PRIEST, "death_knight": DEATH_KNIGHT, "shaman": SHAMAN,
+    "mage": MAGE, "warlock": WARLOCK, "druid": DRUID,
+}
+_RACE_BY_NAME = {
+    "human": HUMAN, "orc": ORC, "dwarf": DWARF, "nightelf": NIGHTELF,
+    "undead": UNDEAD, "tauren": TAUREN, "gnome": GNOME, "troll": TROLL,
+    "goblin": GOBLIN, "bloodelf": BLOODELF, "draenei": DRAENEI, "worgen": WORGEN,
+}
+_ARCH_BY_NAME = {
+    "devout": DEVOUT, "grim": GRIM, "scholar": SCHOLAR, "boastful": BOASTFUL,
+    "wry": WRY, "haunted": HAUNTED, "savage": SAVAGE, "sinister": SINISTER,
+}
+_RANK_BY_NAME = {
+    "normal": RANK_NORMAL, "elite": RANK_ELITE, "rare_elite": RANK_RARE_ELITE,
+    "world_boss": RANK_WORLD_BOSS, "rare": RANK_RARE,
+}
+# An exact grade, not a floor: a line written for a good find should not also
+# fire on a legendary, which has its own lines and its own register.
+_QUALITY_BY_NAME = {
+    "uncommon": UNCOMMON, "rare": RARE, "epic": EPIC, "legendary": LEGENDARY,
+}
+_GROUP_BY_NAME = {
+    "alone": GROUP_ALONE, "grouped": GROUP_GROUPED, "with_player": GROUP_WITH_PLAYER,
+}
+_GENDER_BY_NAME = {"male": 0, "female": 1}
+
+_TRIGGERS = {
+    "zone_enter", "quest_accept", "quest_complete", "kill", "kill_boss",
+    "death", "level_up", "loot_rare", "combat_start", "idle",
+}
+
+# Which placeholders the module actually fills for each trigger. A %item in a
+# kill line would substitute to nothing and leave a hole in the sentence.
+_ALLOWED_TOKENS = {
+    "combat_start":   {"%target", "%zone", "%area", "%name"},
+    "death":          {"%target", "%killer", "%zone", "%area", "%name"},
+    "kill":           {"%target", "%zone", "%area", "%name"},
+    "kill_boss":      {"%target", "%zone", "%area", "%name"},
+    "level_up":       {"%zone", "%area", "%name"},
+    "loot_rare":      {"%item", "%zone", "%area", "%name"},
+    "zone_enter":     {"%zone", "%area", "%name"},
+    "idle":           {"%zone", "%area", "%name"},
+    "quest_accept":   {"%quest", "%zone", "%area", "%name"},
+    "quest_complete": {"%quest", "%zone", "%area", "%name"},
+}
+
+
+def _filters_from_header(header, where):
+    """Turn 'trigger=x rank=elite' into keyword arguments for line()."""
+    spec = {}
+    for token in header.split():
+        assert "=" in token, f"{where}: header token without '=': {token!r}"
+        key, value = token.split("=", 1)
+        spec[key] = value
+
+    trigger = spec.pop("trigger", None)
+    assert trigger in _TRIGGERS, f"{where}: unknown trigger {trigger!r}"
+
+    kw = {}
+    for key, value in spec.items():
+        if key == "class":
+            kw["cls"] = _CLASS_BY_NAME[value] if value in _CLASS_BY_NAME else _fail(where, key, value)
+        elif key == "race":
+            kw["race"] = _RACE_BY_NAME[value] if value in _RACE_BY_NAME else _fail(where, key, value)
+        elif key == "archetype":
+            kw["personality"] = _ARCH_BY_NAME[value] if value in _ARCH_BY_NAME else _fail(where, key, value)
+        elif key == "rank":
+            kw["rank"] = _RANK_BY_NAME[value] if value in _RANK_BY_NAME else _fail(where, key, value)
+        elif key == "quality":
+            grade = _QUALITY_BY_NAME[value] if value in _QUALITY_BY_NAME else _fail(where, key, value)
+            kw["minq"] = kw["maxq"] = grade
+        elif key == "group":
+            kw["group"] = _GROUP_BY_NAME[value] if value in _GROUP_BY_NAME else _fail(where, key, value)
+        elif key == "gender":
+            kw["gender"] = _GENDER_BY_NAME[value] if value in _GENDER_BY_NAME else _fail(where, key, value)
+        elif key == "zone":
+            assert value.isdigit(), f"{where}: zone must be a number, got {value!r}"
+            kw["zone"] = int(value)
+        elif key == "area":
+            assert value.isdigit(), f"{where}: area must be a number, got {value!r}"
+            kw["area"] = int(value)
+        elif key == "weight":
+            kw["weight"] = int(value)
+        else:
+            raise AssertionError(f"{where}: unknown filter {key!r}")
+
+    return trigger, kw
+
+
+def _fail(where, key, value):
+    raise AssertionError(f"{where}: {key}={value!r} is not a known value")
+
+
+def load_line_files():
+    here = os.path.dirname(os.path.abspath(__file__))
+    directory = os.path.join(here, "..", "data", "lines")
+    loaded = 0
+
+    for path in sorted(glob.glob(os.path.join(directory, "*.txt"))):
+        name = os.path.basename(path)
+        trigger, kw = None, None
+        with open(path, encoding="utf-8") as fh:
+            for lineno, raw in enumerate(fh, 1):
+                text = raw.rstrip("\n")
+                where = f"{name}:{lineno}"
+                if not text.strip() or text.lstrip().startswith("#"):
+                    continue
+                if text.startswith("@ "):
+                    trigger, kw = _filters_from_header(text[2:], where)
+                    continue
+                assert trigger, f"{where}: a line before any @ header"
+                for token in set(re.findall(r"%\w+", text)):
+                    assert token in _ALLOWED_TOKENS[trigger], \
+                        f"{where}: {token} is not substituted on {trigger}"
+                # Weight 3, matching the other authored lines: specificity does
+                # most of the work, this keeps a hand-written line ahead of a
+                # generic one of equal specificity.
+                line(trigger, text, weight=kw.get("weight", 3),
+                     comment=f"{name} line {lineno}",
+                     **{k: v for k, v in kw.items() if k != "weight"})
+                loaded += 1
+
+    return loaded
+
 def dedupe():
     seen = set()
     kept = []
@@ -2155,6 +2306,7 @@ def dedupe():
 
 
 def main():
+    from_files = load_line_files()
     dropped = dedupe()
     here = os.path.dirname(os.path.abspath(__file__))
     out = os.path.join(here, "..", "data", "sql", "db-world", "base", "botlore_lore_text.sql")
@@ -2180,7 +2332,7 @@ def main():
         triggers[r["trigger"]] = triggers.get(r["trigger"], 0) + 1
 
     print(f"wrote {os.path.normpath(out)}: {len(rows)} lines "
-          f"({dropped} duplicates dropped)")
+          f"({from_files} from data/lines, {dropped} duplicates dropped)")
     for t, n in sorted(triggers.items(), key=lambda kv: -kv[1]):
         print(f"  {t:<16}{n:>5}")
 

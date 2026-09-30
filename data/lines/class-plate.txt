@@ -1,0 +1,115 @@
+@ trigger=combat_start class=warrior archetype=grim
+%target does not know it is already dead. Neither did the last one.
+Keep your weight on the back foot and this ends quick.
+
+@ trigger=combat_start class=warrior archetype=savage
+Come closer, %target. My arms are cold and they want the work.
+Good. I was getting tired of walking.
+
+@ trigger=combat_start class=warrior archetype=wry
+%target picked the one morning I remembered to sharpen this.
+Hold still. It goes easier on both of us that way.
+
+@ trigger=combat_start class=warrior archetype=boastful
+Watch the footwork, not the sword. The footwork is the part that kills.
+
+@ trigger=combat_start class=paladin archetype=devout
+Stand behind me. I would rather this ended with only one of us hurt.
+I did not swear the oath for glory, only for this. Come on then, %target.
+
+@ trigger=combat_start class=paladin archetype=boastful
+Let it see the shield first. Most of them think better of it after that.
+Watch closely. This is what a sworn arm looks like when it is working.
+
+@ trigger=combat_start class=paladin archetype=haunted
+I have swung at smaller things than %target and slept worse for it.
+
+@ trigger=combat_start class=paladin archetype=grim
+%target gets the same mercy as all the rest. Quick.
+
+@ trigger=combat_start class=death_knight archetype=grim
+The runes are awake. That is the only warning %target gets.
+Cold goes in first. The rest of it follows, so stand clear.
+
+@ trigger=combat_start class=death_knight archetype=sinister
+Hold still, %target. I want to see how little of me this takes.
+I could leave you be. I have decided otherwise.
+
+@ trigger=combat_start class=death_knight archetype=haunted
+Something in me is glad of this, and I do not like which part.
+I never asked to be this cold. %target will feel it regardless.
+
+@ trigger=combat_start class=death_knight archetype=wry
+The blade hums even for this one. It has no standards left.
+
+@ trigger=level_up class=warrior archetype=scholar
+My guard closes a hand's width faster than it did. The drilling works.
+
+@ trigger=level_up class=warrior archetype=boastful
+The armour weighs less this morning, or I weigh more.
+Somebody in the back should mark the day my arms got better than this.
+
+@ trigger=level_up class=paladin archetype=devout
+The Light answers a little sooner now. I will try to deserve that.
+Steadier hands than yesterday, and steadier hands mean fewer graves.
+
+@ trigger=level_up class=paladin archetype=wry
+Stronger, apparently. The road will find a use for it, it always does.
+
+@ trigger=level_up class=death_knight archetype=haunted
+Whatever I am becomes more of itself. I keep waiting to mind.
+Stronger. I would sooner have back the years it cost me.
+
+@ trigger=level_up class=death_knight archetype=scholar
+The runes bite deeper into the steel, and my hands finally know why.
+
+@ trigger=level_up class=death_knight archetype=sinister
+Good. There is more of me to go around.
+
+@ trigger=death class=warrior archetype=grim
+Knew it would be a day like this one. Take my shield, it is better than yours.
+%target had the reach. Nothing to argue with there.
+
+@ trigger=death class=warrior archetype=wry
+Well. That is the last time I lead with my chin.
+
+@ trigger=death class=paladin archetype=devout
+Do not grieve long. The Light does not keep me waiting and neither should you.
+I kept the oath to the end of it. Tell them that part.
+
+@ trigger=death class=paladin archetype=haunted
+I am not afraid of the dark. I have been walking toward it a long while.
+
+@ trigger=death class=death_knight archetype=grim
+Second life spent. It was never mine to keep.
+%target only took back what was already borrowed.
+
+@ trigger=death class=death_knight archetype=sinister
+Go on, %target. The cold keeps better accounts than you do.
+
+@ trigger=death class=death_knight archetype=haunted
+Quiet, at last. I had nearly forgotten what that was.
+
+@ trigger=kill_boss class=warrior archetype=boastful
+Down, and in front of witnesses. Somebody remember how that looked.
+%target stood a head taller than me. That has never once mattered.
+
+@ trigger=kill_boss class=warrior archetype=savage
+That one fought. I will grant it that much and nothing more.
+
+@ trigger=kill_boss class=paladin archetype=devout
+%target is finished. Now the ground here can be quiet again.
+It is done, and I took no joy in it. The Light asks for the work, not the pleasure.
+
+@ trigger=kill_boss class=paladin archetype=wry
+Larger than advertised. Dead all the same.
+
+@ trigger=kill_boss class=death_knight archetype=sinister
+%target went down exactly as I said it would. I am rarely wrong about endings.
+There. Something else knows the cold now.
+
+@ trigger=kill_boss class=death_knight archetype=haunted
+I stood over it a while. Nothing in me moved.
+
+@ trigger=kill_boss class=death_knight archetype=scholar
+%target broke at the joint, precisely where the runes said it would.

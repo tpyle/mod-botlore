@@ -1,0 +1,111 @@
+@ trigger=quest_accept archetype=devout
+Someone asked, and that is reason enough. I will see it through.
+I gave my word on this, and my word is worth more than my comfort.
+
+@ trigger=quest_accept archetype=grim
+It will not do itself. It never does.
+This ends badly or it ends done. Either way I have started.
+
+@ trigger=quest_accept archetype=scholar
+I have wondered about this for some time, and now I have a reason to go and look.
+%quest - I would like to know how a thing like that comes about.
+
+@ trigger=quest_accept archetype=boastful
+This is the sort of work they name people after. Let them name it after me.
+%quest, they call it. They will be calling it something else once I am finished.
+
+@ trigger=quest_accept archetype=wry
+I looked around for someone better suited. Nobody looked back.
+%quest. Of course it is mine. Everything is, eventually.
+I said yes before I heard the whole of it. That is generally how it goes.
+
+@ trigger=quest_accept archetype=haunted
+I have seen what waiting costs. I will not wait.
+If I turn away from this, someone stands there alone. I know that ground.
+
+@ trigger=quest_accept archetype=savage
+There is killing in this one. Good.
+Point me at whatever needs breaking and I will be quick about it.
+
+@ trigger=quest_accept archetype=sinister
+They will owe me for %quest, and a debt is a useful thing to hold.
+I accepted. Let them believe that was their own idea.
+Small favours make the largest hooks. I will do this one gladly.
+
+@ trigger=quest_complete archetype=devout
+It is finished, and no one else had to carry it. That is the whole of my thanks.
+%quest is done. I would rather be tired than have left it undone.
+
+@ trigger=quest_complete archetype=grim
+Done. It cost what I expected it to cost.
+%quest is finished. There will be another before the day is out.
+
+@ trigger=quest_complete archetype=scholar
+Finished, and I understand it better than when I began. That is the better half of the reward.
+%quest is settled. I have written down what I found, in case it matters later.
+
+@ trigger=quest_complete archetype=boastful
+%quest, complete, and I made it look easy because it was.
+Finished. Someone should have been watching - that was the best of my work.
+Tell it however you like, so long as you tell it with my name in it.
+
+@ trigger=quest_complete archetype=wry
+Done, and I kept most of my skin. A modest triumph.
+%quest is finished. I expect the next will be much the same, only worse.
+
+@ trigger=quest_complete archetype=haunted
+It is finished. I wish finishing felt like more than this.
+%quest is done, and no one was left behind in it. That is enough for today.
+
+@ trigger=quest_complete archetype=savage
+Finished, and I am not done wanting more of it.
+%quest is done. The ones who needed killing are killed.
+
+@ trigger=quest_complete archetype=sinister
+%quest is complete. Now we come to the part where they thank me.
+Done, and done quietly. They will never learn how.
+
+@ trigger=idle gender=female archetype=wry
+My mother wanted me steady at a loom. I am steady at other things.
+
+@ trigger=idle gender=female archetype=grim
+My sister taught me to bank a fire so it lasts the night. Everything I know about lasting came from her.
+
+@ trigger=idle gender=female archetype=scholar
+They would not let me copy in the scriptorium, so I learned my letters upside down across the table.
+
+@ trigger=idle gender=female archetype=boastful
+They told me a girl could not carry the standard. I carried it, and then I carried the man who said so.
+
+@ trigger=idle gender=male archetype=devout
+My father prayed with his hands and almost never with his mouth. I learned the better half from him.
+
+@ trigger=idle gender=male archetype=haunted
+I was the eldest son, so the keeping of everyone fell to me. I was not good enough at it.
+
+@ trigger=idle gender=male archetype=savage
+My father said a man who swings in anger swings only once. I have swung a great many times since.
+
+@ trigger=idle gender=male archetype=wry
+I was raised to inherit a shop. The shop is still there, I expect.
+
+@ trigger=level_up gender=female archetype=devout
+My mother's hands were stronger than my father's and she never once said so. I understand her better now.
+
+@ trigger=level_up gender=female archetype=savage
+I was handed a needle when I wanted the hammer. The hammer suits me better every year.
+
+@ trigger=level_up gender=female archetype=haunted
+My sister was always the stronger of us. I am stronger now than she ever was, and I would trade it back.
+
+@ trigger=level_up gender=female archetype=grim
+I was raised to be married off quietly. I am harder to move than that now.
+
+@ trigger=level_up gender=male archetype=grim
+My father got old, then slow, then buried. I am only getting stronger, for now.
+
+@ trigger=level_up gender=male archetype=scholar
+My mother taught me to measure twice and cut once. I can feel the measure getting truer.
+
+@ trigger=level_up gender=male archetype=boastful
+My father swore I would never fill his armour. It fits me poorly now - too small.

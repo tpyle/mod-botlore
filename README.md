@@ -20,20 +20,34 @@ the core's database updater applies it at startup for every enabled module:
 is re-applied, so regenerating the corpus and restarting is enough to publish
 it. Nothing has to be applied by hand.
 
-That file is generated. The corpus itself lives in Python, under `tools/`,
-because it is prose and has to stay readable and editable:
+That file is generated. The corpus itself is kept in two shapes:
 
-    tools/gen_bot_lore.py          the hand-placed lines: this zone, that
-                                   quest, that boss, and the header and schema
-                                   of the SQL file
-    tools/gen_bot_lore_combos.py   fragments along the axes the module filters
-                                   on - class, archetype, race, gender, spec,
-                                   item category - multiplied out, which is
-                                   where the volume comes from
+    data/lines/*.txt               most of it - plain text, a header naming the
+                                   filters and the lines under it inheriting
+                                   them. Ten files, 500 lines, one per slice of
+                                   the filter space
+    tools/gen_bot_lore.py          the lines that need code beside them: a loop,
+                                   or a table of creature and quest ids. Also
+                                   the loader for data/lines and the schema
+    tools/gen_bot_lore_combos.py   retired. Fragments multiplied out into joined
+                                   pairs; it supplied nine lines in ten until
+                                   the joins turned out to be why the corpus
+                                   read as machine-made. AUTHORED_ONLY lists
+                                   every trigger now, which switches it off.
+                                   Dropping a trigger from that set puts its
+                                   joined lines back
 
-Run `python3 tools/gen_bot_lore.py` to rewrite the SQL file; it drives the
-combos half itself and prints the per-trigger counts. To publish without a
-restart, apply the regenerated file by hand and run `.botlore reload`.
+A line file looks like this, and a bad filter value stops the build rather than
+silently reading as "any":
+
+    @ trigger=combat_start rank=elite archetype=savage
+    Big one. Finally something that will not fall over when I look at it.
+    %target has real weight to it. Good. I want to feel the swing land.
+
+Run `python3 tools/gen_bot_lore.py` to rewrite the SQL file; it loads
+`data/lines` itself and prints the per-trigger counts. To publish without a
+restart, apply the regenerated file by hand and run `.botlore reload` - the
+corpus is data, so it needs no rebuild.
 
 ## The table
 

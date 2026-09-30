@@ -1,0 +1,121 @@
+@ trigger=zone_enter race=human zone=12
+Every road in Elwynn leads home eventually. I could walk this one blindfolded.
+
+@ trigger=zone_enter race=human zone=40
+My uncle farmed out here before the harvesters came. Nobody has brought the wheat in for years.
+
+@ trigger=zone_enter race=human zone=267
+Southshore still flies our banner, and that is more than most of the old holdings can say.
+
+@ trigger=zone_enter race=human zone=28
+Lordaeron was the greatest kingdom men ever built. Look what is left of the fields.
+
+@ trigger=zone_enter race=human zone=33
+Kingdoms rise and fall and this jungle simply eats them. Booty Bay is the only honest thing in it.
+
+@ trigger=zone_enter race=human
+%zone is on no map my father ever owned. We keep having to add pages.
+
+@ trigger=idle race=human
+Stormwind was rubble when I was small. Anything can be rebuilt if enough of us live to do the rebuilding.
+I keep a list of the dead in my head. I say a few of the names when it is quiet like this.
+My grandmother was born in Stromgarde. I have never seen it and I still call it ours.
+
+@ trigger=zone_enter race=dwarf zone=1
+The cold here is honest cold. Everywhere else I go, the air tastes of something.
+
+@ trigger=zone_enter race=dwarf zone=38
+The dam holds, the loch is full, and my people made both. That is a good afternoon.
+
+@ trigger=zone_enter race=dwarf zone=51
+We dug too eager here once, and the mountain kept the difference.
+
+@ trigger=zone_enter race=dwarf zone=45
+The stonework out here was cut by men, and cut well. I will say that once and not again.
+
+@ trigger=zone_enter race=dwarf
+Every stone in %zone has a story in it, and I have all night.
+
+@ trigger=idle race=dwarf
+The Titans shaped us out of stone. I think on that when my hands ache.
+Nothing wrong with a quiet hour and a full flagon. My ancestors would want me rested.
+Three clans, one mountain, and we still cannot agree whose forge came first.
+
+@ trigger=zone_enter race=gnome zone=1
+Kharanos is warm and the dwarves are kind, but none of this is Gnomeregan.
+
+@ trigger=zone_enter race=gnome zone=490
+Crystals that hum and ferns older than speech. I could spend a lifetime in this crater and publish nothing.
+
+@ trigger=zone_enter race=gnome zone=618
+I want to know how the snow here stays so dry. I have a theory and three empty jars.
+
+@ trigger=zone_enter race=gnome zone=51
+The heat in this gorge is absurd. Something below is still burning and nobody has bothered to write it down.
+
+@ trigger=zone_enter race=gnome zone=11
+Mud, marsh gas, and mosquitoes the size of my head. Somebody ought to be studying this properly.
+
+@ trigger=idle race=gnome
+We gassed our own city to save it. I have run the numbers a hundred times and they still come out the same.
+I measure things because measuring is the only part of the world that holds still.
+The tall folk think we tinker for amusement. We tinker because we lost a city and I mean to take it back.
+Four inventions half finished and a peaceful moment to think. A dangerous combination.
+
+@ trigger=zone_enter race=nightelf zone=141
+The tree is young yet. I am not, and I will still be here when its bark runs deep.
+
+@ trigger=zone_enter race=nightelf zone=148
+The sea took these ruins when the world broke apart. I remember their rooftops standing above the water.
+
+@ trigger=zone_enter race=nightelf zone=331
+Every axe stroke in Ashenvale is a wound that will outlast whoever swung it.
+
+@ trigger=zone_enter race=nightelf zone=361
+I walked these woods before the taint took them. Nothing I could say would make you understand what was lost.
+
+@ trigger=zone_enter race=nightelf zone=618
+Winterspring keeps the old silence. All of Kalimdor sounded like this once.
+
+@ trigger=idle race=nightelf
+I slept ten thousand years and woke to find the world in a hurry.
+Mortality is new to me. I am told one grows used to it.
+%area was named by someone who arrived yesterday, so I will not be using that name.
+
+@ trigger=zone_enter race=draenei zone=3524
+The Exodar came to rest here and this island simply made room for us. Not every world has.
+
+@ trigger=zone_enter race=draenei zone=3525
+Our crash poisoned this ground. I will not pretend otherwise to spare my own feelings.
+
+@ trigger=zone_enter race=draenei zone=4
+This is what the Legion leaves behind. I have seen my own world wear this same face.
+
+@ trigger=zone_enter race=draenei zone=361
+Felwood smells of Draenor in its last days. I would rather not speak while we pass through.
+
+@ trigger=zone_enter race=draenei
+So this is %zone. Another name to learn in another world that is not mine.
+
+@ trigger=idle race=draenei
+I have fled two worlds now. I am told this one is meant to be the last.
+The Light does not promise us a home. It promises us light, and we have made do.
+My grandmother remembered Argus. I remember her remembering it.
+When it is quiet I find myself counting the exoduses. Two is enough for any people.
+
+@ trigger=zone_enter race=worgen zone=10
+Duskwood smells of wet fur and old graves, and some part of me is glad to be here. That is the part I watch.
+
+@ trigger=zone_enter race=worgen zone=12
+Elwynn is too bright and too tidy for me now. I keep to the treeline out of habit.
+
+@ trigger=zone_enter race=worgen zone=44
+There are wolves in these hills and they do not know what to make of me. Neither do I.
+
+@ trigger=zone_enter race=worgen
+Gilneas shut its wall and I was left outside it. Walking %zone, I begin to see the sense in a wall.
+
+@ trigger=idle race=worgen
+I was a man of Gilneas with a house and a name. I still have the name.
+Keep the breathing slow and the thoughts in words. Words are the one thing the beast cannot use.
+The hunger comes in the quiet hours. I have learned to sit with it until it tires of me.

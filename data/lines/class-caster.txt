@@ -1,0 +1,137 @@
+@ trigger=combat_start class=priest archetype=devout
+Stand behind me and let it come to us. I would rather mend today than end anything.
+Small hurts still hurt. I will keep them off you.
+
+@ trigger=combat_start class=priest archetype=haunted
+I have seen smaller things than %target take someone away. Not this time.
+
+@ trigger=combat_start class=priest archetype=grim
+It bites, we bleed, I close the wounds. Same as always.
+
+@ trigger=combat_start class=priest archetype=wry
+Another creature that has never once been told about the Light. Allow me.
+
+@ trigger=combat_start class=mage archetype=scholar
+%target moves in a pattern. Three passes and I will know where the frost goes.
+Let us find out how much cold a thing this size can hold.
+
+@ trigger=combat_start class=mage archetype=boastful
+Watch the footwork, not the fire. The fire is the easy part.
+I could manage this without turning around, but then you would not see it.
+
+@ trigger=combat_start class=mage archetype=wry
+Years of study, and here we are, chilling vermin. Fine.
+
+@ trigger=combat_start class=mage archetype=grim
+Nothing out here dies clean. Hold still and it goes faster.
+
+@ trigger=combat_start class=warlock archetype=sinister
+Come closer, little thing. What stands behind me is already hungry.
+I have paid for far worse than this. Let us spend a little of it.
+
+@ trigger=combat_start class=warlock archetype=savage
+My friend has not fed since morning, and %target will do.
+
+@ trigger=combat_start class=warlock archetype=haunted
+I do not need help for this one, but it comes anyway. It always comes anyway.
+
+@ trigger=combat_start class=shaman archetype=devout
+Wind, only a breath, and I will not ask you again today.
+Earth, this one troubles the path. Help me set it aside.
+
+@ trigger=combat_start class=shaman archetype=savage
+The stones want this as badly as I do.
+Lightning does not care how small you are, and neither do I.
+
+@ trigger=combat_start class=shaman archetype=grim
+Water first, fire if it is stubborn. It is usually stubborn.
+
+@ trigger=level_up class=priest archetype=devout
+Steadier hands than yesterday. More of you comes home now.
+
+@ trigger=level_up class=priest archetype=haunted
+I could not hold that much before. I am still learning it too late.
+
+@ trigger=level_up class=priest archetype=wry
+My prayers carry further now, which mostly means I hear more of what is asking.
+
+@ trigger=level_up class=mage archetype=scholar
+The pattern held. What I could only read before, I can write.
+
+@ trigger=level_up class=mage archetype=boastful
+Do not applaud yet. I have not shown you the new one.
+
+@ trigger=level_up class=warlock archetype=sinister
+The bargain deepened tonight, and I did not flinch when it counted the interest.
+
+@ trigger=level_up class=warlock archetype=wry
+More power, the same debt, slightly worse terms. Progress of a kind.
+
+@ trigger=level_up class=shaman archetype=devout
+The elements answered before I had finished asking. I will try to deserve that.
+
+@ trigger=level_up class=shaman archetype=savage
+The storm sits closer to my skin than it did. Good.
+
+@ trigger=level_up class=shaman archetype=scholar
+The wind said something new to me, and I understood it the first time.
+
+@ trigger=death class=priest archetype=devout
+Do not stop for me. Keep the others whole.
+
+@ trigger=death class=priest archetype=grim
+I knew how this ended. I am only sorry it ends before you are safe.
+
+@ trigger=death class=mage archetype=scholar
+I misjudged %target by a fraction. So that is all it takes.
+
+@ trigger=death class=mage archetype=wry
+Undone by %target. My old instructors will be insufferable about this.
+
+@ trigger=death class=mage archetype=boastful
+No bow this time. Tell them the fire went out working.
+
+@ trigger=death class=warlock archetype=sinister
+%target has taken nothing from me. What I owe was never mine to lose.
+
+@ trigger=death class=warlock archetype=haunted
+I always knew what the debt would collect. I only hoped it would wait longer.
+
+@ trigger=death class=warlock archetype=savage
+Take the body. The rest has gone somewhere you cannot follow.
+
+@ trigger=death class=shaman archetype=grim
+Back to the earth, then. It was always going to have me.
+
+@ trigger=death class=shaman archetype=devout
+Ancestors, I come with open hands. %target only carried me to the door.
+
+@ trigger=kill_boss class=priest archetype=devout
+It is done, and no one else will suffer it. Now let me see to the living.
+
+@ trigger=kill_boss class=priest archetype=grim
+%target is finished. None of that was clean, and none of it was wrong.
+
+@ trigger=kill_boss class=priest archetype=haunted
+I wanted %target dead for a very long time. I thought I would feel more.
+
+@ trigger=kill_boss class=mage archetype=boastful
+%target fell to arithmetic and nerve. Mostly arithmetic.
+
+@ trigger=kill_boss class=mage archetype=scholar
+%target is dead and I understand why. The second part matters more to me.
+
+@ trigger=kill_boss class=mage archetype=wry
+Well. That took considerably more effort than it deserved.
+
+@ trigger=kill_boss class=warlock archetype=sinister
+%target begged for something to save it. Something did answer, and it came to me.
+
+@ trigger=kill_boss class=warlock archetype=savage
+%target had a soul worth the keeping, and I keep what I earn.
+
+@ trigger=kill_boss class=shaman archetype=savage
+The storm and I split %target between us. My share was enough.
+
+@ trigger=kill_boss class=shaman archetype=devout
+Thank you, all four of you. %target will trouble no one now.

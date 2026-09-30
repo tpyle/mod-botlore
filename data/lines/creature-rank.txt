@@ -1,0 +1,147 @@
+@ trigger=combat_start rank=elite archetype=savage
+Big one. Finally something that will not fall over when I look at it.
+%target has real weight to it. Good. I want to feel the swing land.
+
+@ trigger=combat_start rank=elite archetype=grim
+%target kills people who get careless. I will not be careless.
+
+@ trigger=combat_start rank=elite archetype=devout
+Stand close and stay standing. I can mend a great deal, but not everything.
+
+@ trigger=combat_start rank=elite archetype=scholar
+Note the scars on %target - it has already survived others who tried this.
+
+@ trigger=combat_start rank=elite archetype=boastful
+%target is the strongest thing in this valley. Watch closely what happens to it.
+
+@ trigger=combat_start rank=elite archetype=haunted
+I have seen what a thing that size does to a careless company. Keep your feet under you.
+
+@ trigger=combat_start rank=elite archetype=sinister
+%target is dangerous. That is exactly why it deserves to be done properly.
+
+@ trigger=combat_start rank=rare_elite archetype=scholar
+Dangerous and seldom seen both - I may never get another look at %target. Stay alive so I can.
+
+@ trigger=combat_start rank=rare_elite archetype=grim
+Seldom seen and strong with it. Of course that is the one that found us.
+
+@ trigger=combat_start rank=rare_elite archetype=boastful
+Few living have laid eyes on %target. Fewer still will do what I am about to.
+
+@ trigger=combat_start rank=rare_elite archetype=haunted
+Something that hides as well as %target, and hits as hard. I would rather it had stayed hidden.
+
+@ trigger=combat_start rank=rare_elite archetype=wry
+Seldom seen and thoroughly armed. Those two do tend to travel together.
+
+@ trigger=combat_start rank=rare_elite archetype=savage
+I have hunted years without meeting one of these. I am not letting it walk away.
+
+@ trigger=combat_start rank=rare archetype=scholar
+Unusual markings, and no great danger in it. Hold a moment and let me look.
+
+@ trigger=combat_start rank=rare archetype=wry
+%target is an odd little thing. I will not pretend it frightens me.
+
+@ trigger=combat_start rank=rare archetype=boastful
+Nobody I know has one of these on their wall. I intend to be the first.
+
+@ trigger=combat_start rank=rare archetype=devout
+Strange, this one, but not wicked that I can see. I will be quick with it.
+
+@ trigger=combat_start rank=rare archetype=savage
+Rare hide, thin arms. %target will make a better trophy than a fight.
+
+@ trigger=combat_start rank=world_boss archetype=grim
+%target is bigger than everything we have killed put together. We will likely die here. Forward.
+
+@ trigger=combat_start rank=world_boss archetype=devout
+Hold the line and pray with your hands, not your mouth. This is the hour we trained for.
+
+@ trigger=combat_start rank=world_boss archetype=haunted
+I once stood where something like this walked through a whole company. Now it is my turn to stand.
+
+@ trigger=combat_start rank=world_boss archetype=boastful
+Get this one told properly. %target has never been brought down, and that ends today.
+
+@ trigger=combat_start rank=world_boss archetype=scholar
+Nothing as old as %target should still be walking. I want to understand it before it ends us.
+
+@ trigger=combat_start rank=world_boss archetype=wry
+That shadow on the ground is the shadow of our own poor judgement. Let us go stand in it.
+
+@ trigger=kill_boss rank=elite archetype=savage
+%target fought. My arms are shaking and I am not the least bit sorry.
+
+@ trigger=kill_boss rank=elite archetype=grim
+Down. It took more out of us than a thing that size should.
+
+@ trigger=kill_boss rank=elite archetype=devout
+%target is at rest. Come here, all of you, and let me see the damage.
+
+@ trigger=kill_boss rank=elite archetype=scholar
+Hold still now, %target, while I take the proper measure of those jaws.
+
+@ trigger=kill_boss rank=elite archetype=boastful
+%target is flat on the ground, and I want it known who was still standing.
+
+@ trigger=kill_boss rank=elite archetype=haunted
+It died the way they all die. I thought it would feel like more than this.
+
+@ trigger=kill_boss rank=elite archetype=sinister
+Strong things break the same as weak ones. Only slower, and with more noise.
+
+@ trigger=kill_boss rank=elite archetype=wry
+Well. It was dangerous right up until the moment it was not.
+
+@ trigger=kill_boss rank=rare_elite archetype=scholar
+%target may not be seen again in my lifetime. Give me a moment with it before we move on.
+
+@ trigger=kill_boss rank=rare_elite archetype=boastful
+Ask anyone alive if they have seen one of these dead. Now they have seen me do it.
+
+@ trigger=kill_boss rank=rare_elite archetype=grim
+Seldom seen and dangerous, and now neither. Take whatever is worth taking.
+
+@ trigger=kill_boss rank=rare_elite archetype=savage
+I waited years for a fight like %target. I would take it again tomorrow.
+
+@ trigger=kill_boss rank=rare_elite archetype=wry
+Seldom seen, and from today considerably less often. Hard luck for the scholars.
+
+@ trigger=kill_boss rank=rare_elite archetype=haunted
+Something that rare should have been left alone. Too late to think so now.
+
+@ trigger=kill_boss rank=rare archetype=wry
+There it lies, the strangest thing I have killed and much the easiest.
+
+@ trigger=kill_boss rank=rare archetype=scholar
+Look at %target properly - the colouring is wrong for its kind. Worth writing down.
+
+@ trigger=kill_boss rank=rare archetype=boastful
+That one goes on the wall. Not for the danger in it, for the rarity.
+
+@ trigger=kill_boss rank=rare archetype=devout
+An odd creature, and a quick end for it. That was the most I could give.
+
+@ trigger=kill_boss rank=rare archetype=sinister
+%target was uncommon, not formidable. The distinction matters very little now.
+
+@ trigger=kill_boss rank=world_boss archetype=boastful
+%target is down, and I will be telling this one until I am too old to stand.
+
+@ trigger=kill_boss rank=world_boss archetype=grim
+%target is dead. I did not think we would be the ones left standing.
+
+@ trigger=kill_boss rank=world_boss archetype=devout
+Kneel a moment. Something that old leaving the world should be marked.
+
+@ trigger=kill_boss rank=world_boss archetype=haunted
+I have wanted to see one of these fall since the day I lost everything. It is quieter than I hoped.
+
+@ trigger=kill_boss rank=world_boss archetype=savage
+A whole life spent sharpening steel for one fight like %target. Nothing after this will taste right.
+
+@ trigger=kill_boss rank=world_boss archetype=scholar
+%target is dead and the world is smaller for it. I will be years writing this down.

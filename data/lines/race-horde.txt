@@ -1,0 +1,121 @@
+@ trigger=zone_enter race=orc zone=14
+This land was given to us, not taken, and that is why I can stand here without shame.
+
+@ trigger=zone_enter race=orc zone=267
+There were camps in these hills where we sat with our hands open and forgot ourselves. I do not walk quietly here.
+
+@ trigger=zone_enter race=orc zone=46
+The air here tastes like the old blood in us. I breathe shallow and keep moving.
+
+@ trigger=zone_enter race=orc zone=361
+Fel rots this forest the way it once rotted my people. I know the smell better than I would like.
+
+@ trigger=zone_enter race=orc
+New ground. I will learn where the water is before I learn anything else.
+
+@ trigger=idle race=orc
+My blood remembers a green it never chose, and every quiet hour is a small argument with it.
+Thrall gave us our honor back and asks only that we keep it. That is a cheap price.
+Quiet in %zone. Even a warrior is allowed to sit down for a breath.
+
+@ trigger=zone_enter race=troll zone=33
+Dese ruins be Gurubashi, and dey older dan any kingdom standin today.
+
+@ trigger=zone_enter race=troll zone=440
+Dere be Zul'Farrak sand in dis wind. My kin still hold what dey can out here.
+
+@ trigger=zone_enter race=troll zone=490
+Dis crater be older dan every empire, and it do not care about none of dem.
+
+@ trigger=zone_enter race=troll zone=400
+High stone and thin air. Good place for a watcher, bad place for a man who like his feet flat.
+
+@ trigger=zone_enter race=troll
+New ground, and de loa be watchin how I walk it.
+
+@ trigger=idle race=troll
+Empires fall, mon. Mine fell so long ago dat your grandfathers was still learnin fire.
+I be restin, not sleepin. Dat be a big difference when de world go quiet like dis.
+Every bone knit back and every wound close. De hard part be rememberin which ones should have killed me.
+De orcs call dis peace. I call it de part of de hunt where nobody move.
+
+@ trigger=zone_enter race=tauren zone=215
+The Earth Mother keeps her finest grass here, and my grandmother's grandmother walked it.
+
+@ trigger=zone_enter race=tauren zone=405
+This ground was green once. Something took that from it, and no one ever taught the land how to grieve.
+
+@ trigger=zone_enter race=tauren zone=406
+The trees here were cut by machines and not by need. That is the whole wrong of it.
+
+@ trigger=zone_enter race=tauren zone=490
+Life piles on life here until it forgets to be careful. The Earth Mother laughs loudest in such places.
+
+@ trigger=zone_enter race=tauren
+I will walk soft in %zone until I know what lives here.
+
+@ trigger=idle race=tauren
+My hooves have been on this world a short while, and these hills will still be counting long after.
+Nothing is happening, and that is a thing to be grateful for rather than a thing to fix.
+I say my father's name at times like this, so that the wind keeps carrying it.
+
+@ trigger=zone_enter race=undead zone=85
+I was born in this soil and I was buried in it, and only one of those was my choosing.
+
+@ trigger=zone_enter race=undead zone=130
+I remember when these woods still had woodsmen in them. Now they have me.
+
+@ trigger=zone_enter race=undead zone=267
+There is a farmhouse down there I could find blindfolded, which is why I will not go and look.
+
+@ trigger=zone_enter race=undead zone=28
+The blight made me and then it kept going. I feel no gratitude either way.
+
+@ trigger=zone_enter race=undead zone=139
+The Scourge still hold this ground, and I was once the ground they held.
+
+@ trigger=idle race=undead
+I keep catching myself rubbing my hands for warmth. Dead all these years and still so bad at it.
+The living fidget to pass the time. I fidget because I never learned how to stop.
+I used to fear quiet places, and it seems I kept the flinch but lost the reason.
+I have no heartbeat to count the waiting by, so I hum instead.
+
+@ trigger=zone_enter race=bloodelf zone=3430
+Ten thousand years of us, and the leaves still turn gold on command. Let no one call that luck.
+
+@ trigger=zone_enter race=bloodelf zone=3433
+This was Quel'Thalas too, before the Scourge cut their road through it. We do not say so quietly.
+
+@ trigger=zone_enter race=bloodelf zone=16
+Kaldorei ruins, and something older still beneath them. We grew from the same root and acquired better manners.
+
+@ trigger=zone_enter race=bloodelf zone=361
+The fel here is loud enough to make my hands ache, and I am not proud of what my hands want.
+
+@ trigger=zone_enter race=bloodelf
+There is nothing worth drinking in the air of %zone. I will manage, as I always manage.
+
+@ trigger=idle race=bloodelf
+The thirst is quietest when I am busy, which is why I am so rarely still. Note that I am still now.
+Our city stands - chipped, patched and half in mourning, but standing, which is more than Lordaeron managed.
+I fold my hands when nothing is happening. It is easier than watching them shake.
+
+@ trigger=zone_enter race=goblin zone=17
+Nothing out here but road and thirst, and I could sell water to both ends of it.
+
+@ trigger=zone_enter race=goblin zone=440
+Gadgetzan takes a cut of every crate crossing this desert, and I take a cut of Gadgetzan.
+
+@ trigger=zone_enter race=goblin zone=405
+No buyers, no sellers, no water. This is the only land I know that runs a loss standing still.
+
+@ trigger=zone_enter race=goblin zone=46
+Ore, heat, and nobody holding the paperwork to stop me. I like the numbers on this place.
+
+@ trigger=zone_enter race=goblin
+First thing I do anywhere new is find out who already owns it and what they overcharge for.
+
+@ trigger=idle race=goblin
+Standing around is the most expensive thing I do all day, and I am doing it right now.
+This conversation is free, which should tell you exactly what it is worth.
+I have three deals pending and not one of them knows about the others. We call that balance.

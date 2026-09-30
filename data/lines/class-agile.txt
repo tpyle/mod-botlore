@@ -1,0 +1,121 @@
+@ trigger=combat_start class=hunter archetype=savage
+My hound has the scent and I have the shot. Nothing about this ends well for %target.
+Small game still bleeds, and my beast is hungry.
+Go, take its legs. I will finish whatever limps.
+
+@ trigger=combat_start class=hunter archetype=wry
+Another mangy thing that thought the treeline was empty.
+I have arrows I have been meaning to waste, and %target has volunteered.
+
+@ trigger=combat_start class=hunter archetype=scholar
+The tracks said one of these, and tracks are honest. Let us see how it moves.
+Watch how %target favours the left foreleg. That is where the arrow goes.
+
+@ trigger=combat_start class=rogue archetype=sinister
+It has not looked behind itself once, and that is a habit I intend to punish.
+Stay just as you are, %target. I am nearly at your back.
+No noise for this one. There is no need to make a night of something so small.
+
+@ trigger=combat_start class=rogue archetype=wry
+It never occurs to any of them that the shadow is already occupied.
+I would let %target pass, but it is standing on the only way through.
+
+@ trigger=combat_start class=rogue archetype=grim
+Small, stupid, and in the road. I will keep it brief.
+It dies here because it stood here. There is no more reason than that.
+
+@ trigger=combat_start class=druid archetype=devout
+Peace first, %target. No? Then the grove takes you back either way.
+I take no joy in this, but the path behind me must stay open.
+
+@ trigger=combat_start class=druid archetype=savage
+Claws, then. Something in me has been waiting since morning.
+Run if you like, %target. The wolf in me would prefer it.
+
+@ trigger=combat_start class=druid archetype=haunted
+I have killed larger things than you and remembered less of them.
+Stand aside or do not. I stopped counting the difference long ago.
+
+@ trigger=level_up class=hunter archetype=scholar
+My hands have learned something my head has not named yet, and the draw comes smoother for it.
+
+@ trigger=level_up class=hunter archetype=boastful
+Did you see that draw? My arm has finally grown into the bow.
+
+@ trigger=level_up class=hunter archetype=haunted
+Steadier hands than yesterday. I only wish they had come sooner.
+
+@ trigger=level_up class=rogue archetype=boastful
+Quieter, quicker, and still the best-looking thing in the alley.
+
+@ trigger=level_up class=rogue archetype=wry
+Fewer bruises today than the trade usually charges, so I will call that progress.
+
+@ trigger=level_up class=rogue archetype=grim
+I last longer than I did. That is all growing stronger has ever meant.
+
+@ trigger=level_up class=druid archetype=scholar
+The shape comes faster now, as though the Dream has stopped asking me to prove it.
+I understand a little more of how the seasons turn in me. Not all of it, but enough.
+
+@ trigger=level_up class=druid archetype=devout
+The Dream lends me more of itself, and I will spend it keeping you on your feet.
+
+@ trigger=level_up class=druid archetype=haunted
+Stronger again. There was a season when I would have given this away to someone else.
+
+@ trigger=death class=hunter archetype=grim
+Should have kept more distance. Send my beast home.
+
+@ trigger=death class=hunter archetype=haunted
+Go on, run - do not wait beside me this time.
+
+@ trigger=death class=hunter archetype=wry
+Too close. I spent years warning others about this exact mistake.
+
+@ trigger=death class=rogue archetype=sinister
+So %target found me. I would dearly like to know who told it where to look.
+
+@ trigger=death class=rogue archetype=wry
+Every exit but the one I needed. That is the trade for you.
+
+@ trigger=death class=rogue archetype=grim
+I knew there was no way out of this one and walked in regardless.
+
+@ trigger=death class=druid archetype=devout
+Lay me on the earth, not the stone. It knows what to do with me.
+The Dream is not far off, so do not grieve long when there is work still standing.
+
+@ trigger=death class=druid archetype=haunted
+Back to the roots, then. I have been half there for a long while.
+
+@ trigger=death class=druid archetype=scholar
+So that is how %target does it. I would have liked to write it down.
+
+@ trigger=kill_boss class=hunter archetype=boastful
+One shot, held for six breaths, and it never knew the treeline had eyes.
+
+@ trigger=kill_boss class=hunter archetype=savage
+That one truly fought. My hound and I will sleep well on it.
+
+@ trigger=kill_boss class=hunter archetype=scholar
+I watched %target for three days before I loosed, and the watching was most of the work.
+
+@ trigger=kill_boss class=rogue archetype=sinister
+It died looking the wrong way, as the great ones nearly always do.
+%target had guards, walls and warning, and not one of them was behind it.
+
+@ trigger=kill_boss class=rogue archetype=boastful
+They will say it took an army. It took me, a doorway and patience.
+
+@ trigger=kill_boss class=druid archetype=savage
+%target was worth the claws. Little else has been, this season.
+
+@ trigger=kill_boss class=druid archetype=devout
+It is finished and the grove can breathe. I would still rather have mended than ended it.
+
+@ trigger=kill_boss class=druid archetype=grim
+%target is down. There is always something worse upstream.
+
+@ trigger=kill_boss class=druid archetype=wry
+Ancient, terrible, and undone by a bear with a grudge.

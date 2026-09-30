@@ -1,0 +1,149 @@
+@ trigger=combat_start group=alone archetype=wry
+No audience for this one. A shame, I had a flourish ready.
+
+@ trigger=combat_start group=alone archetype=savage
+Come on then, %target. Nobody here to pull me off you.
+
+@ trigger=combat_start group=alone archetype=grim
+Just me and %target, and one of us is walking away from it.
+
+@ trigger=combat_start group=alone archetype=sinister
+No witnesses. I do prefer it this way.
+
+@ trigger=death group=alone archetype=haunted
+Nobody saw. That is almost a kindness.
+
+@ trigger=death group=alone archetype=grim
+Face down in the dirt, and the dirt does not care either way.
+
+@ trigger=death group=alone archetype=devout
+Light, I am alone out here and I am asking anyway.
+
+@ trigger=kill_boss group=alone archetype=boastful
+%target is dead and I have only myself to tell. I will tell it well.
+
+@ trigger=kill_boss group=alone archetype=scholar
+%target is dead, and I am the only one who will ever know how it moved.
+
+@ trigger=kill_boss group=alone archetype=haunted
+I killed %target for nobody at all. It still needed doing.
+
+@ trigger=idle group=alone archetype=haunted
+I say less when there is no one to hear. I only think louder.
+
+@ trigger=idle group=alone archetype=wry
+I have been telling myself the same story since dawn. Still not sick of it.
+
+@ trigger=idle group=alone archetype=scholar
+%zone sounds different when there is nobody breathing beside me.
+
+@ trigger=idle group=alone archetype=devout
+No one to pray over today, so I will pray for the road instead.
+
+@ trigger=idle group=alone archetype=sinister
+Alone, I do not have to soften anything.
+
+@ trigger=combat_start group=grouped archetype=savage
+Leave me some of %target, at least.
+
+@ trigger=combat_start group=grouped archetype=wry
+We outnumber %target badly. It hardly seems fair on the poor thing.
+
+@ trigger=combat_start group=grouped archetype=grim
+Small fight. We will still do it properly.
+
+@ trigger=combat_start group=grouped archetype=boastful
+I fight better with company about. %target will come to regret that.
+
+@ trigger=death group=grouped archetype=grim
+We were sloppy, and I paid the bill for all of it.
+
+@ trigger=death group=grouped archetype=devout
+I fell among friends. That is not the worst end I was promised.
+
+@ trigger=death group=grouped archetype=wry
+Well. Undignified, and in front of company too.
+
+@ trigger=kill_boss group=grouped archetype=savage
+%target went down under all of us at once. That was good work.
+
+@ trigger=kill_boss group=grouped archetype=scholar
+We will never repeat that exactly. Worth remembering while it is fresh.
+
+@ trigger=kill_boss group=grouped archetype=sinister
+%target died well enough. We should be pleased with ourselves quietly.
+
+@ trigger=idle group=grouped archetype=wry
+Nothing to do but walk, and company makes the walking shorter.
+
+@ trigger=idle group=grouped archetype=haunted
+It is easier to sit still when somebody else is sitting too.
+
+@ trigger=idle group=grouped archetype=devout
+Rest while we can. The road through %zone gives little of it.
+
+@ trigger=idle group=grouped archetype=scholar
+I could name half the plants in %area, and nobody has asked yet.
+
+@ trigger=idle group=grouped archetype=boastful
+I have stories for this stretch of road, if the silence keeps up.
+
+@ trigger=combat_start group=with_player archetype=devout
+Stay behind me and I will keep you whole.
+
+@ trigger=combat_start group=with_player archetype=grim
+Small thing. Keep your guard up regardless.
+
+@ trigger=combat_start group=with_player archetype=savage
+Mine first. Take whatever slips past me.
+
+@ trigger=combat_start group=with_player archetype=haunted
+Stay where I can see you. I will not lose another.
+
+@ trigger=combat_start group=with_player archetype=boastful
+At last, someone worth fighting in front of. Watch closely.
+
+@ trigger=combat_start group=with_player archetype=sinister
+Hold there. I would rather you did not see all of this.
+
+@ trigger=death group=with_player archetype=devout
+Forgive me, I left you a shield short. Do not stay for my sake.
+
+@ trigger=death group=with_player archetype=wry
+Do not look. I would like to keep some of my reputation.
+
+@ trigger=death group=with_player archetype=haunted
+Go on without me. I have done this part before.
+
+@ trigger=death group=with_player archetype=grim
+Down. Get clear and do not spend yourself on me.
+
+@ trigger=kill_boss group=with_player archetype=boastful
+Did you see it? I want you to have seen it.
+
+@ trigger=kill_boss group=with_player archetype=devout
+That was yours as much as mine. I only held the line.
+
+@ trigger=kill_boss group=with_player archetype=scholar
+Tell me what you noticed. I missed the middle of it entirely.
+
+@ trigger=kill_boss group=with_player archetype=savage
+%target fought hard and we fought harder. I would do that again with you.
+
+@ trigger=idle group=with_player archetype=wry
+You are quiet. I can carry the talking, if it comes to that.
+
+@ trigger=idle group=with_player archetype=haunted
+I am glad of the company. I will not say more than that.
+
+@ trigger=idle group=with_player archetype=scholar
+Ask me about %zone while we wait. I know more than you want.
+
+@ trigger=idle group=with_player archetype=sinister
+You keep watching me. I find that I do not mind it.
+
+@ trigger=idle group=with_player archetype=grim
+Say the word and I will move. Until then I am watching the treeline.
+
+@ trigger=idle group=with_player archetype=devout
+If you are hurt, say so now rather than later.

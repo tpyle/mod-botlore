@@ -1,0 +1,99 @@
+@ trigger=loot_rare quality=rare archetype=devout
+%item is worth more in the right hands than in my pack, and I will find those hands.
+A good find. Someone will be glad of it before the week is out.
+I will keep this one, not for pride, but for the next time somebody needs more than I can give them.
+
+@ trigger=loot_rare quality=rare archetype=grim
+Better than nothing, and nothing was what I expected.
+%item will hold up for a while. Nothing holds up forever.
+
+@ trigger=loot_rare quality=rare archetype=scholar
+The make is careful. Someone spent real time on this before they lost it.
+I want an hour and a quiet table with %item before I say what it is.
+Not unheard of, but not common either. I will note where it came from.
+
+@ trigger=loot_rare quality=rare archetype=boastful
+%item comes with me, and everyone we pass is going to hear about it.
+Look at this. Not every day, is it.
+I have had worse mornings, and I intend to tell the story of this one.
+
+@ trigger=loot_rare quality=rare archetype=wry
+%item. Three weeks earlier and it would have saved me a great deal of walking.
+Useful. I had almost forgotten what that felt like.
+Of course it turns up now that the hard part is behind us.
+
+@ trigger=loot_rare quality=rare archetype=haunted
+Someone was carrying this for a reason. I will carry it a while longer.
+%item. I knew somebody who would have laughed and called this a fine day.
+
+@ trigger=loot_rare quality=rare archetype=savage
+It did not want to give this up, and that made the taking better.
+%item came off something with teeth, and the teeth are behind us now.
+
+@ trigger=loot_rare quality=rare archetype=sinister
+%item, and no one left alive who remembers owning it. Tidy.
+Whoever kept this had plans for it. I will put it to better use.
+
+@ trigger=loot_rare quality=epic archetype=devout
+%item is not a reward, it is a responsibility, and I will answer for how I use it.
+Grace comes strangely. I will spend this where it does the most good.
+
+@ trigger=loot_rare quality=epic archetype=grim
+%item. I will use it hard and it will still outlast me.
+I will remember this hour and the smell of this place. That is what a thing like this earns.
+Few ever see one of these. Fewer keep them long.
+
+@ trigger=loot_rare quality=epic archetype=scholar
+I have read of these and never expected to hold one. Give me a moment.
+%item. Three scholars I know would trade a year of their lives for an afternoon with it.
+This changes what I thought was possible, and I mean to write it down properly tonight.
+
+@ trigger=loot_rare quality=epic archetype=boastful
+%item is mine, and I want witnesses.
+Stand where you can see it, all of you. This is a thing worth seeing.
+They will ask me about this for years, and I will tell them every time.
+
+@ trigger=loot_rare quality=epic archetype=wry
+%item. Finally, something that justifies the last several months.
+I would celebrate, but I have forgotten how, so this will have to do.
+
+@ trigger=loot_rare quality=epic archetype=haunted
+%item. I know exactly who I would have shown this to.
+Years of nothing, and then this, arriving too late to matter to anyone I loved.
+I will keep it, and I will not be glad about keeping it.
+
+@ trigger=loot_rare quality=epic archetype=savage
+It fought to its last breath over %item, and now I understand why.
+This came out of something that deserved a better end than I gave it.
+
+@ trigger=loot_rare quality=epic archetype=sinister
+%item. Whoever held it last had enemies, and I have just inherited them.
+I will show this to no one until I know exactly what it is worth.
+
+@ trigger=loot_rare quality=legendary archetype=devout
+%item is older than my order, and it has come to my hands. I intend to deserve it.
+
+@ trigger=loot_rare quality=legendary archetype=grim
+Things like this are not found, they are handed down through the dead. I am only the latest set of hands.
+
+@ trigger=loot_rare quality=legendary archetype=scholar
+%item. There are perhaps three of these spoken of in any record I trust, and I am holding one of them.
+
+@ trigger=loot_rare quality=legendary archetype=boastful
+I have promised an audience something like %item my whole life, and every doubter among them owes me an apology.
+
+@ trigger=loot_rare quality=legendary archetype=wry
+A thing out of the old songs, and it lands in my hands on an ordinary afternoon.
+
+@ trigger=loot_rare quality=legendary archetype=haunted
+%item. I would give it away entire for one more hour with the one I lost.
+
+@ trigger=loot_rare quality=legendary archetype=savage
+Nothing gives this up while it still breathes, and nothing here is still breathing.
+
+@ trigger=loot_rare quality=legendary archetype=sinister
+I will speak of this to no one, and no one will ever learn where %item went.
+
+@ trigger=loot_rare quality=legendary
+Hands older than any kingdom carried this before mine, and I will not be the one who loses it.
+The world will hear of %item whether I choose to speak of it or not.

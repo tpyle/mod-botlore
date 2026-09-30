@@ -1,0 +1,137 @@
+@ trigger=zone_enter zone=3483
+The ground here is red as a wound and the sky is torn open right above it. Welcome to what is left of Draenor.
+Broken siege engines rust in the Hellfire dust, and nobody has come to haul them off.
+
+@ trigger=zone_enter zone=3483 archetype=grim
+Thrallmar and Honor Hold glare at each other across the dust, and the demons wait for whoever wins.
+
+@ trigger=zone_enter zone=3521
+Mushrooms taller than towers, and the water draining out from under them. Zangarmarsh is dying quietly.
+
+@ trigger=zone_enter zone=3521 archetype=scholar
+The naga pumps at Coilfang have drawn these marshes down. You can read the old waterline on every spore stalk.
+
+@ trigger=zone_enter zone=3518
+This is Draenor before the breaking. Grass, wind, clefthoof, and a sky that stayed shut.
+
+@ trigger=zone_enter zone=3518 archetype=wry
+Nagrand has good grass, clean water and no hole in the sky. In Outland that counts as paradise.
+
+@ trigger=zone_enter zone=3518 race=orc
+My people rode these plains when they were only hunters. Nagrand remembers us better than we remember ourselves.
+
+@ trigger=zone_enter zone=3519
+Quiet trees, and then the Bone Wastes where nothing grows over Auchindoun. Terokkar keeps both.
+
+@ trigger=zone_enter zone=3519 archetype=devout
+I walk softly in Terokkar. Auchindoun was a resting place for draenei dead long before anyone tore it open.
+
+@ trigger=zone_enter zone=3522
+Stone spires stand up out of Blade's Edge like knives someone left in the ground.
+Ogres hold the high passes here, and the dragon bones down in the canyons are older than their holds.
+
+@ trigger=zone_enter zone=3523
+Netherstorm has no ground left, only broken rock hanging over nothing and arcane engines humming on top of it.
+
+@ trigger=zone_enter zone=3523 race=draenei
+Tempest Keep was ours before the blood elves took it. I never thought to see it again from below.
+
+@ trigger=zone_enter zone=3520
+Black ash, fel rivers, and the Black Temple squatting in the middle of it all. Shadowmoon hides nothing.
+
+@ trigger=zone_enter zone=3520 race=draenei
+This was farmland once. Then the orcs drank fel here, and my people burned with the fields.
+
+@ trigger=zone_enter zone=3537
+Cold sea, flat tundra, and the smell of whale oil off the Borean coast. Northrend starts here.
+Even the mammoths here walk like they are expecting trouble.
+
+@ trigger=zone_enter zone=495
+Cliffs straight down to grey water, and vrykul halls up top with the fires still lit.
+
+@ trigger=zone_enter zone=495 archetype=haunted
+The wind in the Howling Fjord sounds like people I used to know. I keep walking.
+
+@ trigger=zone_enter zone=65
+Every dragon that knows it is dying comes to Dragonblight to lie down. The snow here is all ribs.
+
+@ trigger=zone_enter zone=65 archetype=devout
+Wyrmrest still stands over the boneyard, and the flights still answer from it. That is worth something.
+
+@ trigger=zone_enter zone=394
+Sawdust, pine and axework in the Grizzly Hills. The only forest in Northrend that smells like honest labour.
+The lumber camps cut fast here, because furbolgs and worse come out of the trees at dusk.
+
+@ trigger=zone_enter zone=66
+The trolls of Zul'Drak are killing their own gods for the power to fight the Scourge, and it is not going well.
+Blood on the stairs of every temple in Zul'Drak, and most of it is troll.
+
+@ trigger=zone_enter zone=3711
+Green heat in the middle of Northrend. Sholazar Basin has no business existing, and I am glad of it.
+
+@ trigger=zone_enter zone=3711 archetype=scholar
+The titan devices ringing this basin hold the warmth inside it. Everything grows here as if the ice had never come.
+
+@ trigger=zone_enter zone=67
+Titan stonework running up past the clouds, and giants walking between it like caretakers.
+
+@ trigger=zone_enter zone=67 archetype=scholar
+Every arch in the Storm Peaks was cut to a measure I do not know yet. The titans built to be understood eventually.
+
+@ trigger=zone_enter zone=210
+Icecrown Citadel is up there, and every mile between us and it belongs to the Lich King.
+
+@ trigger=zone_enter zone=210 archetype=grim
+The Scourge builds in the open here. No ambush, no pretense - just a wall of them and the road through.
+
+@ trigger=zone_enter zone=210 archetype=savage
+The Lich King keeps his whole army at home in Icecrown. Good. I hate travelling far for a fight.
+
+@ trigger=zone_enter zone=2817
+The trees in Crystalsong are frozen through to glass, and they chime when the wind moves them.
+Dalaran floats above Crystalsong now, and the woods under it ring like struck crystal.
+
+@ trigger=idle zone=3483 archetype=wry
+Nothing in %area but red dirt and the sound of that hole in the sky.
+
+@ trigger=idle zone=3521
+I have lost the sun twice under these spore caps. Someone mark the path out of %area.
+
+@ trigger=idle zone=3518
+I could stop here. %area has water and grass and nothing screaming at me.
+
+@ trigger=idle zone=3519 archetype=haunted
+Too quiet in %area. Quiet is when I start remembering.
+
+@ trigger=idle zone=3522 archetype=boastful
+Point out an ogre anywhere in %area and I will bring you back something to hang on your wall.
+
+@ trigger=idle zone=3523 archetype=scholar
+The manaforges pull power straight out of the Nether. Impressive work, and I would not care to stand near a failure.
+
+@ trigger=idle zone=3520
+The ash in %area gets into everything. I will be tasting this valley for a week.
+
+@ trigger=idle zone=3537 archetype=wry
+My waterskin froze solid in %area. Northrend is very committed to its work.
+
+@ trigger=idle zone=495
+I can hear the surf breaking on the cliffs all the way up here in %area.
+
+@ trigger=idle zone=65 archetype=grim
+Standing in a dragon graveyard does put my own troubles in order.
+
+@ trigger=idle zone=394
+Somewhere out past %area an axe is still going. Good to know someone is working.
+
+@ trigger=idle zone=66 archetype=sinister
+A people willing to butcher their own gods will do anything at all. Worth remembering.
+
+@ trigger=idle zone=3711
+Birds, heat and green in %area. I keep forgetting the ice is an hour's walk away.
+
+@ trigger=idle zone=67 archetype=devout
+Whatever the titans were, they built here to last, and I can feel that patience in the stone.
+
+@ trigger=idle zone=210 archetype=grim
+The cold here does not come off the sea. It comes off him.

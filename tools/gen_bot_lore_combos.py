@@ -36,9 +36,29 @@ and constants so both halves append to the same row list.
 # what I expected."), or answered its own childhood with a remark about a book.
 # Those are the lines that read as machine-made.
 #
-# So these triggers are authored instead. Emptying the set puts the joined
-# lines back, which is the whole of the revert.
-AUTHORED_ONLY = {"combat_start", "death", "level_up"}
+# So these triggers are authored instead. It began as the three short ones and
+# now covers all ten, which switches this layer off entirely: the corpus is
+# hand-written end to end. Nothing here is deleted, because the trade-off is
+# real and may want revisiting - dropping a trigger from this set puts its
+# joined lines back immediately, and the fragments below are still the fastest
+# way to produce volume if variety ever matters more than voice.
+#
+# The counts at the moment of the switch, as a record of what it cost:
+#
+#     trigger          before   authored   glued (dropped)
+#     idle               3627        219              3408
+#     loot_rare          2926         94              2832
+#     quest_accept       1371        109              1262
+#     quest_complete     1313         50              1263
+#     zone_enter         1028        468               560
+#     kill_boss           313        155               158
+#
+# idle is the thin one to watch, because it fires on a timer rather than on
+# something happening, so repetition shows there first.
+AUTHORED_ONLY = {
+    "zone_enter", "quest_accept", "quest_complete", "kill", "kill_boss",
+    "death", "level_up", "loot_rare", "combat_start", "idle",
+}
 
 
 def build(ns):
