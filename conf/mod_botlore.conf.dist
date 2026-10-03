@@ -73,6 +73,30 @@ BotLore.RangeYards = 40
 BotLore.IdleSeconds = 900
 
 #
+#    BotLore.MinGapSeconds
+#        Description: Shortest gap between two lines that the SAME real player
+#                     hears, from any bot. 0 disables it.
+#
+#                     The per-bot cooldown cannot stop a burst, because a burst
+#                     is not one bot talking too often - it is eight bots
+#                     talking once each, in the same instant. They are
+#                     correlated by the world and not by any timer: a knot of
+#                     bots fighting one pull all take combat_start on the same
+#                     tick, and because nothing is said unless a real player is
+#                     in earshot, every bot near that player becomes eligible
+#                     the moment they walk up, each with a cooldown that expired
+#                     long ago.
+#
+#                     So the throttle is on the listening end, and keyed to the
+#                     listener rather than kept as one realm-wide clock, so two
+#                     players in different zones do not starve each other. One
+#                     line counts against every player in earshot of the bot
+#                     that spoke.
+#        Default:     20
+
+BotLore.MinGapSeconds = 20
+
+#
 #    BotLore.LoginGraceSeconds
 #        Description: Stay silent for this long after logging in. Entering the
 #                     world counts as a zone change, so without a grace period

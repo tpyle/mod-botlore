@@ -105,12 +105,44 @@ steadier than yesterday is not.
 With hundreds of bots the gating matters more than the lines. In order:
 feature and trigger enabled, any real player online at all (a cached GUID
 set, so an empty realm costs one branch), bot-ness, a real player within
-`RangeYards`, a per-bot cooldown, then the chance roll. No grid searches.
+`RangeYards`, the gap since that player last heard anything, a per-bot
+cooldown, then the chance roll. No grid searches.
+
+### Why a per-bot cooldown is not enough
+
+Bots were answering in clumps - eight of them inside a few seconds - and the
+per-bot cooldown could not have prevented it, because a burst is not one bot
+talking too often. It is eight bots talking once each, in the same instant.
+
+They are correlated by the world rather than by any timer. A knot of bots
+fighting one pull all take `combat_start` on the same tick. And because nothing
+is said unless a real player is in earshot, every bot near that player becomes
+eligible the moment they walk up, each with a cooldown that expired long ago
+while nobody was there to hear them. The gate that keeps the world quiet is
+exactly what bunches the lines together.
+
+Two things address it.
+
+**`MinGapSeconds` throttles the listening end.** It is the shortest gap between
+two lines the same real player hears, from any bot, and it is keyed to the
+listener rather than kept as one realm-wide clock so that two players in
+different zones do not starve each other. One line counts against every player
+in earshot of the bot that spoke, or two people standing together would each let
+a line through and both would hear twice the intended rate.
+
+**Every timer is now jittered.** Each reset was previously the exact configured
+value, which quietly tied the bots together: two that spoke in the same second
+stayed in step for ever afterwards, and a batch that logged in together shared
+an idle phase for life. The initial values were staggered at login but nothing
+maintained it, so the stagger decayed rather than persisting. Resets now land
+anywhere from half to one and a half times the interval, so bots drift apart
+instead of locking.
 
 ## Configuration (`mod_botlore.conf`)
 
 `BotLore.Enable`, `.Chance`, `.CooldownSeconds`, `.RangeYards`,
-`.IdleSeconds`, `.LoginGraceSeconds`, `.AvoidRepeats`, `.SpecificityWeight`,
+`.IdleSeconds`, `.MinGapSeconds`, `.LoginGraceSeconds`, `.AvoidRepeats`,
+`.SpecificityWeight`,
 per-trigger chances (`.Chance.KillBoss`, `.Chance.LevelUp`, `.Chance.Death`)
 and per-trigger switches (`.Trigger.*`). Read in `OnAfterConfigLoad`, so
 `reload config` applies them live.

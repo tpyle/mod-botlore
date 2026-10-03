@@ -172,6 +172,12 @@ namespace
     // these is within earshot, so an empty set short-circuits everything.
     std::unordered_set<ObjectGuid> listeners;
 
+    // When each real player last heard anything, so a burst can be capped on
+    // the only measure that matters - what one person hears. Keyed on the
+    // listener rather than kept as one realm-wide clock, so two players in
+    // different zones do not starve each other.
+    std::unordered_map<ObjectGuid, time_t> lastHeard;
+
     struct BotLoreConfig
     {
         bool   Enable = true;
@@ -179,6 +185,7 @@ namespace
         uint32 CooldownSeconds = 240;
         float  RangeYards = 40.0f;
         uint32 IdleSeconds = 600;
+        uint32 MinGapSeconds = 20;
         uint32 LoginGraceSeconds = 60;
         bool   AvoidRepeats = true;
         uint32 SpecificityWeight = 6;
@@ -246,6 +253,7 @@ namespace
         cfg.CooldownSeconds = sConfigMgr->GetOption<uint32>("BotLore.CooldownSeconds", 240);
         cfg.RangeYards      = sConfigMgr->GetOption<float>("BotLore.RangeYards", 40.0f);
         cfg.IdleSeconds     = sConfigMgr->GetOption<uint32>("BotLore.IdleSeconds", 600);
+        cfg.MinGapSeconds   = sConfigMgr->GetOption<uint32>("BotLore.MinGapSeconds", 20);
         cfg.LoginGraceSeconds = sConfigMgr->GetOption<uint32>("BotLore.LoginGraceSeconds", 60);
         cfg.AvoidRepeats      = sConfigMgr->GetOption<bool>("BotLore.AvoidRepeats", true);
         cfg.SpecificityWeight = sConfigMgr->GetOption<uint32>("BotLore.SpecificityWeight", 6);
@@ -384,16 +392,47 @@ namespace
         return "";
     }
 
-    bool HasListenerNearby(Player* bot)
+    // Half to one and a half times the configured interval.
+    //
+    // Every one of these timers used to be reset to the exact configured value,
+    // which quietly tied the bots together: two that spoke in the same second
+    // stayed in step for ever afterwards, and a batch of bots that logged in
+    // together shared an idle phase for the rest of their lives. The initial
+    // values were already staggered at login, but nothing maintained it, so the
+    // stagger decayed instead of persisting and the result was bots answering
+    // in clumps.
+    uint32 Jittered(uint32 seconds)
+    {
+        if (seconds < 2)
+            return seconds;
+
+        return urand(seconds / 2, seconds + seconds / 2);
+    }
+
+    // The nearest real player who can hear this bot, or nullptr. Returns the
+    // listener rather than a bool because the burst throttle is keyed on who
+    // is listening.
+    Player* ListenerNearby(Player* bot)
     {
         // Walking the handful of real players is far cheaper than a grid
         // search per bot per trigger.
         for (ObjectGuid const& guid : listeners)
             if (Player* listener = ObjectAccessor::FindPlayer(guid))
                 if (bot->IsWithinDistInMap(listener, cfg.RangeYards))
-                    return true;
+                    return listener;
 
-        return false;
+        return nullptr;
+    }
+
+    // Every real player in earshot of this bot, so that one line counts against
+    // all of them. Without this, two players standing together would each let a
+    // line through and both would hear twice the intended rate.
+    void NoteHeard(Player* bot, time_t now)
+    {
+        for (ObjectGuid const& guid : listeners)
+            if (Player* listener = ObjectAccessor::FindPlayer(guid))
+                if (bot->IsWithinDistInMap(listener, cfg.RangeYards))
+                    lastHeard[guid] = now;
     }
 
     // The bot's own attributes, as numbers the selection rules understand.
@@ -586,6 +625,7 @@ namespace
         NotABot,
         NoListener,
         InGrace,
+        TooSoonForListener,
         OnCooldown,
         ChanceRoll,
         NoLine
@@ -617,8 +657,17 @@ namespace
         if (!IsBot(bot))
             return Refusal::NotABot;
 
-        if (!forced && (listeners.empty() || !HasListenerNearby(bot)))
-            return Refusal::NoListener;
+        Player* listener = nullptr;
+
+        if (!forced)
+        {
+            if (listeners.empty())
+                return Refusal::NoListener;
+
+            listener = ListenerNearby(bot);
+            if (!listener)
+                return Refusal::NoListener;
+        }
 
         BotLoreData* data = bot->CustomData.GetDefault<BotLoreData>(DATA_KEY);
         time_t const now = GameTime::GetGameTime().count();
@@ -634,6 +683,21 @@ namespace
         // the command nearly unusable: at the configured twenty minutes almost
         // every bot answered "still on cooldown" and verifying a filter meant
         // hunting for one that had not spoken yet.
+        // The per-bot cooldown cannot stop a burst, because a burst is not one
+        // bot talking too often - it is eight bots talking once each, in the
+        // same instant. They are correlated by the world rather than by any
+        // timer: a knot of bots fighting one pull all take combat_start on the
+        // same tick, and the earshot gate means every bot near a player becomes
+        // eligible the moment that player walks up, each with a cooldown that
+        // expired long ago. So the only effective throttle is on the listening
+        // end.
+        if (!forced && cfg.MinGapSeconds && listener)
+        {
+            auto const heard = lastHeard.find(listener->GetGUID());
+            if (heard != lastHeard.end() && now - heard->second < time_t(cfg.MinGapSeconds))
+                return Refusal::TooSoonForListener;
+        }
+
         if (!forced && data->nextLine > now)
             return Refusal::OnCooldown;
 
@@ -651,7 +715,10 @@ namespace
         // so it deliberately leaves the cooldown alone. lastLineId is still
         // recorded, which is what makes repeated tests draw different lines.
         if (!forced)
-            data->nextLine = now + cfg.CooldownSeconds;
+        {
+            data->nextLine = now + Jittered(cfg.CooldownSeconds);
+            NoteHeard(bot, now);
+        }
 
         data->lastLineId = line->id;
 
@@ -865,6 +932,7 @@ namespace
             case Refusal::NotABot:    return "that character is not a bot";
             case Refusal::NoListener: return "no real player is within earshot";
             case Refusal::InGrace:    return "the bot only just logged in";
+            case Refusal::TooSoonForListener: return "somebody nearby heard a line moments ago";
             case Refusal::OnCooldown: return "the bot is still on cooldown";
             case Refusal::ChanceRoll: return "the chance roll failed";
             case Refusal::NoLine:     return "no line matches that bot and place";
@@ -932,6 +1000,7 @@ public:
     void OnPlayerLogout(Player* player) override
     {
         listeners.erase(player->GetGUID());
+        lastHeard.erase(player->GetGUID());
     }
 
     void OnPlayerUpdateZone(Player* player, uint32 newZone, uint32 newArea) override
@@ -1067,13 +1136,13 @@ public:
             if (!IsBot(player) || listeners.empty())
                 return;
 
-            player->CustomData.GetDefault<BotLoreData>(DATA_KEY)->idleTimer = cfg.IdleSeconds * IN_MILLISECONDS;
+            player->CustomData.GetDefault<BotLoreData>(DATA_KEY)->idleTimer = Jittered(cfg.IdleSeconds) * IN_MILLISECONDS;
             return;
         }
 
         if (!data->idleTimer)
         {
-            data->idleTimer = cfg.IdleSeconds * IN_MILLISECONDS;
+            data->idleTimer = Jittered(cfg.IdleSeconds) * IN_MILLISECONDS;
             return;
         }
 
@@ -1083,7 +1152,7 @@ public:
             return;
         }
 
-        data->idleTimer = cfg.IdleSeconds * IN_MILLISECONDS;
+        data->idleTimer = Jittered(cfg.IdleSeconds) * IN_MILLISECONDS;
 
         if (player->IsInWorld() && !player->IsInCombat())
             Speak(player, TRIGGER_IDLE, ContextFor(player));
