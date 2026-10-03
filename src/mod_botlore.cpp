@@ -13,7 +13,7 @@
  * by what the bot is doing and where it is standing, spoken locally with /say
  * and /emote (and in party or guild where a line asks for it).
  *
- * Bots are identified by WorldSession::IsBot(), which is exactly the set of
+ * Bots are identified by WorldSession::IsHeadless(), which is exactly the set of
  * fabricated sessions mod-playerbots creates for its random population. That
  * keeps this module free of any playerbots header - nothing here breaks when
  * the fork moves. The trade-off is that a player's own alt bots ("selfbots")
@@ -371,7 +371,11 @@ namespace
 
     bool IsBot(Player* player)
     {
-        return player && player->GetSession() && player->GetSession()->IsBot();
+        // IsHeadless, not the IsBot this used to call: upstream's headless
+        // session work renamed the idea, and the predicate behind it is
+        // unchanged - a session with no socket, which is what mod-playerbots
+        // fabricates for its bots.
+        return player && player->GetSession() && player->GetSession()->IsHeadless();
     }
 
     // Mirrors PlayerbotAI::GetLocalizedAreaName: several AreaTable locale slots
